@@ -1,0 +1,30 @@
+\begin{table*}[!htbp]
+\begin{center}
+
+\begin{filecontents*}{productivity.csv}
+Measure,FlatEven,FlatWave,NestedEven,NestedWave
+Per-cell-update resource inflow,$0.0175 \pm 0$,$0.0145 \pm 0.0008$,$0.0175 \pm 0$,$0.0178 \pm 0.0010$
+Per-cell-update cell reproduction,$0.0108 \pm 0.0020$,$0.0094 \pm 0.0018$,$0.0113 \pm 0.0018$,$0.0117 \pm 0.0023$
+\end{filecontents*}
+
+\begin{tabular}{l|c|c|c|c}%
+\bfseries Measure
+  & \bfseries Flat-Even
+  & \bfseries Flat-Wave
+  & \bfseries Nested-Even
+  & \bfseries Nested-Wave
+\csvreader[head to column names]{productivity.csv}{}
+{\\\hline\Measure
+  & \FlatEven
+  & \FlatWave
+  & \NestedEven
+  & \NestedWave
+}
+\end{tabular}
+
+\caption{
+Observed productivity at epoch 1 (mean $\pm$ S.D.)
+}
+\label{tab:productivity}
+\end{center}
+\end{table*}

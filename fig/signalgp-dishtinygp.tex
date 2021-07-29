@@ -1,0 +1,45 @@
+\begin{figure}
+\begin{center}
+
+\hspace*{\fill}%
+\begin{minipage}[t]{\columnwidth}
+\centering
+\vspace{0pt} % for alignment
+\begin{subfigure}[b]{\textwidth}
+\includegraphics[width=\textwidth]{img/signalgp-cartoon}%
+\caption{
+A cartoon overview of a single SignalGP instance.
+SignalGP program modules execute pseudo-concurrently in response to tagged signals, which can originate internally, from the environment, or from other agents.
+}
+\label{fig:signalgp-cartoon}
+\end{subfigure}
+\end{minipage}%
+\hspace*{\fill}
+
+\hspace*{\fill}%
+\begin{minipage}[t]{\columnwidth}
+\centering
+\vspace{0pt} % for alignment
+\begin{subfigure}[b]{\textwidth}
+\includegraphics[width=\textwidth]{img/dishtinygp-cartoon}
+\caption{
+A cartoon overview of how individual SignalGP instances are organized into DISHTINY cells.
+% Each cell contains four independent SignalGP instances.
+% The same genetic program is mirrored across all four SignalGP instances, but each instance executes independently.
+Within each DISHTINY cell, each of four independent instances senses environmental state, receives intercellular messages, and determines cell behavior with respect to a single cardinal direction.
+All four instances sense non-directional environmental cues and non-directional actions may be taken by any instance.
+Instances within a cell communicate via intracellular messaging.
+}
+\label{fig:dishtinygp-cartoon}
+\end{subfigure}
+\end{minipage}%
+\hspace*{\fill}
+
+
+\caption{
+Schematic illustrations of how individual SignalGP instances function and how individual SignalGP instances are organized into DISHTINY cells.
+Figure \ref{fig:signalgp-cartoon} provided courtesy Alexander Lalejini.
+}
+\label{fig:signalgp-dishtinygp}
+\end{center}
+\end{figure}

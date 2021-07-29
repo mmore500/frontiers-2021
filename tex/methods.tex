@@ -1,0 +1,53 @@
+\section{Methods}
+
+We performed simulations in which cells evolved open-ended behaviors to make decisions about resource sharing, reproductive timing, and apoptosis.
+We will first describe the environment and hereditary grouping system cells evolved under and then describe the behavior-control system cells used.
+
+\subsection{Environment and Hereditary Groups}
+
+Cells occupy individual tiles on a toroidal grid.
+Over discrete time steps (``updates''), cells can collect a resource.
+Once sufficient resource has been accrued, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
+Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
+
+Cells accrue resource via a cooperative resource-collection process conducted by explicitly-registered hereditary groups.
+As cells reproduce, they can choose to keep offspring in the parent's hereditary group or expel offspring to found a new hereditary group.
+These decisions affect the spatial layout of these hereditary groups and, in turn, affect individual cells' resource-collection rate.
+Medium-sized, circular hereditary groups tend to collect resource at a greater per-cell rate than large, small, or irregularly-shaped groups.
+To promote group turnover, we counteract the advantage of established hereditary groups with a simple aging scheme.
+As hereditary groups age over elapsed updates and somatic generations, their constituent cells expressly lose the ability regenerate somatic tissue and then, soon after, to collect resource.
+
+A complete description of the mechanisms behind these collective resource-collection and group aging mechanisms appears in supplementary sections \ref{sup:resource_collection_process} and \ref{sup:channel_group_life_cycle}.
+
+Because hereditary groups arise through inheritance, they signify a kin relationship in addition to a potentially functionally cooperative relationship.
+In this work, we screen for fraternal transitions in individuality with respect to these hereditary groups by evaluating three characteristic traits of higher-level organisms: resource sharing, reproductive division of labor, and apoptosis.
+
+\subsection{Cell-Level Organisms}
+
+Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and implicit selective pressures.
+We employ the SignalGP representation, which expresses function-like modules of code in response to internal signals or external stimuli (akin to gene expression).
+This event-driven paradigm facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
+
+Previous work evolving digital organisms in grid-based problem domains has relied on a single computational agent that designates a direction to act in via an explicit cardinal ``facing'' \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}.
+We introduce novel methodology to facilitate the evolution of directionally-symmetric phenotypes.
+In this work, each cell instantiates four copies of the SignalGP hardware: one facing each cardinal direction.
+These hardware instances all execute the same SignalGP program and may coordinate via internal signals, but are otherwise decoupled.
+Supplementary Figure \ref{fig:dishtinygp-cartoon} overviews the configuration of the four SignalGP instances that constitute a single cell.
+
+\subsection{Surveyed Evolutionary Conditions}
+
+To broaden our exploration of possible evolved multicellular behaviors in this system, we surveyed several evolutionary conditions.
+
+In one manipulation, we explored the effect of structuring hereditary groups, such that parent cells can choose to keep offspring in their same sub-group, in just the same full group, or expel them entirely to start a new group.
+Cells can independently mediate their behavior based on the level of the group with which they are interacting.
+
+In a second manipulation, we explored the importance of explicitly selecting for medium-sized groups (as had been needed to maximize resource collection) by removing this incentive.
+Instead, they system distributed resource at a uniform per-cell rate.
+
+We combined these two manipulations to yield four surveyed conditions:
+\begin{enumerate}
+\item ``Flat-Even'': One hereditary level (flat) with uniform resource inflow (even). In-browser simulation: \url{https://mmore500.com/hopto/i},
+\item ``Flat-Wave'': One hereditary level (flat) with group-mediated resource collection (wave); In-browser simulation: \url{https://mmore500.com/hopto/j}),
+\item ``Nested-Even'': Two hierarchically-nested hereditary levels (nested) with uniform resource inflow (even). In-browser simulation: \url{https://mmore500.com/hopto/k},
+\item ``Nested-Wave'': Two hierarchically-nested hereditary group levels (nested) with group-mediated resource collection (wave). In-browser simulation: \url{https://mmore500.com/hopto/l}.
+\end{enumerate}

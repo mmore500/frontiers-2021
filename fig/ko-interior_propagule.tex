@@ -1,0 +1,110 @@
+\begin{figure}[!htbp]
+\begin{center}
+
+% \begin{subfigure}[b]{\linewidth}
+% \begin{center}
+
+% \begin{minipage}[t]{0.18\linewidth}
+% \centering
+% \vspace{0pt} % for alignment
+% \adjincludegraphics[width=\textwidth, trim={{.0\width} {.77\width} {.79\width} {.02\width}}, clip]{lifecycle/burst-paint/seed=1034+title=directional_channel_grayscale_viz+treat=resource-wave__channelsense-yes__nlev-two+update=1048648+_data_hathash_hash=ca8ad21d3b30b939+_script_fullcat_hash=602c0d0c070e9202+_source_hash=53a2252-clean+ext=}
+% \footnotesize Update 0
+% \end{minipage}
+% \begin{minipage}[t]{0.18\linewidth}
+% \centering
+% \vspace{0pt} % for alignment
+% \adjincludegraphics[width=\textwidth, trim={{.0\width} {.77\width} {.79\width} {.02\width}}, clip]{lifecycle/burst-paint/seed=1034+title=directional_channel_grayscale_viz+treat=resource-wave__channelsense-yes__nlev-two+update=1048744+_data_hathash_hash=ca8ad21d3b30b939+_script_fullcat_hash=602c0d0c070e9202+_source_hash=53a2252-clean+ext=}
+% \footnotesize 96
+% \end{minipage}
+% \begin{minipage}[t]{0.18\linewidth}
+% \centering
+% \vspace{0pt} % for alignment
+% \adjincludegraphics[width=\textwidth, trim={{.0\width} {.77\width} {.79\width} {.02\width}}, clip]{lifecycle/burst-paint/seed=1034+title=directional_channel_grayscale_viz+treat=resource-wave__channelsense-yes__nlev-two+update=1048840+_data_hathash_hash=ca8ad21d3b30b939+_script_fullcat_hash=602c0d0c070e9202+_source_hash=53a2252-clean+ext=}
+% \footnotesize 192
+% \end{minipage}
+% \begin{minipage}[t]{0.18\linewidth}
+% \centering
+% \vspace{0pt} % for alignment
+% \adjincludegraphics[width=\textwidth, trim={{.0\width} {.77\width} {.79\width} {.02\width}}, clip]{lifecycle/burst-paint/seed=1034+title=directional_channel_grayscale_viz+treat=resource-wave__channelsense-yes__nlev-two+update=1048936+_data_hathash_hash=ca8ad21d3b30b939+_script_fullcat_hash=602c0d0c070e9202+_source_hash=53a2252-clean+ext=}
+% \footnotesize 288
+% \end{minipage}
+% \begin{minipage}[t]{0.18\linewidth}
+% \centering
+% \vspace{0pt} % for alignment
+% \adjincludegraphics[width=\textwidth, trim={{.0\width} {.77\width} {.79\width} {.02\width}}, clip]{lifecycle/burst-paint/seed=1034+title=directional_channel_grayscale_viz+treat=resource-wave__channelsense-yes__nlev-two+update=1049032+_data_hathash_hash=ca8ad21d3b30b939+_script_fullcat_hash=602c0d0c070e9202+_source_hash=53a2252-clean+ext=}
+% \footnotesize 384
+% \end{minipage}
+% \caption{Wild type timelapse}
+% \label{fig:wt_timelapse}
+% \end{center}
+% \end{subfigure}
+
+% \vspace{2ex}
+
+\begin{subfigure}[b]{\linewidth}
+\begin{center}
+
+\begin{minipage}[t]{0.30\linewidth}
+\centering
+\vspace{0pt} % for alignment
+% adapted from https://tex.stackexchange.com/a/186476
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) { \adjincludegraphics[width=\linewidth, trim={{.25\width} {.20\width} {.5\width} {.55\width}}, clip]{knockout/interior_propagule/wildtype/seed=1+title=directional_regulator_viz+treat=resource-wave__channelsense-yes__nlev-two+update=8188+_data_hathash_hash=8b493febd79aad1f+_script_fullcat_hash=90718bb0c6ec4dbd+_source_hash=53a2252-clean+ext=}
+};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+  \draw [-stealth, yellow] (0.35,0.59) -- ++(0.05,-0.05);
+  \draw [-stealth, yellow] (0.01,0.39) -- ++(0.05,-0.05);
+  \draw [-stealth, yellow] (0.68,0.39) -- ++(0.05,-0.05);
+  \draw [-stealth, yellow] (0.62,0.32) -- ++(0.05,-0.05);
+\end{scope}
+\end{tikzpicture}
+\footnotesize Wild type
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+\centering
+\vspace{0pt} % for alignment
+\adjincludegraphics[width=\linewidth, trim={{.5\width} {.5\width} {.25\width} {.25\width}}, clip]{knockout/interior_propagule/propaguleknockout/seed=1+title=directional_regulator_viz+treat=resource-wave__channelsense-yes__nlev-two+update=8188+_data_hathash_hash=2b6711db47fb5887+_script_fullcat_hash=90718bb0c6ec4dbd+_source_hash=53a2252-clean+ext=}
+\footnotesize Propagule knockout
+\end{minipage}
+\begin{minipage}[t]{0.30\linewidth}
+\centering
+\vspace{0pt} % for alignment
+\adjincludegraphics[width=\linewidth, trim={{.5\width} {.5\width} {.25\width} {.25\width}}, clip]{knockout/interior_propagule/regulationknockout/seed=1+title=directional_regulator_viz+treat=resource-wave__channelsense-yes__nlev-two+update=8188+_data_hathash_hash=11ab5cdd47ed18c7+_script_fullcat_hash=90718bb0c6ec4dbd+_source_hash=53a2252-clean+ext=}
+\footnotesize Regulation knockout
+\end{minipage}
+
+\caption{Regulation visualizations}
+\label{fig:regulation_visualizations}
+
+\end{center}
+\end{subfigure}
+
+\begin{minipage}[t]{\linewidth}
+\centering
+\vspace{0pt} % for alignment
+\begin{subfigure}[b]{\linewidth}
+\includegraphics[width=\linewidth]{knockout/interior_propagule/title=interior_propagules+_data_hathash_hash=bb0fa6254f1b7398+_script_fullcat_hash=f738b363bea8c98a+_source_hash=53a2252-clean+ext=}%
+\caption{Interior propagule rate by genotype}
+\label{fig:interior_propagule_rate}
+\end{subfigure}
+\end{minipage}%
+\hspace*{\fill}
+
+
+\caption{
+Analysis of a wild type strain exhibiting a "burst" lifecycle evolved under the ``Nested-Wave'' treatment exhibiting interior propagule generation.
+% Figure \ref{fig:wt_timelapse} traces the wild type life history.
+% Level-one groups are by differentiated by grayscale tone and separated by solid black borders.
+% Level-zero groups are by separated by gray borders.
+% In each example, the focal parent level-one group is colored purple and the focal offspring group orange.
+Figure \ref{fig:regulation_visualizations} depicts gene regulation at each of a cell's four directional SignalGP instances using a PCA mapping from regulatory state to three-dimensional RGB coordinates, calculated uniquely for each level-one same-channel signaling group.
+Black borders divide outer registered-kin groups and white borders divide inner registered-kin groups.
+Endogenous daughter groups annotated with yellow arrows.
+Figure \ref{fig:interior_propagule_rate} compares the mean number of interior propagules observed per level-one same-channel signaling group.
+Error bars indicate 95\% confidence.
+View an animation of wild type gene regulation at \url{https://mmore500.com/hopto/t}.
+View the wild type strain in a live in-browser simulation at \url{https://mmore500.com/hopto/g}.
+}
+\label{fig:ko-interior_propagule}
+\end{center}
+\end{figure}

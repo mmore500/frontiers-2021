@@ -1,0 +1,126 @@
+\section{Results and Discussion}
+
+To characterize the general selective pressures induced by surveyed environmental conditions, we assessed the prevalence of characteristic multicellular traits among evolved genotypes across replicates.
+In the case of an evolutionary transition of individuality, we would expect cells to modulate their own reproductive behavior to prioritize group interests above individual cell interests.
+In DISHTINY, cell reproduction inherently destroys an immediate neighbor cell.
+As such, we would expect somatic growth to occur primarily at group peripheries in a higher-level individual.
+Supplementary Figure \ref{fig:reproduction_surrounded} compares cellular reproduction rates between the interior and exterior of highest-level same-channel signaling networks.
+For all treatments, phenotypes with depressed interior cellular reproduction rates dominated across replicates (non-overlapping 95\% CI).
+All four treatment conditions appear to select for some level of reproductive cooperation among cells.
+
+Across replicate evolutionary runs in all four treatments, we also found that resource was transferred among registered kin at a significantly higher mean rate than to unrelated neighbors (non-overlapping 95\% CI).
+To test whether this resource-sharing was solely an artifact of sharing between direct cellular kin, we also assessed mean sharing to registered kin that were not immediate cellular relatives.
+Mean sharing between such cells also exceeded sharing among unrelated neighbors (non-overlapping 95\% CI).
+Thus, all four treatments appear to select for functional cooperation among wider kin groups.
+Supplementary section \label{sec:resource-sharing} presents these results in detail.
+
+\subsection{Qualitative Life Histories} \label{sec:life-histories}
+
+\input{fig/lifecycle.tex}
+
+Although cooperative cell-level phenotypes were common among evolved same-channel signaling networks, across replicates functional and reproductive cooperation arose via diverse qualitative life histories.
+To provide a general sense for the types of life histories we observed in this system, Figure \ref{fig:lifecycle} shows time lapses of representative multicellular groups evolved in different replicates.
+Figure \ref{fig:lifecycle-naive} depicts an example of a naive life history in which --- beyond the cellular progenitor of a propagule group --- the parent and propagule groups exhibit no special cooperative relationship.
+In Figure \ref{fig:lifecycle-adjoin}, propagules repeatedly bud off of parent groups to yield a larger network of persistent parent-child cooperators.
+In Figure \ref{fig:lifecycle-sweep}, propagules are generated at the extremities of parent groups and then rapidly replace most or all of the parent group.
+Finally, in Figure \ref{fig:lifecycle-burst}, propagules are generated at the interior of a parent group and replace it from the inside out.
+
+To better understand the multicellular strategies that evolved in this system, we investigated the mechanisms and adaptiveness of notable phenotypes that evolved in several individual evolutionary replicates.
+In the following sections, we present these investigations as a series of case studies.
+
+%Section \ref{sec:gene-regulation} reports a particular group-replication strategy in which propagule groups are seeded within the soma, destroying the parent as they mature.
+
+
+\subsection{Case Study: Burst Lifecycle} \label{sec:gene-regulation}
+
+\input{fig/ko-interior_propagule.tex}
+
+%This wild type strain exhibits an irregular, but somewhat concentric, spatial pattern of gene regulation illustrated in Figure \ref{fig:regulation_visualizations}.
+%In time-series animation, linked in the figure caption, gene regulation appears to fluctuate dynamically.
+
+In the strain exhibiting the ``burst'' lifecycle shown above, we wondered how localization and timing of the propagule origination was determined.
+To assess whether gene regulation instructions played a role in this process, we prepared two knockout strains.
+In the first, gene regulation instructions were replaced with no-operation (Nop) instructions (so that gene regulation state would remain baseline).
+In the second, the reproduction instructions to spawn a propagule were replaced with Nop instructions.
+Figure \ref{fig:regulation_visualizations} depicts the gene regulation phenotypes of these strains.
+
+Figure \ref{fig:interior_propagule_rate} compares interior propagule generation between the strains, confirming the direct mechanistic role of gene regulation in promoting interior propagule generation (non-overlapping 95\% CI).
+
+In head-to-head match-ups, the wild type strain outcompetes both the regulation-knockout ($20/20$; $p < 0.001$; two-tailed exact test) and the propagule-knockout strains
+($20/20$; $p < 0.001$; two-tailed exact test).
+The deficiency of the propagule-knockout strain confirms the adaptive role of interior propagule generation.
+Likewise, the deficiency of the regulation-knockout strain affirms the adaptive role of gene regulation in the focal wild type strain.
+
+\subsection{Case Study: Cell-cell Messaging} \label{sec:cell-cell-messaging}
+
+\input{fig/ko-intermessaging-sharing.tex}
+
+We discovered adaptive cell-cell messaging in two evolved strains.
+Here, we discuss a strain evolved under the Flat-Wave treatment where cell-cell messaging disrupts directional and spatial uniformity of resource sharing.
+Supplementary Section \ref{sec:intergroup} overviews an evolved strain where cell-cell messaging appears to intensify expression of a contextual tit-for-tat policy between same-channel signaling network groups.
+
+Figure \ref{fig:ko-intermessaging-sharing} depicts the cell-cell messaging, resource sharing, and resource stockpile phenotypes of the wild type strain side-by-side with corresponding phenotypes of a cell-cell messaging knockout strain.
+In the wild type strain, cell-cell messaging emanates from irregular collection of cells --- in some regions, grid-like and in others more sparse --- broadcasting to all neighboring cells.
+Resource sharing appears more widespread in the knockout strain than in the wild type.
+However, messaging's effects suppressing resource sharing is neither spatially nor directionally homogeneous.
+Relative to the knockout strain, cell-cell messaging increases variance in cardinal directionality of net resource sharing
+(%
+WT: mean 0.28, S.D. 0.07, $n=54$; % 2020/01-06-ll.md
+KO: mean 0.17, S.D. 0.07, $n=69$; % 2020/01-06-ll.md
+%Figure \ref{fig:intermessaging-sharing-direction};
+$p < 0.001$, bootstrap test%
+).
+Cell-cell messaging also increases variance of resource sharing density with respect to spatial quadrants demarcated by same-channel signaling group's spatial centroid
+(%
+WT: mean 0.23, S.D. 0.07, $n=52$; % 2020/01-06-ll.md
+KO: mean 0.16, S.D. 0.08, $n=68$; % 2020/01-06-ll.md
+%Figure \ref{fig:intermessaging-sharing-quadrant};
+$p < 0.001$, bootstrap test% 2020/01-06-ll.md
+).
+We used competition experiments to confirm the fitness advantage both of cell-cell messaging ($20/20$; $p < 0.001$; two-tailed exact test) and (using a separate knockout strain) resource sharing ($20/20$; $p < 0.001$; two-tailed exact test).
+The fitness advantage of irregularized sharing might stem from a corresponding increase in the fraction of cells with enough resource to reproduce stockpiled
+(%
+WT: mean 0.18, S.D. 0.11, $n=54$; % 2020/01-06-ll.md
+KO: mean 0.06, S.D. 0.08, $n=69$; % 2020/01-06-ll.md
+$p < 0.001$, bootstrap test% 2020/01-06-ll.md
+).
+
+\subsection{Case Study: Gradient-conditioned Cell Behavior} \label{sec:gradient-conditioned-behavior}
+
+\input{fig/ko-stockpiletrigger-sharing.tex}
+
+To further assess how multicellular groups process and employ spatial and directional information, we investigated whether successful multicellular strategies evolved where cells condition their behavior based on the resource concentration gradient within a multicellular group.
+We discovered a strain that employs a dynamic strategy where cells condition their own resource-sharing behavior based on the relative abundance of their own resource stockpiles compared to their neighbors.
+This strain appears to use this information to selectively suppress resource sharing.
+This strain's wild type outcompeted a variant where cells' capacity to assess relative richness of neighboring resource stockpiles was knocked out ($20/20$; $p < 0.001$; two-tailed exact test).
+Figure \ref{fig:ko-stockpiletrigger-sharing} contrasts the wild type resource-sharing phenotype with the more sparse knockout resource-sharing phenotype.
+
+This result raises the question of whether more sophisticated morphological patterning might evolve within the experimental system.
+Supplementary Section \ref{sec:morphology} examines a strain that exhibited genetically-driven morphological patterning of same-channel signaling networks.
+However, in knockout experiments this phenotype did not exhibit adaptive significance.
+
+\subsection{Case Studies: Apoptosis} \label{sec:apoptosis}
+
+\input{fig/ko-apoptosis.tex}
+
+Finally, we assessed whether cell self-sacrifice played a role in multicellular strategies evolved across our survey.
+Screening replicate evolutionary runs by apoptosis rate flagged two strains with several orders of magnitude greater activity.
+In strain A, evolved under the Nested-Even treatment, apoptosis accounts for 2\% of cell mortality.
+In strain B, evolved under the Nested-Flat treatment, 15\% of mortality is due to apoptosis.
+
+To test the adaptive role of apoptosis in these strains, we performed competition experiments against apoptosis knockout strains, in which all apoptosis instructions were substituted for Nop instructions.
+Figure \ref{fig:ko-apoptosis} compares the same-channel wild type phenotypes of these strains to their corresponding knockouts.
+
+Apoptosis contributed significantly to fitness in both strains (strain A: $18/20$, $p < 0.001$, two-tailed exact test; strain B: $20/20$, $p < 0.001$, two-tailed exact test).
+The success of strategies incorporating cell suicide is characteristic of evolutionary conditions favoring altruism, such kin selection or a transition from cell-level to collective individuality.
+
+To discern whether spatial or temporal targeting of apoptosis contributed to fitness, we competed wild type strains with apoptosis-knockout strains on which we externally triggered cell apoptosis with spatially and temporally uniform probability.
+In one set of competition experiments, the knockout strain's apoptosis probability was based on the observed apoptosis rate of the wild type strain's monoculture.
+In a second set of competition experiments, the knockout strain's apoptosis probability was based on the observed apoptosis rate of the population in the evolutionary run the wild type strain was harvested from.
+In both sets of experiments on both strains, wild type strains outcompeted knockout strains with uniform apoptosis probabilities
+(%
+strain A \@ monoculture rate: $18/20$, $p < 0.001$, two-tailed exact test;
+strain A \@ population rate: $19/20$, $p < 0.001$, two-tailed exact test;
+strain B \@ monoculture rate: $20/20$, $p < 0.001$, two-tailed exact test;
+strain B \@ population rate: $20/20$, $p < 0.001$, two-tailed exact test%
+). %2020-01-06-ll.md
