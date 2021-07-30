@@ -30,11 +30,11 @@ When mutagenic side-effects are applied Goldsby et al. have observed the evoluti
 Resource appears at a single point then spreads outwards update-by-update in a diamond-shaped wave.
 The expanding wave halts at a predefined limit.
 Cells must enter an ``activated'' state to harvest resource as it passes overhead.
-The cell at the starting position of a resource wave is automatically activated, and will propagate the activation signal to neighboring cells on the same signaling channel.
-The newly activated cells, in turn, activate their own neighbors registered to the same signaling channel.
-Neighbors registered to other signaling channels do not activate.
+The cell at the starting position of a resource wave is automatically activated, and will propagate the activation signal to neighboring cells in the same hereditary group.
+The newly activated cells, in turn, activate their own neighbors registered to the same hereditary group.
+Neighbors registered to other hereditary groups do not activate.
 Each cell, after sending the activation signal, enters a temporary quiescent state.
-In this manner, cells sharing a signaling channel track and harvest an expanding resource wave.
+In this manner, cells sharing a hereditary group track and harvest an expanding resource wave.
 The rate of resource collection for a cell is determined by the size and shape of of its hereditary group;
 small or fragmented hereditary groups will frequently miss out on resource as it passes by.
 
@@ -58,25 +58,25 @@ No guarantees are made about the uniqueness of a newly-generated hereditary grou
 
 In addition to hereditary group-based resource collection, we provide a uniform inflow of $+0.0051$, sufficient for one reproduction approximately every thousand updates.
 
-\subsection{Channel Group Life Cycle} \label{sup:channel_group_life_cycle}
+\subsection{Hereditary Group Life Cycle} \label{sup:hereditary_group_life_cycle}
 
-Mature hereditary groups enjoy a considerable advantage over fledging propagules.
+Mature hereditary groups enjoy a considerable advantage over fledgling propagules.
 Because of the isometric scaling relationship between surface area and perimeter, cooperating hereditary groups can marshal more resource at their periphery.
 In addition, because of their greater surface area, mature hereditary groups are able to seed resource-wave events and collect resource at a higher per-cell rate.
 
-In order to ensure channel group turnover and facilitate channel group propagation, we impose a timed phase-out of somatic reproduction and resource wave harvests.
-For each cell, we track a channel generation counter at each resource wave level.
-At the genesis of a new channel group, these counters are set to zero.
-Daughter cells that expand a channel group's soma are initialized to a counter value one greater than their parent.
-Additionally, all channel generation counters are incremented every 512 updates to ensure that soma ages even in the absence of reproduction.
-When a cell's channel generation counter reaches 1.5 times the wave radius of its level, it can no longer produce somatic daughter cells.
+In order to ensure hereditary group turnover and facilitate hereditary group propagation, we impose a timed phase-out of somatic reproduction and resource wave harvests.
+For each cell, we track a hereditary group generation counter at each resource wave level.
+At the genesis of a new hereditary group, these counters are set to zero.
+Daughter cells that expand a hereditary group's soma are initialized to a counter value one greater than their parent.
+Additionally, all hereditary generation counters are incremented every 512 updates to ensure that soma ages even in the absence of reproduction.
+When a cell's hereditary group generation counter reaches 1.5 times the wave radius of its level, it can no longer produce somatic daughter cells.
 Then, after two additional counter steps, cells lose their ability to seed resource wave events and collect resource.
-Thus, as channel groups age over time, their constituent cells lose the ability regenerate somatic tissue and then, soon after, to collect resource.
-To prevent complete stagnation in the case where all cells' channel generation counters expire we provide a uniform inflow of $+0.0051$, sufficient for one reproduction approximately every thousand updates.
+Thus, as hereditary groups age over time, their constituent cells lose the ability regenerate somatic tissue and then, soon after, to collect resource.
+To prevent complete stagnation in the case where all cells' hereditary group generation counters expire we provide a uniform inflow of $+0.0051$, sufficient for one reproduction approximately every thousand updates.
 
-Interaction between nested channel groups produces a notable selective byproduct.
-Because smaller, level-one channel groups tend to have intrinsically shorter lifespans, in order to achieve the full potential productive somatic lifespan of a larger, level-two channel group its constituent small channel groups must be intermittently regenerated.
-Otherwise, the soma's capacity to seed resource-wave events and to collect resource will be prematurely lost once its constituent smaller, level-one channel groups expire.
+Interaction between nested hereditary groups produces a notable selective byproduct.
+Because smaller, L0 hereditary groups tend to have intrinsically shorter lifespans, in order to achieve the full potential productive somatic lifespan of a larger, L1 hereditary group its constituent small hereditary groups must be intermittently regenerated.
+Otherwise, the soma's capacity to seed resource-wave events and to collect resource will be prematurely lost once its constituent smaller, L0 hereditary groups expire.
 
 This aging scheme's design ultimately stems from a desire
 \begin{enumerate}
@@ -224,11 +224,11 @@ Copy the program module regulator value of currently-executing program module in
 
 \subsection{Custom Instruction Library} \label{sup:custom_instruction_library}
 
-We define a number of custom instructions to allow evolving programs to sense and interact with their environments, including
+We define a number of custom instructions to allow evolving programs to sense and interact with their environment, through mechanisms including
 \begin{itemize}
 \item reproduction,
 \item resource sharing,
-\item channel ID sensing,
+\item hereditary group ID sensing,
 \item apoptosis,
 \item intracellular messaging, and
 \item intercellular messaging.
@@ -287,11 +287,11 @@ The fraction reduced is determined by a register-based argument.
 \item \textbf{Reproduce}
 Attempt to spawn a child cell in a particular direction, paid for out of the parent cell's resource stockpile.
 If sufficient resource is not available in the cell's stockpile, no resource is action is taken.
-Variants of this instruction are defined for each channel ID inheritance level: from endowing the daughter cell with the parental channel IDs across all levels, to endowing the daughter cell with a new level-one channel ID but the parent's level-two channel ID, to endowing the daughter cell with all-new channel IDs.
-If a channel generation counter limit has been reached, reproduction is simply attempted at the next highest level; even with channel generation counters maxed out, cells may generate offspring with all-new channel IDs.
+Variants of this instruction are defined for each hereditary group ID inheritance level: from endowing the daughter cell with the parental hereditary group IDs across all levels, to endowing the daughter cell with a new level-one hereditary group ID but the parent's level-two hereditary group ID, to endowing the daughter cell with all-new hereditary group IDs.
+If a hereditary group generation counter limit has been reached, reproduction is simply attempted at the next highest level; even with hereditary group generation counters maxed out, cells may generate offspring with all-new hereditary group IDs.
 \item \textbf{Pause Reproduction}
 Pause cellular reproduction in a single direction for the remainder of the current update and for the entire next update.
-Variants of this instruction pause reproduction at a certain wave/channel-signaling level or across all channel ID inheritance levels.
+Variants of this instruction pause reproduction at a certain hereditary grouping level or across all hereditary group inheritance levels.
 \item \textbf{Set Stockpile Reproduction Reserve}
 Designate a quantity of stockpiled resource as ineligible for use to reproduce.
 The amount may be modified by a register-based argument.
@@ -302,13 +302,13 @@ The cell is killed at the end of the current update.
 \item \textbf{Designate/Revoke Heir} A dying cell's own stockpile is split evenly among neighboring cells that are designated at the time of death.
 On apoptosis, 50\% of the reproduction cost to establish a cell is also split between designated neighboring cells.
 These instructions mark or un-mark a neighbor as a heir.
-\item \textbf{Increase Channel Generation Counter}
-Increases the cell's channel generation counter.
+\item \textbf{Increase Hereditary Group Generation Counter}
+Increases the cell's hereditary group generation counter.
 The amount the cell's generation counter is increased by can be adjusted by register-based argument.
 \item \textbf{Query Own Stockpile}
 Sets a designated register to the amount of resource present in the cell's stockpile.
-\item \textbf{Query Own Channel Generation Counter}
-This instruction sets a designated register to the value of the cell's channel generation counter.
+\item \textbf{Query Own Hereditary Group Generation Counter}
+This instruction sets a designated register to the value of the cell's hereditary group generation counter.
 A variant of this instruction is provided for each hereditary group level.
 \item \textbf{Query ``Is Neighbor Live?''}
 This instruction sets a designated register to 1 if the neighboring tile contains a live cell and 0 otherwise.
@@ -317,8 +317,8 @@ This instruction sets a designated register to 1 if the neighboring cell is the 
 \item \textbf{Query ``Is Neighbor My Cellular Parent?''}
 This instruction sets a designated register to 1 if the neighboring cell is the parent of the querying cell and 0 otherwise.
 \item \textbf{Query ``Does Neighbor's Hereditary Group ID Match Mine?''}
-This instruction sets a designated register to 1 if the neighboring cell has the same channel ID as the querying cell and 0 otherwise.
-A variant of this instruction is provided for each wave/channel-signaling level.
+This instruction sets a designated register to 1 if the neighboring cell has the same hereditary group ID as the querying cell and 0 otherwise.
+A variant of this instruction is provided for each level of hereditary grouping.
 \item \textbf{Query ``Does Neighbor's Hereditary Group ID Descend From Mine?''}
 This instruction sets a designated register to 1 if the neighboring cell's highest-level hereditary group ID is different from the querying cell's highest-level hereditary group ID, but is descended from the querying cell's hereditary group ID via an explicit propagule-generating reproduction call.
 This instruction allows a querying cell to sense whether its neighbor is a member of a hereditary group that is a propagule of the querying cell's hereditary group.
@@ -330,10 +330,10 @@ This instruction sets a designated register to 1 if the querying cell's resource
 \item \textbf{Query ``Is Neighbor Older?''}
 This instruction sets a designated register to 1 if the querying cell's cell age is less than the neighboring cell's.
 \item \textbf{Query ``Is Neighbor Expired?''}
-This instruction sets a designated register to 1 if a neighboring cell's channel generation counter has exceeded the expiration threshold.
-\item \textbf{Query Neighbor's Channel ID}
-This instruction sets a designated register to the neighbor's channel ID.
-A variant of this instruction is provided for each wave/channel-signaling level.
+This instruction sets a designated register to 1 if a neighboring cell's hereditary group generation counter has exceeded the expiration threshold.
+\item \textbf{Query Neighbor's Hereditary Group ID}
+This instruction sets a designated register to the neighbor's hereditary group ID.
+A variant of this instruction is provided for each hereditary grouping level.
 \item \textbf{Query Neighbor's Stockpile}
 This instruction sets a designated register to the amount of resource present in the neighbor's stockpile.
 \end{itemize}
@@ -366,22 +366,22 @@ This event is triggered if the focal cell's highest-level hereditary group ID is
 This event allows a neighboring cell to sense whether its neighbor is a member of a hereditary group that is a propagule of the neighboring cell's hereditary group.
 \item \textbf{Neighbor's Hereditary Group ID Matches Mine}
 This event is triggered if a SignalGP instance is facing a neighbor cell that shares its hereditary group ID.
-A different event is provided for each resource wave/channel-signaling level.
+A different event is provided for each level of hereditary grouping.
 \item \textbf{Neighbor's Hereditary Group ID Does Not Match Mine}
 This event is triggered if a SignalGP instance is facing a neighbor cell that does not share its hereditary group ID.
-A different event is provided for each resource wave/channel-signaling level.
-\item \textbf{Channel Generation Counter Is Unexpired}
-This event is triggered if a SignalGP instance's cell's channel generation counter has not yet reached the expiration threshold.
-A different event is provided for each resource wave/channel-signaling level.
-\item \textbf{Channel Generation Counter Is Expiring}
-This event is triggered if a SignalGP instance's cell's channel generation counter has not yet reached the threshold where somatic propagation capacity, but not resource accumulation capacity, is lost.
-A different event is provided for each resource wave/channel-signaling level.
-\item \textbf{Channel Generation Counter Is Expired}
-This event is triggered if a SignalGP instance's cell's channel generation counter has not yet reached the threshold where both somatic propagation capacity and resource accumulation capacity are lost.
-A different event is provided for each resource wave/channel-signaling level.
+A different event is provided for each level of hereditary grouping.
+\item \textbf{Hereditary Group Generation Counter Is Unexpired}
+This event is triggered if a SignalGP instance's cell's hereditary group generation counter has not yet reached the expiration threshold.
+A different event is provided for each level of hereditary grouping.
+\item \textbf{Hereditary Group Generation Counter Is Expiring}
+This event is triggered if a SignalGP instance's cell's hereditary group generation counter has not yet reached the threshold where somatic propagation capacity, but not resource accumulation capacity, is lost.
+A different event is provided for each level of hereditary grouping.
+\item \textbf{Hereditary Group Generation Counter Is Expired}
+This event is triggered if a SignalGP instance's cell's hereditary group generation counter has not yet reached the threshold where both somatic propagation capacity and resource accumulation capacity are lost.
+A different event is provided for each level of hereditary grouping.
 \item \textbf{No-reward Resource Activation}
 This event is triggered if a SignalGP instance's cell experiences a resource collection activation where no resource reward is achieved (e.g., the cell lies extent of the resource wave).
-A different event is provided for each resource wave/channel-signaling level.
+A different event is provided for each level of hereditary grouping.
 \end{itemize}
 
 \subsection{Treatments} \label{sup:treatments}
@@ -392,14 +392,14 @@ A different event is provided for each resource wave/channel-signaling level.
 
 In this work, we screened replicates conducted under combinations of two experimental conditions:
 \begin{enumerate}
-\item flat versus nested hierarchical resource wave/channel-signaling levels and
+\item flat versus two nested hierarchical levels of hereditary grouping and
 \item cooperative versus independent resource collection.
 \end{enumerate}
 
 The first experimental manipulation explores the effects of hierarchical nesting of kin-sensing and/or functional cooperation.
 The second manipulation explores the effects of functional cooperation.
 
-To enact the first manipulation, we compared the nested hierarchical resource wave/channel-signaling scheme described above with a single-level scheme with waves extending six toroidal tiles.
+To enact the first manipulation, we compared the nested hierarchical hereditary grouping scheme described above with a single-level scheme with waves extending six toroidal tiles.
 We also increased the resource wave reward to $+0.6$ to approximately match the observed resource inflow rate of the nested scheme.
 To enact the second manipulation, we removed the resource wave reward and increased the uniform resource inflow rate to $+0.0175$ in order to approximately match the net inflow rate under the dual-level wave-based scheme.
 Table \ref{tab:productivity} reports productivity observed under these different conditions.
