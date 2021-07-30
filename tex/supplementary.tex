@@ -27,15 +27,16 @@ When mutagenic side-effects are applied Goldsby et al. have observed the evoluti
 
 \subsection{Resource Collection Process} \label{sup:resource_collection_process}
 
-Resource appears at a single point then spreads outwards update-by-update in a diamond-shaped wave. The expanding wave halts at a predefined limit.
+Resource appears at a single point then spreads outwards update-by-update in a diamond-shaped wave.
+The expanding wave halts at a predefined limit.
 Cells must enter an ``activated'' state to harvest resource as it passes overhead.
 The cell at the starting position of a resource wave is automatically activated, and will propagate the activation signal to neighboring cells on the same signaling channel.
 The newly activated cells, in turn, activate their own neighbors registered to the same signaling channel.
 Neighbors registered to other signaling channels do not activate.
 Each cell, after sending the activation signal, enters a temporary quiescent state.
 In this manner, cells sharing a signaling channel track and harvest an expanding resource wave.
-The rate of resource collection for a cell is determined by the size and shape of of its same-channel signaling network;
-small or fragmented same-channel signaling networks will frequently miss out on resource as it passes by.
+The rate of resource collection for a cell is determined by the size and shape of of its hereditary group;
+small or fragmented hereditary groups will frequently miss out on resource as it passes by.
 
 Resource waves have a limited extent.
 Cells that activate outside the extent of a resource wave collect no resource.
@@ -45,40 +46,42 @@ In this manner, ``Goldilocks'' --- not to small and not too big --- signaling ne
 Resource wave starting points (seeds) are tiled over the toroidal grid from a randomly chosen starting location such that the extents of the resource waves do not overlap.
 All resource waves begin and proceed synchronously;
 when they complete, the next resource waves are seeded.
-This process provides efficient and spatially-uniform selection for ``Goldilocks'' same-channel signaling networks.
+This process provides efficient, spatially-uniform, distributed selection for ``Goldilocks'' hereditary groups.
 
-Cells control the size and shape of their same-channel signaling group through strategic reproduction.
-Three choices are afforded: whether to reproduce at all, where among the four adjoining tiles of the toroidal grid to place their offspring, and whether the offspring should be registered to the parent's signaling channel or be given a random channel ID (in the range 1 to $2^{64} - 1$).
-The probability of channel collision is miniscule: $60 \times 60 \times 2^{20}$ (the grid dimensions times the number of simulation updates) independent channel values will collide with probability less than $1 \times 10^{-9}$.
-No guarantees are made about the uniqueness of a newly-generated channel ID, but chance collisions are rare.
+Cells control the size and shape of their hereditary group through strategic reproduction.
+Three choices are afforded: whether to reproduce at all, where among the four adjoining tiles of the toroidal grid to place their offspring, and whether the offspring should be registered to the parent's hereditary group or be given a random hereditary ID (in the range 1 to $2^{64} - 1$).
+The probability of hereditary group collision is miniscule: $60 \times 60 \times 2^{20}$ (the grid dimensions times the number of simulation updates) independent hereditary group IDs will collide with probability less than $1 \times 10^{-9}$.
+No guarantees are made about the uniqueness of a newly-generated hereditary group ID, but chance collisions are vanishingly rare.
 
-In addition to ``signaling channel''-based resource collection, we provide a uniform inflow of $+0.0051$, sufficient for one reproduction approximately every thousand updates.
+In addition to hereditary group-based resource collection, we provide a uniform inflow of $+0.0051$, sufficient for one reproduction approximately every thousand updates.
 
 \subsection{Hierarchical Nesting} \label{sup:hierarchical_nesting}
 
-Hierarchical levels are introduced into the system through multiple separate, but overlaid, instantiations of this resource wave/channel-signaling scheme.
-We refer to each independent resource wave/channel-signaling system as a ``level.''
-In some experimental treatments, we allowed two resource wave/channel-signaling levels, identified here as level one and level two.
-On level one, resource waves extended a radius of two toroidal tiles.
-On level two they extended a radius of six toroidal tiles.
+Hierarchical levels are introduced into the system through multiple separate, but overlaid, instantiations of this hereditary grouping scheme.
+We refer to each independent hereditary grouping system as a ``level.''
+In some experimental treatments, we allowed two levels of hereditary grouping, identified here as L0 and L1.
+On L0, resource waves extended a radius of two toroidal tiles.
+On L1 they extended a radius of six toroidal tiles.
 On both levels, activated cells netted $+0.2$ resource from a resource wave, but did not collect any resource outside the extent of the resource wave.
-Due to the different radii of resource waves on different levels, level one selects for small same-channel signaling networks and level two selects for large same-channel signaling networks.
+Due to the different radii of resource waves on different levels, level one selects for small hereditary groups and level two selects for larger hereditary groups.
 
-Each cell contained a pair of separate channel IDs, the first for level one and the second for level two.
-We kept these channel IDs hierarchically nested by constraining inheritance during reproduction.
-Daughter cells could not inherit just the level-one channel ID, they could either
+Each cell contained a pair of separate hereditary group IDs, the first for level one and the second for level two.
+We kept these hereditary group IDs hierarchically nested by constraining inheritance during reproduction.
+During reproduction, daughter cells could either
 \begin{enumerate}
-\item inherit both level-one and level-two channel ID,
-\item inherit level-two channel ID but not level-one channel ID, or
-\item inherit neither channel ID.
+\item inherit both L0 and L1 hereditary group ID,
+\item inherit L0 hereditary group ID but not L1 hereditary group ID, or
+\item inherit neither hereditary group ID.
 \end{enumerate}
-Hierarchically nested channel IDs are analogous to a strict corporate organizational structure: all employees (i.e., cells) are members of one department (i.e., level-one channel network) and one corporation (i.e., level-two channel network) but no employee can be a member of two departments and no department can be a member of two corporations.
-Figure \ref{fig:morphology-wt} depicts hierarchically nested channel states assumed by an evolved strain.
+However, daughter cells could not inherit just the L1 hereditary group ID.
 
-An evolutionary transition in individuality can readily be evaluated within the DISHTINY framework with respect to same-channel network groups.
-In addition to a potentially functionally cooperative relationship, shared channel IDs --- which may only systematically arise through inheritance --- imply a close hereditary relationship.
-Because new channel IDs arise first in a single cell, same-channel signaling networks are reproductively bottlenecked analogously to a "Staying Together" life cycle (rather than a "Coming Together" life cycle) \cite{staps2019emergence}.
-This precludes chimeric groups, except for mutations arising from somatic reproduction and rare cases of channel ID collision.
+Hierarchically nested channel IDs are analogous to a strict corporate organizational structure: all employees (i.e., cells) are members of one department (i.e., L0 hereditary group) and one corporation (i.e., L1 hereditary group) but no employee can be a member of two departments and no department can be a member of two corporations.
+Figure \ref{fig:morphology-wt} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
+
+An evolutionary transition in individuality can readily be evaluated within the DISHTINY framework with respect to hereditary groups.
+In addition to a potentially functionally cooperative relationship, shared hereditary group IDs --- which may only systematically arise through inheritance --- imply a close hereditary relationship.
+Because new hereditary group IDs arise first in a single cell, hereditary groups are reproductively bottlenecked analogously to a "Staying Together" life cycle (rather than a "Coming Together" life cycle) \cite{staps2019emergence}.
+This precludes chimeric groups, except for mutations arising from somatic reproduction and rare cases of hereditary group ID collision.
 
 To recognize an evolutionary transition in individuality, we can evaluate
 \begin{enumerate}
@@ -87,13 +90,13 @@ To recognize an evolutionary transition in individuality, we can evaluate
 \end{enumerate}
 If cells sharing the same level-one channel fulfill these conditions, we would suppose that a first-level transition in individuality had occurred.
 Likewise, if cells sharing the sharing the same level-two channel fulfill these conditions, we would suppose that a second-level transition in individuality had occurred.
-Further, we can screen for the evolution of complex multicellularity by assessing cell-cell messaging, regulatory patterning, and functional differentiation between cells within the a same-channel signaling network \cite{knoll2011multiple}.
+Further, we can screen for the evolution of complex multicellularity by assessing cell-cell messaging, regulatory patterning, and functional differentiation between cells within hereditary groups \cite{knoll2011multiple}.
 
 \subsection{Channel Group Life Cycle} \label{sup:channel_group_life_cycle}
 
-Mature same-channel resource collecting groups enjoy a considerable advantage over fledging propagules.
-Because of the isometric scaling relationship between surface area and perimeter, cooperative same-channel resource collecting groups can marshal more resource at their periphery.
-In addition, because of their greater surface area, mature same-channel resource collecting groups are able to seed resource-wave events and collect resource at a higher per-cell rate.
+Mature hereditary groups enjoy a considerable advantage over fledging propagules.
+Because of the isometric scaling relationship between surface area and perimeter, cooperating hereditary groups can marshal more resource at their periphery.
+In addition, because of their greater surface area, mature hereditary groups are able to seed resource-wave events and collect resource at a higher per-cell rate.
 
 In order to ensure channel group turnover and facilitate channel group propagation, we impose a timed phase-out of somatic reproduction and resource wave harvests.
 For each cell, we track a channel generation counter at each resource wave level.
@@ -340,22 +343,22 @@ The amount the cell's generation counter is increased by can be adjusted by regi
 Sets a designated register to the amount of resource present in the cell's stockpile.
 \item \textbf{Query Own Channel Generation Counter}
 This instruction sets a designated register to the value of the cell's channel generation counter.
-A variant of this instruction is provided for each wave/channel-signaling level.
+A variant of this instruction is provided for each hereditary group level.
 \item \textbf{Query ``Is Neighbor Live?''}
 This instruction sets a designated register to 1 if the neighboring tile contains a live cell and 0 otherwise.
 \item \textbf{Query ``Is Neighbor My Cellular Child?''}
 This instruction sets a designated register to 1 if the neighboring cell is the daughter of the querying cell and 0 otherwise.
 \item \textbf{Query ``Is Neighbor My Cellular Parent?''}
 This instruction sets a designated register to 1 if the neighboring cell is the parent of the querying cell and 0 otherwise.
-\item \textbf{Query ``Does Neighbor's Channel ID Match Mine?''}
+\item \textbf{Query ``Does Neighbor's Hereditary Group ID Match Mine?''}
 This instruction sets a designated register to 1 if the neighboring cell has the same channel ID as the querying cell and 0 otherwise.
 A variant of this instruction is provided for each wave/channel-signaling level.
-\item \textbf{Query ``Does Neighbor's Channel ID Descend From Mine?''}
-This instruction sets a designated register to 1 if the neighboring cell's highest-level channel ID is different from the querying cell's highest-level channel ID, but is descended from the querying cell's channel ID via an explicit propagule-generating reproduction call.
-This instruction allows a querying cell to sense whether its neighbor is a member of a same-channel group that is a propagule of the querying cell's same-channel group.
-\item \textbf{Query ``Does My Channel ID Descend From Neighbor's?''}
-This instruction sets a designated register to 1 if the querying cell's highest-level channel ID is different from the neighboring cell's highest-level channel ID, but is descended from the neighboring cell's channel ID  via an explicit propagule-generating reproduction call.
-This instruction allows a querying cell to sense whether it is a member of a same-channel group that is a propagule of the neighboring cell's same-channel group.
+\item \textbf{Query ``Does Neighbor's Hereditary Group ID Descend From Mine?''}
+This instruction sets a designated register to 1 if the neighboring cell's highest-level hereditary group ID is different from the querying cell's highest-level hereditary group ID, but is descended from the querying cell's hereditary group ID via an explicit propagule-generating reproduction call.
+This instruction allows a querying cell to sense whether its neighbor is a member of a hereditary group that is a propagule of the querying cell's hereditary group.
+\item \textbf{Query ``Does My Hereditary Group ID Descend From Neighbor's?''}
+This instruction sets a designated register to 1 if the querying cell's highest-level hereditary group ID is different from the neighboring cell's highest-level hereditary group ID, but is descended from the neighboring cell's hereditary group ID  via an explicit propagule-generating reproduction call.
+This instruction allows a querying cell to sense whether it is a member of a hereditary group that is a propagule of the neighboring cell's hereditary group.
 \item \textbf{Query ``Is Neighbor Poorer?''}
 This instruction sets a designated register to 1 if the querying cell's resource stockpile is larger than the neighboring cell's.
 \item \textbf{Query ``Is Neighbor Older?''}
@@ -389,17 +392,17 @@ This event is triggered if a neighbor cell has less stockpiled resource than the
 This event is triggered if the SignalGP instance is facing a neighboring cell that is the querying cell's daughter.
 \item \textbf{Facing Cellular Parent}
 This event is triggered if the SignalGP instance is facing a neighboring cell that is the querying cell's parent.
-\item \textbf{Neighbor's Channel ID Descends From Mine}
-This event is triggered if the neighboring cell's highest-level channel ID is different from the querying cell's highest-level channel ID, but is descended from the querying cell's channel ID via an explicit propagule-generating reproduction call.
-This event allows a querying cell to sense whether its neighbor is a member of a same-channel group that is a propagule of the querying cell's same-channel group.
-\item \textbf{My Channel ID Descends From Neighbor's}
-This event is triggered if the focal cell's highest-level channel ID is different from the neighboring cell's highest-level channel ID, but is descended from the neighboring cell's channel ID via an explicit propagule-generating reproduction call.
-This event allows a neighboring cell to sense whether its neighbor is a member of a same-channel group that is a propagule of the neighboring cell's same-channel group.
-\item \textbf{Neighbor's Channel ID Matches Mine}
-This event is triggered if a SignalGP instance is facing a neighbor cell that shares its channel ID.
+\item \textbf{Neighbor's Hereditary Group ID Descends From Mine}
+This event is triggered if the neighboring cell's highest-level hereditary group ID is different from the querying cell's highest-level hereditary group ID, but is descended from the querying cell's hereditary group ID via an explicit propagule-generating reproduction call.
+This event allows a querying cell to sense whether its neighbor is a member of a hereditary group that is a propagule of the querying cell's hereditary group.
+\item \textbf{My Hereditary Group ID Descends From Neighbor's}
+This event is triggered if the focal cell's highest-level hereditary group ID is different from the neighboring cell's highest-level hereditary group ID, but is descended from the neighboring cell's hereditary group ID via an explicit propagule-generating reproduction call.
+This event allows a neighboring cell to sense whether its neighbor is a member of a hereditary group that is a propagule of the neighboring cell's hereditary group.
+\item \textbf{Neighbor's Hereditary Group ID Matches Mine}
+This event is triggered if a SignalGP instance is facing a neighbor cell that shares its hereditary group ID.
 A different event is provided for each resource wave/channel-signaling level.
-\item \textbf{Neighbor's Channel ID Does Not Match Mine}
-This event is triggered if a SignalGP instance is facing a neighbor cell that does not share its channel ID.
+\item \textbf{Neighbor's Hereditary Group ID Does Not Match Mine}
+This event is triggered if a SignalGP instance is facing a neighbor cell that does not share its hereditary group ID.
 A different event is provided for each resource wave/channel-signaling level.
 \item \textbf{Channel Generation Counter Is Unexpired}
 This event is triggered if a SignalGP instance's cell's channel generation counter has not yet reached the expiration threshold.
@@ -488,43 +491,44 @@ Figure \ref{fig:sharing} overviews evolved resource sharing behavior across cell
 Replicates in the flat-wave treatment exhibit an especially elevated rate of resource sharing to cell children.
 This could perhaps be due to an especial selective pressure to convey resource towards the group periphery.
 
-Surprisingly, in the Nested-Wave treatment resource was shared at a higher mean rate among high-level same-channel signaling groups than low-level groups.
-This observation is likely due to replicates where level-one same-channel signaling groups were composed of single-cell level-zero same-channel signaling groups (where no or very few opportunities for level-zero resource sharing occurred).
+Surprisingly, in the Nested-Wave treatment resource was shared at a higher mean rate among L1 hereditary groups than L0 groups.
+This observation is likely due to replicates where L1 groups were composed of single-cell L0 groups (where no or very few opportunities for L0 resource sharing occurred).
 
-Finally, under all treatments resource was transferred to highest-level channelmates at a significantly higher mean rate than to unrelated neighbors (non-overlapping 95\% CI).
-This observation suggests that functional cooperation within same-channel groups might have been a common evolutionary outcome under all four treatments.
+Finally, under all treatments resource was transferred to hereditary group comrades at a significantly higher mean rate than to unrelated neighbors (non-overlapping 95\% CI).
+This observation suggests that functional cooperation within hereditary groups might have been a common evolutionary outcome under all four treatments.
 However, it could potentially be driven exclusively by resource-sharing between direct cellular kin.
 
-Figure \ref{fig:sharing_channelmate} breaks same-channel resource-sharing apart by cellular kin relation.
-In all four treatments, mean sharing to direct-kin highest-level channelmates was indeed greater than to other channelmates.
-This could be due to an evolutionary incentive to favor direct cell kin over other channelmates, group-level selection for asymmetric resource flow achieved by preferential sharing, or some combination of the two.
-However, in all four treatments mean sharing to non-direct-kin highest-level channelmates was also significantly greater than resource sharing to unrelated neighbors (non-overlapping 95\% CI).
-Thus, all four treatments appear to be sufficient to select for functional cooperation among cells.
+Figure \ref{fig:sharing_channelmate} investigates this possibility by breaking within-group resource sharing apart by cellular kin relation.
+In all four treatments, mean sharing to direct-kin hereditary group comrades was indeed greater than to other hereditary group comrades.
+This could be due to an evolutionary incentive to favor direct cell kin over other hereditary comrades, group-level selection for asymmetric resource flow achieved by preferential sharing, or some combination of the two.
+However, in all four treatments mean sharing to non-direct-kin hereditary group comrades was also significantly greater than resource sharing to unrelated neighbors (non-overlapping 95\% CI).
+Thus, all four treatments appear to be sufficient to select for functional cooperation within hereditary groups.
 
 \subsection{Case Study: Morphology} \label{sec:morphology}
 
 \input{fig/ko-morphology.tex}
 
-One of the more striking examples of genetically-encoded same-channel signaling network patterning, in which level-zero same-channel signaling groups arranged as elongated single-file strings, arose in a Nested-Even treatment replicate.
-Figure \ref{fig:morphology-wt} provides a snapshot of this strain's same-channel signaling morphology.
-Knocking out intracell messaging disrupts the stringy arrangement of same-channel signaling groups, shown in Figure \ref{fig:morphology-ko}.
-Figure \ref{fig:morphology-shape} compares the distribution of cells' level-zero same-channel neighbor counts for level-one groups of size nine or greater.
-Wild type cells are significantly less likely to have three or four level-zero same-channel neighbors, as we would expect of single-file strings (non-overlapping 95\% CI).
-However, we also observed that wild-type level-zero groups had significantly fewer cells
+One of the more striking examples of genetically-encoded hereditary group patterning, in which L0 hereditary groups arranged as elongated single-file strings, arose in a Nested-Even treatment replicate.
+Figure \ref{fig:morphology-wt} provides a snapshot of this strain's hereditary group morphology.
+Knocking out intracell messaging disrupts the stringy arrangement of L0 hereditary groups groups, shown in Figure \ref{fig:morphology-ko}.
+Figure \ref{fig:morphology-shape} compares the distribution of cells' L0 same-hereditary-group neighbor counts for L1 groups of nine or more cells.
+Wild-type cells are significantly less likely to have three or four L0 same-hereditary-group neighbors, as we would expect of single-file strings (non-overlapping 95\% CI).
+However, we also observed that wild-type L0 hereditary groups also had significantly fewer cells than the knockout strain
 (WT: mean $2.1$, S.D. $1.5$; messaging knockout: mean $4.3$, S.D. 5.1; $p < 0.001$; bootstrap test).
-To determine whether morphological patterning besides smaller group size contributed to observed differences in neighbor count, we compared a dimensionless shape factor describing group stringiness (perimeter divided by the square root of area) between the wild type and messaging knockout strains.
-Between level-zero group size four (the smallest size stringiness can emerge at on a grid) and level-zero group size nine (the largest size we had replicate wild type observations for), wild type exhibited significantly greater stringiness
-(4: $p < 0.01$, bootstrap test; 5: $p < 0.01$, bootstrap test; 6, 7, 8: non-overlapping 95\% CI; 9 $p < 0.01$, bootstrap test).
+
+To determine whether morphological patterning beyond smaller group size contributed to observed differences in neighbor count, we compared a dimensionless shape factor describing group stringiness (perimeter divided by the square root of area) between the wild type and messaging knockout strains.
+Between L0 group size four (the smallest size stringiness can emerge at on a grid) and L0 group size six (the largest size we had sufficient replicate wild type observations for), wild type exhibited significantly greater stringiness
+(4: $p < 0.01$, bootstrap test; 5: $p < 0.01$, bootstrap test; 6: non-overlapping 95\% CI).
 
 However, competition experiments between the wild type and knockout strain failed to establish a fitness differential ($6/20$).
-Thus, it seems this trait emerged either by drift, as the genetic background of a selective sweep, or --- perhaps less likely --- was advantageous against a divergent competitor earlier in evolutionary history.
+Thus, it seems this trait emerged either by drift, as the genetic background of a selective sweep, or was advantageous against a divergent competitor earlier in evolutionary history.
 
 \subsection{Case Study: Cell-Cell Messaging} \label{sec:intergroup}
 
 \input{fig/ko-intermessaging-intergroup_border.tex}
 
 Figure \ref{fig:intermessaging-intergroup_border-phen} compares the cell-cell messaging, resource sharing, and parent-propagule phenotypes between wild type and cell-cell messaging knockout variants of a strain evolved under the Nested-Wave treatment.
-Cell-cell messaging volume appears generally uniform in the interiors of same-channel signaling groups, but some group-group borders --- largely, but not entirely parent-propagule interfaces --- manifest somewhat depressed cell-cell messaging overlaid with an alternating motif of elevated cell-cell messaging.
+Cell-cell messaging volume appears generally uniform in the interiors of hereditary groups, but some group-group borders --- largely, but not entirely parent-propagule interfaces --- manifest somewhat reduced cell-cell messaging overlaid with an alternating motif of elevated cell-cell messaging.
 We affirmed the adaptiveness of cell-cell messaging in this strain through competition experiments between wild type and knockout variants ($19/20$; $p < 0.001$; two-tailed exact test).
 The gene activated by cell-cell messaging in this strain contains a share resource instruction and, indeed, we observed significantly greater net resource sharing in the wild type strain
 (%
@@ -536,7 +540,7 @@ non-overlapping 95\% CI%
 ). %2020-01-06-ll.md
 However, that same gene also contains a reproduction-inhibiting instruction, leading us to investigate whether cell-cell messaging could influence a broader set of phenotypic traits.
 
-Cell-cell messaging in the wild type strain appears to be associated with a drawn out same-channel signaling network life history.
+Cell-cell messaging in the wild type strain appears to be associated with a drawn out hereditary group life history.
 The wild-type strain exhibits significantly greater mean cell age
 (%
 WT: mean 59, S.D. 7, $n=20$;
@@ -554,27 +558,27 @@ $p < 0.001$, bootstrap test%
 This strain exhibits the ``sweep'' life history depicted in Figure \ref{fig:lifecycle-sweep}, so propagule generation can be largely or entirely destructive to the parent group.
 So, the increase in mean cell age could plausibly be attributable to delayed propagule genesis or, alternatively, delayed propagule genesis could arise from other factors retarding life history.
 
-In this strain, we anecdotally observed that contiguous bands of low cell turnover and anomalous cell-cell messaging volumes frequently arose along parent-propagule borders, but also occasionally between other same-channel signaling network groups.
+In this strain, we anecdotally observed that contiguous bands of low cell turnover and anomalous cell-cell messaging volumes frequently arose along parent-propagule borders, but also occasionally between other pairs hereditary groups.
 Cell-cell messaging not only enables functional coordination within cellular collectives but could also enable adaptive communication among cellular collectives.
-This possibility motivated us to test for non-uniform interactions between non-parent-propagule same-channel signaling network groups.
+This possibility motivated us to test for non-uniform interactions between hereditary groups that did not share a parent-propagule relationship.
 
-We measured mean border age (equivalent to the youngest age of either flanking cell) along the borders of non-parent-propagule same-channel signaling network groups.
-Figure \ref{fig:intermessaging-intergroup_border-borderage} splits this statistic out between borders that were disrupted either by cells birthed from members of the same-channel signaling networks flanking the border (``affiliate'') or from a member of a third same-channel signaling network (``neighbor'').
-In both wild type and knockout strains, there was significantly more recent turnover in the absence of intrusion by a third same-channel signaling network (non-overlapping 95\% CI, bootstrap test).
-Restated, borders invaded by a third party were more on average more stable than those perturbed by either of the flanking same-channel signaling networks.
+We measured mean border age (equivalent to the youngest age of either flanking cell) along the borders of non-parent-propagule hereditary groups.
+Figure \ref{fig:intermessaging-intergroup_border-borderage} splits this statistic out between borders that were disrupted either by cells birthed from members of the hereditary groups flanking the border (``affiliate'') or from a member of a third hereditary group (``neighbor'').
+In both wild type and knockout strains, there was significantly more recent turnover in the absence of intrusion by a third hereditary group (non-overlapping 95\% CI, bootstrap test).
+Restated, borders invaded by a third party were more on average more stable than those perturbed by either of the flanking hereditary groups.
 
 This phenomenon was accentuated in the wild type strain.
 Although the wild type strain exhibits slightly higher turnover rates on borders plied by only two groups, borders invaded by a third group are significantly more stale than the knockout strain (non-overlapping 95\% CI, bootstrap test).
 
-Greater age of borders disrupted by a third party would be consistent with a general slowing of turnover as same-channel signaling networks age or overall reduced resource availability due to the presence of a third party.
-However, a primitive tit-for-tat policy where a subset of non-parent-propagule same-channel signaling network borders stabilize (until invaded by a third party) could also contribute to such an observation.
+Greater age of borders disrupted by a third party would be consistent with a general slowing of turnover as hereditary groups age or reduced resource availability in the presence of a third party.
+However, a primitive tit-for-tat policy where a subset of non-parent-propagule hereditary group borders stabilize (until invaded by a third party) could also contribute to such an observation.
 
-So, does the cell reproduction rate fluctuate uniformly across a same-channel signaling network's borders or can reproduction rate differ significantly between a group's non-parent-propagule neighbor groups at a single time point?
-To assess this question, we used Kruskal-Wallis tests (with Bonferroni correction) to screen for same-channel signaling network groups with border reproduction rate distributions that differed significantly between neighboring non-propagule-parent same-channel signaling network groups.
-For each same-channel signaling network group, we calculated mean per-border-cell birth rate at the interface of each of its non-propagule-parent neighbor groups.
+So, does the cell reproduction rate fluctuate uniformly across a hereditary group's borders or can reproduction rate differ significantly between a group's borders with different non-parent-propagule neighbor groups at a single time point?
+To assess this question, we used Kruskal-Wallis tests (with Bonferroni correction) to screen for hereditary groups with border reproduction rate distributions that differed significantly between neighboring non-propagule-parent hereditary groups.
+For each hereditary group, we calculated mean per-border-cell birth rate at the interface of each of its non-propagule-parent neighbor groups.
 We collected observations with respect to each neighbor group every eighth update over 256 updates.
 Groups with significantly differentiated border reproduction rate distributions occurred in both the wild type and messaging knockout strains.
-That is, in both strains, we observed some groups that preferentially expended resource to reproduce at their interfaces with a subset of non-parent-propagule same-channel signaling network group neighbors.
+That is, in both strains, we observed some groups that preferentially expended resource to reproduce at their interfaces with only certain non-parent-propagule hereditary group neighbors.
 
 Again, this phenomenon was accentuated in the wild type strain.
 A significantly higher proportion of groups exhibited asymmetric border reproduction rates with non-parent-child groups
@@ -584,8 +588,8 @@ KO: mean 0.28, S.D. 0.04, $n=20$;
 $p < 0.001$, bootstrap test%
 ). %2020-01-06-ll.md
 
-Messaging between cells registered to different parent-propagule same-channel signaling network groups seems unlikely to directly underlie asymmetric border reproduction rates because execution of the gene targeted by messages triggers resource-sharing to the sender, which we seldom observed between non-parent-propagule groups.
-So, intercell messaging within same-channel signaling network groups is most likely responsible.
-It seems most plausible that increased incidence of asymmetric border reproduction rates arises as a knock-on effect of the life history retarding demographic effects of cell-cell messaging originally discussed.
-Perhaps older, ``full-grown'' same-channel groups arrive at a low-reproduction detente at interfaces with other older, ``full-grown'' same-channel groups while resisting incursion at interfaces with younger, growing same-channel groups.
+Messaging between cells registered to different parent-propagule hereditary groups seems unlikely to directly underlie asymmetric border reproduction rates because execution of the gene targeted by messages triggers resource-sharing to the sender, which we seldom observed between non-parent-propagule groups (Figure \ref{fig:intermessaging-intergroup_border-phen}).
+So, intercell messaging within hereditary groups most likely underlies this phenomenon.
+It seems most plausible that increased incidence of asymmetric border reproduction rates arises as a knock-on effect of the life history retardation effect originally discussed.
+Perhaps older, ``full-grown'' hereditary groups arrive at a low-reproduction detente at interfaces with other older, ``full-grown'' hereditary groups while resisting incursion at interfaces with younger, growing hereditary groups.
 This would constitute a contextually-expressed tit-for-tat policy, perhaps mediated by cell age or cell generations elapsed from the group's founding propagule cell.
