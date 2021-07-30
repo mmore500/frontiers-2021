@@ -12,12 +12,16 @@ Over discrete time steps (``updates''), cells can collect a resource.
 Once sufficient resource has been accrued, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
 Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
 
-Cells accrue resource via a cooperative resource-collection process conducted by explicitly-registered multicellular groups.
-We refer to these groups as hereditary groups.
+Cells accrue resource via a cooperative resource-collection process.
+Cooperating in medium-sized groups (on the order of 100 cells) with a roughly circular layout accelerates per-cell resource collection rate.
+Unicellular, too-small, too-large, or irregularly-shaped groups collect resource at a lesser per-cell rate.
+
+Cells may grow a cooperative resource-collecting group through cell proliferation.
+For this reason, we refer to these groups as ``hereditary groups.''
 These hereditary groups develop through cell proliferation.
-As cells reproduce, they can choose to grow the parent's hereditary group or expel offspring to found a new hereditary group.
+As cells reproduce, they can choose to adsorb daughter cells onto the parent's hereditary group or expel those offspring to found a new hereditary group.
 These decisions affect the spatial layout of these hereditary groups and, in turn, affect individual cells' resource-collection rate.
-Medium-sized, circular hereditary groups tend to collect resource at a greater per-cell rate than large, small, or irregularly-shaped groups.
+
 To promote group turnover, we counteract the advantage of established hereditary groups with a simple aging scheme.
 As hereditary groups age over elapsed updates and somatic generations, their constituent cells expressly lose the ability regenerate somatic tissue and then, soon after, to collect resource.
 
