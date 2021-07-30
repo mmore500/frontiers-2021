@@ -3,15 +3,17 @@
 We performed simulations in which cells evolved open-ended behaviors to make decisions about resource sharing, reproductive timing, and apoptosis.
 We will first describe the environment and hereditary grouping system cells evolved under and then describe the behavior-control system cells used.
 
-\subsection{Environment and Hereditary Groups}
+\subsection{Cells and Hereditary Groups}
 
 Cells occupy individual tiles on a toroidal grid.
 Over discrete time steps (``updates''), cells can collect a resource.
 Once sufficient resource has been accrued, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
 Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
 
-Cells accrue resource via a cooperative resource-collection process conducted by explicitly-registered hereditary groups.
-As cells reproduce, they can choose to keep offspring in the parent's hereditary group or expel offspring to found a new hereditary group.
+Cells accrue resource via a cooperative resource-collection process conducted by explicitly-registered multicellular groups.
+We refer to these groups as hereditary groups.
+These hereditary groups develop through cell proliferation.
+As cells reproduce, they can choose to grow the parent's hereditary group or expel offspring to found a new hereditary group.
 These decisions affect the spatial layout of these hereditary groups and, in turn, affect individual cells' resource-collection rate.
 Medium-sized, circular hereditary groups tend to collect resource at a greater per-cell rate than large, small, or irregularly-shaped groups.
 To promote group turnover, we counteract the advantage of established hereditary groups with a simple aging scheme.
@@ -19,8 +21,39 @@ As hereditary groups age over elapsed updates and somatic generations, their con
 
 A complete description of the mechanisms behind these collective resource-collection and group aging mechanisms appears in supplementary sections \ref{sup:resource_collection_process} and \ref{sup:channel_group_life_cycle}.
 
-Because hereditary groups arise through inheritance, they signify a kin relationship in addition to a potentially functionally cooperative relationship.
+Because new hereditary group IDs arise first in a single cell and grow disseminate exclusively among direct descendants of that progenitor cell, hereditary groups are reproductively bottlenecked.
+This clonal (or ``staying together'') multicellular life history stands in contrast with an aggregative (or ``coming together'') life cycle where chimeric groups arise via fusion of potentially loosely-related lineages \citep{staps2019emergence}.
+Such clonal development is known to strengthen between-organism selection effects \citep{grosberg2007evolution}.
+
 In this work, we screen for fraternal transitions in individuality with respect to these hereditary groups by evaluating three characteristic traits of higher-level organisms: resource sharing, reproductive division of labor, and apoptosis.
+We can further screen for the evolution of complex multicellularity by assessing cell-cell messaging, regulatory patterning, and functional differentiation between cells within hereditary groups \cite{knoll2011multiple}.
+
+\subsection{Hierarchical Nesting of Hereditary Groups} \label{sec:hierarchical_nesting}
+
+Successive fraternal transitions in natural history, for example to multicellularity and then to eusociality \citep{smith1997major}) underscores the constructive power of evolution to harness emergent structures as building blocks for further novelty.
+To explore these dynamics, in some experimental conditions we incorporated a hierarchical extension to the hereditary grouping scheme described above.
+
+Hierarchical levels are introduced into the system by providing a mechanism to groups of hereditary groups to form.
+We accomplish this through two separate, but overlaid, instantiations of the hereditary grouping scheme.
+We refer to each independent hereditary grouping system as a ``level.''
+The hierarchical extension allows two levels of hereditary grouping, identified here as L0 and L1.
+Without the hierarchical extension, only L0 is present.
+\footnote{
+We chose to number these levels using the computer science convention of zero-based indexing (as opposed to everyday practice of counting up from one) to maintain consistency with source code and data sets associated with this work.
+}
+We refer to the highest hereditary grouping level present in a simulation as the ``apex'' level.
+
+Under the hierarchical extension, each cell contained a pair of separate hereditary group IDs --- the first for L0 and the second for L1.
+During reproduction, daughter cells could either
+\begin{enumerate}
+\item inherit both L0 and L1 hereditary group ID,
+\item inherit L0 hereditary group ID but not L1 hereditary group ID, or
+\item inherit neither hereditary group ID.
+\end{enumerate}
+In order to enforce hierarchical nesting of hereditary group IDs, daughter cells could not inherit just the L1 hereditary group ID.
+
+Hierarchically nested hereditary group IDs are analogous to a strict corporate organizational structure: all employees (i.e., cells) are members of one department (i.e., L0 hereditary group) and one corporation (i.e., L1 hereditary group) but no employee can be a member of two departments and no department can be a member of two corporations.
+Useful as a concrete illustration of this scheme, Figure \ref{fig:morphology-wt} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
 
 \subsection{Cell-Level Organisms}
 

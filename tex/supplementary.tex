@@ -42,6 +42,9 @@ Resource waves have a limited extent.
 Cells that activate outside the extent of a resource wave collect no resource.
 A long quiescent period ensures that erroneously activated cells miss several subsequent opportunities to collect resource and therefore will tend to collect resource at a slower rate.
 In this manner, ``Goldilocks'' --- not to small and not too big --- signaling networks enjoy superior fitness.
+On L0 under the ``nested'' condition, resource waves extend a radius of two toroidal tiles.
+On the apex level (L0 under the ``flat'' condition and on L1 under the ``nested'' condition) they extend a radius of six toroidal tiles.
+On each level, activated cells netted $+0.2$ resource from a resource wave, but did not collect any resource outside the extent of the resource wave.
 
 Resource wave starting points (seeds) are tiled over the toroidal grid from a randomly chosen starting location such that the extents of the resource waves do not overlap.
 All resource waves begin and proceed synchronously;
@@ -54,43 +57,6 @@ The probability of hereditary group collision is miniscule: $60 \times 60 \times
 No guarantees are made about the uniqueness of a newly-generated hereditary group ID, but chance collisions are vanishingly rare.
 
 In addition to hereditary group-based resource collection, we provide a uniform inflow of $+0.0051$, sufficient for one reproduction approximately every thousand updates.
-
-\subsection{Hierarchical Nesting} \label{sup:hierarchical_nesting}
-
-Hierarchical levels are introduced into the system through multiple separate, but overlaid, instantiations of this hereditary grouping scheme.
-We refer to each independent hereditary grouping system as a ``level.''
-In some experimental treatments, we allowed two levels of hereditary grouping, identified here as L0 and L1.
-On L0, resource waves extended a radius of two toroidal tiles.
-On L1 they extended a radius of six toroidal tiles.
-On both levels, activated cells netted $+0.2$ resource from a resource wave, but did not collect any resource outside the extent of the resource wave.
-Due to the different radii of resource waves on different levels, level one selects for small hereditary groups and level two selects for larger hereditary groups.
-
-Each cell contained a pair of separate hereditary group IDs, the first for level one and the second for level two.
-We kept these hereditary group IDs hierarchically nested by constraining inheritance during reproduction.
-During reproduction, daughter cells could either
-\begin{enumerate}
-\item inherit both L0 and L1 hereditary group ID,
-\item inherit L0 hereditary group ID but not L1 hereditary group ID, or
-\item inherit neither hereditary group ID.
-\end{enumerate}
-However, daughter cells could not inherit just the L1 hereditary group ID.
-
-Hierarchically nested channel IDs are analogous to a strict corporate organizational structure: all employees (i.e., cells) are members of one department (i.e., L0 hereditary group) and one corporation (i.e., L1 hereditary group) but no employee can be a member of two departments and no department can be a member of two corporations.
-Figure \ref{fig:morphology-wt} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
-
-An evolutionary transition in individuality can readily be evaluated within the DISHTINY framework with respect to hereditary groups.
-In addition to a potentially functionally cooperative relationship, shared hereditary group IDs --- which may only systematically arise through inheritance --- imply a close hereditary relationship.
-Because new hereditary group IDs arise first in a single cell, hereditary groups are reproductively bottlenecked analogously to a "Staying Together" life cycle (rather than a "Coming Together" life cycle) \cite{staps2019emergence}.
-This precludes chimeric groups, except for mutations arising from somatic reproduction and rare cases of hereditary group ID collision.
-
-To recognize an evolutionary transition in individuality, we can evaluate
-\begin{enumerate}
-\item whether cells with the same channel ID cooperate altruistically by assessing, for example, resource sharing, and
-\item whether division of reproductive labor arises by assessing whether interior cells cede reproduction to those at the periphery.
-\end{enumerate}
-If cells sharing the same level-one channel fulfill these conditions, we would suppose that a first-level transition in individuality had occurred.
-Likewise, if cells sharing the sharing the same level-two channel fulfill these conditions, we would suppose that a second-level transition in individuality had occurred.
-Further, we can screen for the evolution of complex multicellularity by assessing cell-cell messaging, regulatory patterning, and functional differentiation between cells within hereditary groups \cite{knoll2011multiple}.
 
 \subsection{Channel Group Life Cycle} \label{sup:channel_group_life_cycle}
 
