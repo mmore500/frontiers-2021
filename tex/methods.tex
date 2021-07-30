@@ -19,7 +19,7 @@ Medium-sized, circular hereditary groups tend to collect resource at a greater p
 To promote group turnover, we counteract the advantage of established hereditary groups with a simple aging scheme.
 As hereditary groups age over elapsed updates and somatic generations, their constituent cells expressly lose the ability regenerate somatic tissue and then, soon after, to collect resource.
 
-A complete description of the mechanisms behind these collective resource-collection and group aging mechanisms appears in supplementary sections \ref{sup:resource_collection_process} and \ref{sup:channel_group_life_cycle}.
+A complete description of the mechanisms behind these collective resource-collection and group aging mechanisms appears in Supplementary Sections \ref{sup:resource_collection_process} and \ref{sup:hereditary_group_life_cycle}.
 
 Because new hereditary group IDs arise first in a single cell and grow disseminate exclusively among direct descendants of that progenitor cell, hereditary groups are reproductively bottlenecked.
 This clonal (or ``staying together'') multicellular life history stands in contrast with an aggregative (or ``coming together'') life cycle where chimeric groups arise via fusion of potentially loosely-related lineages \citep{staps2019emergence}.
@@ -57,15 +57,25 @@ Useful as a concrete illustration of this scheme, Figure \ref{fig:morphology-wt}
 
 \subsection{Cell-Level Organisms}
 
+\include{fig/signalgp-dishtinygp}
+
 Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and implicit selective pressures.
-We employ the SignalGP representation, which expresses function-like modules of code in response to internal signals or external stimuli (akin to gene expression).
-This event-driven paradigm facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
+
+We employ the SignalGP event-(riven genetic programming representation.
+As sketched in Figure \ref{fig:fig:signalgp-cartoon}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
+This process can be considered somewhat akin to gene expression.
+The event-driven framework facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
+
+Special module components allow evolving programs to sense and interact with their environment, through mechanisms including resource sharing, hereditary group sensing, apoptosis, cell reproduction, and arbitrary cell-cell messaging.
+Modules can also include general purpose computational elements like conditionals and loops, which allows cells to evolve sophisticated behaviors conditioned on current (and even previous) local conditions.
 
 Previous work evolving digital organisms in grid-based problem domains has relied on a single computational agent that designates a direction to act in via an explicit cardinal ``facing'' \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}.
-We introduce novel methodology to facilitate the evolution of directionally-symmetric phenotypes.
+Here, we introduce novel methodology to facilitate the evolution of directionally-symmetric phenotypes.
 In this work, each cell instantiates four copies of the SignalGP hardware: one facing each cardinal direction.
 These hardware instances all execute the same SignalGP program and may coordinate via internal signals, but are otherwise decoupled.
-Supplementary Figure \ref{fig:dishtinygp-cartoon} overviews the configuration of the four SignalGP instances that constitute a single cell.
+Figure \ref{fig:dishtinygp-cartoon} overviews the configuration of the four SignalGP instances that constitute a single cell.
+
+Supplementary Sections \ref{sup:cell_level_organisms}, \ref{sup:standard_instruction_library}, \ref{sup:custom_instruction_library}, and \ref{sup:environmental_cue_library} provide full details of the digital evolution substrate underpinning this work.
 
 \subsection{Surveyed Evolutionary Conditions}
 
@@ -84,3 +94,5 @@ We combined these two manipulations to yield four surveyed conditions:
 \item ``Nested-Even'': Two hierarchically-nested hereditary group levels (nested) with uniform resource inflow (even). In-browser simulation: \url{https://hopth.ru/k},
 \item ``Nested-Wave'': Two hierarchically-nested hereditary group levels (nested) with group-mediated resource collection (wave). In-browser simulation: \url{https://hopth.ru/l}.
 \end{enumerate}
+
+Supplementary Section \ref{sup:treatments} provides full details of surveyed evolutionary conditions.
