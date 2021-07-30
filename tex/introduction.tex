@@ -25,7 +25,6 @@ Cells grow freely within an organism, but fecundity depends on the collective pr
 When an organism accumulates sufficient resource, a randomly chosen subspace is cleared and a single cell from the replicating organism is used as a propagule to seed the new organism.
 This setup mirrors the dynamics of biological multicellularity, in which cell proliferation may either grow an existing multicellular body or found a new multicellular organism.
 
-
 Here, we take several steps to develop a computational environment that removes the enforcement and rigid regulation of multiple organismal levels.
 Specifically, we remove the explicitly segregated subspaces and we let cell interact with each other more freely.
 We demonstrate the emergence of multicellularity where each organism manages its own spatial distribution and reproductive process.
@@ -39,6 +38,6 @@ Offspring cells may either remain part their parent's hereditary group or found 
 Cells can recognize group members, thus allowing targeted communication and resource sharing with kin.
 We reward cells for performing tasks that require proper timing such that they must coordinate to be successful.
 As such, cells that cooperate will have an advantage on those tasks and if they are also part of a hereditary group they will increase their inclusive fitness.
-In previous work we evolved parameters for manually-designed cell-level strategies to explore fraternal transitions in individuality \citep{moreno2019toward}.
-Here, we extend this prior work to use a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
+In previous work introducing the DISHTINY (DIStributed Hierarchical Transitions in IndividualitY) framework we evolved parameters for manually-designed cell-level strategies to explore fraternal transitions in individuality \citep{moreno2019toward}.
+Here, we build on this prior work with DISHTINY to incorporate a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
 As expected, we see a far more diverse set of behaviors and strategies arise.
