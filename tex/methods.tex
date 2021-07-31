@@ -9,7 +9,7 @@ We will first describe the environment and hereditary grouping system cells evol
 
 Cells occupy individual tiles on a toroidal grid.
 Over discrete time steps (``updates''), cells can collect a resource.
-Once sufficient resource has been accrued, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
+Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
 Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
 
 Cells accrue resource via a cooperative resource-collection process.
@@ -17,13 +17,12 @@ Cooperating in medium-sized groups (on the order of 100 cells) with a roughly ci
 Unicellular, too-small, too-large, or irregularly-shaped groups collect resource at a lesser per-cell rate.
 
 Cells may grow a cooperative resource-collecting group through cell proliferation.
-For this reason, we refer to these groups as ``hereditary groups.''
-These hereditary groups develop through cell proliferation.
+We refer to these cooperative, resource-collecting groups as ``hereditary groups.''
 As cells reproduce, they can choose to adsorb daughter cells onto the parent's hereditary group or expel those offspring to found a new hereditary group.
 These decisions affect the spatial layout of these hereditary groups and, in turn, affect individual cells' resource-collection rate.
 
 To promote group turnover, we counteract the advantage of established hereditary groups with a simple aging scheme.
-As hereditary groups age over elapsed updates and somatic generations, their constituent cells expressly lose the ability regenerate somatic tissue and then, soon after, to collect resource.
+As hereditary groups age over elapsed updates and somatic generations, their constituent cells expressly lose the ability to regenerate somatic tissue and then, soon after, to collect resource.
 
 A complete description of the mechanisms behind these collective resource-collection and group aging mechanisms appears in Supplementary Sections \ref{sup:resource_collection_process} and \ref{sup:hereditary_group_life_cycle}.
 
@@ -36,7 +35,7 @@ We can further screen for the evolution of complex multicellularity by assessing
 
 \subsection{Hierarchical Nesting of Hereditary Groups} \label{sec:hierarchical_nesting}
 
-Successive fraternal transitions in natural history, for example to multicellularity and then to eusociality \citep{smith1997major}) underscores the constructive power of evolution to harness emergent structures as building blocks for further novelty.
+Successive fraternal transitions in natural history --- for example, to multicellularity and then to eusociality \citep{smith1997major} --- underscores the constructive power of evolution to harness emergent structures as building blocks for further novelty.
 To explore these dynamics, in some experimental conditions we incorporated a hierarchical extension to the hereditary grouping scheme described above.
 
 Hierarchical levels are introduced into the system by providing a mechanism to groups of hereditary groups to form.
