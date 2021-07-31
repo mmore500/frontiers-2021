@@ -58,14 +58,14 @@ During reproduction, daughter cells could either
 In order to enforce hierarchical nesting of hereditary group IDs, daughter cells could not inherit just the L1 hereditary group ID.
 
 Hierarchically nested hereditary group IDs are analogous to a strict corporate organizational structure: all employees (i.e., cells) are members of one department (i.e., L0 hereditary group) and one corporation (i.e., L1 hereditary group) but no employee can be a member of two departments and no department can be a member of two corporations.
-Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}(a) depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
+Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}\textbf{(A)} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
 
 \subsection{Cell-Level Organisms}
 
 Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and implicit selective pressures.
 
 We employ the SignalGP event-(riven genetic programming representation.
-As sketched in Figure \ref{fig:signalgp-dishtinygp}(a), this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
+As sketched in Figure \ref{fig:signalgp-dishtinygp}\textbf{(A)}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
 This process can be considered somewhat akin to gene expression.
 The event-driven framework facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
 
@@ -76,7 +76,7 @@ Previous work evolving digital organisms in grid-based problem domains has relie
 Here, we introduce novel methodology to facilitate the evolution of directionally-symmetric phenotypes.
 In this work, each cell instantiates four copies of the SignalGP hardware: one facing each cardinal direction.
 These hardware instances all execute the same SignalGP program and may coordinate via internal signals, but are otherwise decoupled.
-Figure \ref{fig:signalgp-dishtinygp}(b) overviews the configuration of the four SignalGP instances that constitute a single cell.
+Figure \ref{fig:signalgp-dishtinygp}\textbf{(B)} overviews the configuration of the four SignalGP instances that constitute a single cell.
 
 Supplementary Sections \ref{sup:cell_level_organisms}, \ref{sup:standard_instruction_library}, \ref{sup:custom_instruction_library}, and \ref{sup:environmental_cue_library} provide full details of the digital evolution substrate underpinning this work.
 
