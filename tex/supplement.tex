@@ -128,7 +128,7 @@ These bitstrings evolve at a per-bit mutation rate equivalent to the bitstring l
 
 Instances within a cell may send intracellular messages to one another or intercellular messages to a neighboring cell.
 Intercellular messages are received by the SignalGP instance that faces the sending cell.
-Figure \ref{fig:dishtinygp-cartoon} schematically depicts the configuration of the four SignalGP instances that constitute a single DISHTINY cell as well as the instances of neighboring cells that receive extracellular messages from the focal cell.
+Figure \ref{fig:signalgp-dishtinygp}(b) schematically depicts the configuration of the four SignalGP instances that constitute a single DISHTINY cell as well as the instances of neighboring cells that receive extracellular messages from the focal cell.
 
 \subsection{Standard SignalGP Instruction Library} \label{sup:standard_instruction_library}
 
@@ -472,7 +472,7 @@ Thus, all four treatments appear to be sufficient to select for functional coope
 
 \input{fig/ko-intermessaging-intergroup_border.tex}
 
-Figure \ref{fig:intermessaging-intergroup_border-phen} compares the cell-cell messaging, resource sharing, and parent-propagule phenotypes between wild type and cell-cell messaging knockout variants of a strain evolved under the Nested-Wave treatment.
+Figure \ref{fig:ko-intermessaging-intergroup_border}(a) compares the cell-cell messaging, resource sharing, and parent-propagule phenotypes between wild type and cell-cell messaging knockout variants of a strain evolved under the Nested-Wave treatment.
 Cell-cell messaging volume appears generally uniform in the interiors of hereditary groups, but some group-group borders --- largely, but not entirely parent-propagule interfaces --- manifest somewhat reduced cell-cell messaging overlaid with an alternating motif of elevated cell-cell messaging.
 We affirmed the adaptiveness of cell-cell messaging in this strain through competition experiments between wild type and knockout variants ($19/20$; $p < 0.001$; two-tailed exact test).
 The gene activated by cell-cell messaging in this strain contains a share resource instruction and, indeed, we observed significantly greater net resource sharing in the wild type strain
@@ -508,7 +508,7 @@ Cell-cell messaging not only enables functional coordination within cellular col
 This possibility motivated us to test for non-uniform interactions between hereditary groups that did not share a parent-propagule relationship.
 
 We measured mean border age (equivalent to the youngest age of either flanking cell) along the borders of non-parent-propagule hereditary groups.
-Figure \ref{fig:intermessaging-intergroup_border-borderage} splits this statistic out between borders that were disrupted either by cells birthed from members of the hereditary groups flanking the border (``affiliate'') or from a member of a third hereditary group (``neighbor'').
+Figure \ref{fig:intermessaging-intergroup_border-borderage}(b) splits this statistic out between borders that were disrupted either by cells birthed from members of the hereditary groups flanking the border (``affiliate'') or from a member of a third hereditary group (``neighbor'').
 In both wild type and knockout strains, there was significantly more recent turnover in the absence of intrusion by a third hereditary group (non-overlapping 95\% CI, bootstrap test).
 Restated, borders invaded by a third party were more on average more stable than those perturbed by either of the flanking hereditary groups.
 
@@ -533,7 +533,7 @@ KO: mean 0.28, S.D. 0.04, $n=20$;
 $p < 0.001$, bootstrap test%
 ). %2020-01-06-ll.md
 
-Messaging between cells registered to different parent-propagule hereditary groups seems unlikely to directly underlie asymmetric border reproduction rates because execution of the gene targeted by messages triggers resource-sharing to the sender, which we seldom observed between non-parent-propagule groups (Figure \ref{fig:intermessaging-intergroup_border-phen}).
+Messaging between cells registered to different parent-propagule hereditary groups seems unlikely to directly underlie asymmetric border reproduction rates because execution of the gene targeted by messages triggers resource-sharing to the sender, which we seldom observed between non-parent-propagule groups (Figure \ref{fig:ko-intermessaging-intergroup_border}(a)).
 So, intercell messaging within hereditary groups most likely underlies this phenomenon.
 It seems most plausible that increased incidence of asymmetric border reproduction rates arises as a knock-on effect of the life history retardation effect originally discussed.
 Perhaps older, ``full-grown'' hereditary groups arrive at a low-reproduction detente at interfaces with other older, ``full-grown'' hereditary groups while resisting incursion at interfaces with younger, growing hereditary groups.

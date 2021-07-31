@@ -1,7 +1,9 @@
 \begin{figure}[!htbp]
 \begin{center}
 
-% \begin{subfigure}[b]{\linewidth}
+\begin{minipage}[t]{0.5\linewidth}
+
+% \begin{minipage}[b]{\linewidth}
 % \begin{center}
 
 % \begin{minipage}[t]{0.18\linewidth}
@@ -37,11 +39,11 @@
 % \caption{Wild type timelapse}
 % \label{fig:wt_timelapse}
 % \end{center}
-% \end{subfigure}
+% \end{minipage}
 
 % \vspace{2ex}
 
-\begin{subfigure}[b]{\linewidth}
+\begin{minipage}[b]{\linewidth}
 \begin{center}
 
 \begin{minipage}[t]{0.30\linewidth}
@@ -73,23 +75,24 @@
 \footnotesize Regulation knockout
 \end{minipage}
 
-\caption{Regulation visualizations}
-\label{fig:regulation_visualizations}
+{(a) Regulation visualizations}
+% \label{fig:regulation_visualizations}
 
 \end{center}
-\end{subfigure}
+\end{minipage}
 
 \begin{minipage}[t]{\linewidth}
 \centering
 \vspace{0pt} % for alignment
-\begin{subfigure}[b]{\linewidth}
+\begin{minipage}[b]{\linewidth}
 \includegraphics[width=\linewidth]{knockout/interior_propagule/title=interior_propagules+_data_hathash_hash=bb0fa6254f1b7398+_script_fullcat_hash=f738b363bea8c98a+_source_hash=53a2252-clean+ext=}%
-\caption{Interior propagule rate by genotype}
-\label{fig:interior_propagule_rate}
-\end{subfigure}
+{(b) Interior propagule rate by genotype}
+% \label{fig:interior_propagule_rate}
+\end{minipage}
 \end{minipage}%
 \hspace*{\fill}
 
+\end{minipage}
 
 \caption{
 Analysis of a wild type strain exhibiting a ``burst'' lifecycle evolved under the ``Nested-Wave'' treatment exhibiting interior propagule generation.
@@ -97,10 +100,10 @@ Analysis of a wild type strain exhibiting a ``burst'' lifecycle evolved under th
 % L1 hereditary groups are by differentiated by grayscale tone and separated by solid black borders.
 % L0 hereditary groups are by separated by gray borders.
 % In each example, the focal parent L1 hereditary group is colored purple and the focal offspring group orange.
-Figure \ref{fig:regulation_visualizations} depicts gene regulation at each of a cell's four directional SignalGP instances using a PCA mapping from regulatory state to three-dimensional RGB coordinates, calculated uniquely for each L1 hereditary group.
+Subfigure (a) depicts gene regulation at each of a cell's four directional SignalGP instances using a PCA mapping from regulatory state to three-dimensional RGB coordinates, calculated uniquely for each L1 hereditary group.
 Black borders divide outer registered-kin groups and white borders divide inner registered-kin groups.
 Endogenous daughter groups annotated with yellow arrows.
-Figure \ref{fig:interior_propagule_rate} compares the mean number of interior propagules observed per L1 hereditary group.
+Subfigure (b) compares the mean number of interior propagules observed per L1 hereditary group.
 Error bars indicate 95\% confidence.
 View an animation of wild type gene regulation at \url{https://hopth.ru/t}.
 View the wild type strain in a live in-browser simulation at \url{https://hopth.ru/g}.
