@@ -1,7 +1,0 @@
-Measure,FlatEvenShort,FlatWaveShort,NestedEvenShort,NestedWaveShort,FlatEvenLong,FlatWaveLong,NestedEvenLong,NestedWaveLong
-Replicate count,40/40,40/40,40/40,40/40,40/40,40/40,39/40,37/40
-Cellular generations elapsed,$832 \pm 555$,$1140 \pm 697$,$935 \pm 636$,$953 \pm 563$,$3508 \pm 2532$,$5869 \pm 3246$,$4628 \pm 3274$,$4635 \pm 3077$
-Level 1 generations elapsed,$104 \pm  89$,$127 \pm 68$,$592 \pm 553$,$566 \pm  637$,$436 \pm 357$,$654 \pm 353$,$2908 \pm 2768$,$2637 \pm 2933$
-Level 2 generations elapsed,N/A,N/A,$117 \pm  99$,$121 \pm  85$,N/A,N/A,$526 \pm  352$,$546 \pm 349$
-Phylogenetic depth,$11 \pm 5$,$14 \pm  6$,$15 \pm 8$,$14 \pm 6$,$43 \pm 24$,$55 \pm 26$,$60 \pm 44$,$54 \pm 31$
-Coalescent replicates,57.5\%,77.5\%,62.5\%,58.5\%,95\%,97.5\%,92.3\%,94.6\%
