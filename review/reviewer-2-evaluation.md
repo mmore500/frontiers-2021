@@ -1,3 +1,28 @@
+Thank you for your detailed review and feedback, which has been greatly helpful in improving the quality of our manuscript.
+
+We have pasted plain text markdown into the "response to comment fields" on the Frontiers forum.
+However, a nicer-to-read rendered version of our responses to your feedback may be viewed at the following url,
+
+https://github.com/mmore500/frontiers-2021/blob/master/review/reviewer-2-evaluation.md
+
+We are taking advantage of the git version control system to track and report changes we make in response to your comments.
+
+In some of our responses, we include "diffs" that show the exact changes we made.
+Here is an example diff showing a line "deleted text" being replaced by "inserted text."
+Note the leading "-" in front of deleted text and the leading "+" in front of inserted text.
+
+```diff
+--- a/source.tex
++++ b/source.tex
+@@ -1,3 +1,3 @@
+ unchanged text
+-deleted text
++inserted text
+ more unchanged text
+```
+
+These diffs are syntax highlighted for easy skimmability on the rendered version of our notes linked above.
+We also provide some links so that diffs may be viewed directly on GitHub.
 
 ## Q1 Please summarize the main findings of the study.
 
