@@ -151,7 +151,21 @@ Specific changes are noted above.
 
 > 84-87: Why/how are these case studies chosen?
 > Are these e.g. the "best-cases", do these cases examplify the breadth of possible evolutionary outcomes?
->
+
+```diff
+--- a/tex/body/introduction.tex
++++ b/tex/body/introduction.tex
+ In this work we extend DISHTINY to incorporate a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
+ As expected, we see a far more diverse set of behaviors and strategies arise.
+-Here, we report case studies of notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
+-We see these anecdotal characterizations as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
++
++Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
++Each case study strain was chosen by screening the entire set of replicate evolutionary runs for evidence of a particular trait and then hand selecting the most promising strain(s) for further investigation.
++Our goal is to explore a breadth of possible evolutionary outcomes under the DISHTINY framework.
++We see this as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
+```
+
 > 94: What does a new-born cell inherit from its parent?
 
 TODO
