@@ -80,9 +80,13 @@ These case studies highlight the striking similarity between digital evolution >
 > ### Detailed comments:
 >
 > line 64: *cells
->
+
+[Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > 74: part *of* their
->
+
+[Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > 84-87: Why/how are these case studies chosen?
 > Are these e.g. the "best-cases", do these cases examplify the breadth of possible evolutionary outcomes?
 >
@@ -100,11 +104,15 @@ These case studies highlight the striking similarity between digital evolution >
 > 145: What is the intended here with "implicit selection" pressure? Group aging and selection on group size and circular layout seems quite explicit group-level selection pressures.
 >
 > 146: *driven
->
+
+[Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > 151-155: Are all these modules always active? Why are these particular modules chosen (is there a criterion)?
 >
 > 174: *the
->
+
+[Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > 196-202: Could you summarise "how" resource sharing between kins evolves?
 > Do they share information about "with whom" they are cooperating?
 >
@@ -124,7 +132,9 @@ These case studies highlight the striking similarity between digital evolution >
 > Fig 5: I cannot see white borders
 >
 > 306: transitions *in* individuality
->
+
+[Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > 332: Could you please quantify how many multicellular organisms are typically alive at any point (after evolution)?
 > This is important because a higher-level individuality also entails competition (and thus evolution) at the higher level.
 > If the number is very small, then it is difficult to envision how competition between groups can overcome drift.
@@ -132,7 +142,11 @@ These case studies highlight the striking similarity between digital evolution >
 > ### Supplementary material:
 >
 > Line 519-520: twice the same text
->
+
+[Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > 689: ...took place *on*
->
+
+[Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > 710-711: The system just recovered the L0 situation, though with an L1 set-up. Why do the authors think this is surprising?

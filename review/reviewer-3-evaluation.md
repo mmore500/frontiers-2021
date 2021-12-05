@@ -85,7 +85,9 @@
 >
 > ### General:
 > - There are a few typos here and there.
->
+
+[Fixed some typos](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
+
 > ### Introduction:
 > - L26-32: I would first present the two concepts, and then precise what is the focus on.
 > - L33-39: This part lacks some details and examples about what is a major transition.
