@@ -49,7 +49,19 @@ These case studies highlight the striking similarity between digital evolution >
 > The main weaknesses are:
 > 1. They do not explain in depth how this information evolves (no evolutionary dynamics - only the final results)
 
-TODO
+We agree that evolutionary dynamics and evolutionary histories are crucial, exciting topics with respect to experimental and modeling efforts around multicellularity.
+This is an active topic of [our ongoing work](http://workshops.alife.org/oee4/papers/moreno-oee4-camera-ready.pdf).
+
+We have added some closing remarks noting the limited scope of the existing work and emphasizing the importance of exploring these dimensions in future work.
+
+```diff
+--- a/tex/body/discussion.tex
++++ b/tex/body/discussion.tex
+ In future work, we are eager to undertake experiments investigating open questions pertaining to major evolutionary transitions such as the role of pre-existing phenotypic plasticity \citep{clune2007investigating, lalejini2016evolutionary}, pre-existing environmental interactions, pre-existing reproductive division of labor, and how transitions relate to increases in organizational \citep{goldsby2012task}, structural, and functional \citep{goldsby2014evolutionary} complexity.
++Expanding the scope of our existing work to directly study evolutionary dynamics and evolutionary histories will be crucial to such efforts.
+
+ In particular, we plan to investigate mechanisms to evolve greater collective sophistication among agents.
+```
 
 > 2. They do not explain "how" information encoded by individual cells generates the organism-level features they report.
 
