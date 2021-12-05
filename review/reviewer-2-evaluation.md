@@ -23,8 +23,16 @@ These case studies highlight the striking similarity between digital evolution >
 >
 > The main weaknesses are:
 > 1. They do not explain in depth how this information evolves (no evolutionary dynamics - only the final results)
+
+TODO
+
 > 2. They do not explain "how" information encoded by individual cells generates the organism-level features they report.
+
+TODO
+
 > 3. The main text and the captions of their figures should give more detail about the figures.
+
+TODO
 
 ## Q3 Please comment on the methods, results and data interpretation. If there are any objective errors, or if the conclusions are not supported, you should detail your concerns.
 
@@ -33,7 +41,10 @@ These case studies highlight the striking similarity between digital evolution >
 > The method is an extension of a series of models developed by the group over the course of many years.
 > I think the method is sound, though very A-Life oriented.
 >Their conclusions are supported by their results.
->
+
+We have re-worked the introduction, discussion, and conclusion to better serve non-Alife audiences.
+* commit TODO
+
 > The occasional methodological awkwardness that comes with modelling biological cells as abstract computer programs is more than offset by the resemblance of their results to biological systems.
 
 ## Q4 Check List
@@ -45,7 +56,9 @@ These case studies highlight the striking similarity between digital evolution >
 >
 > Is the quality of the figures and tables satisfactory?
 > - No
->
+
+Improvements made to figure captions are noted above.
+
 > Does the reference list cover the relevant literature adequately and in an unbiased manner?
 > - Yes
 >
@@ -54,7 +67,11 @@ These case studies highlight the striking similarity between digital evolution >
 >
 > Are the methods sufficiently documented to allow replication studies?
 > - No
->
+
+TODO
+We have moved methods and
+* [commit]()
+
 > Are the data underlying the study available in either the article, supplement, or deposited in a repository? (Sequence/expression data, protein/molecule characterizations, annotations, and taxonomy data are required to be deposited in public repositories prior to publication)
 > - Not Applicable
 >
@@ -71,12 +88,20 @@ These case studies highlight the striking similarity between digital evolution >
 > My major point for revision, and what I think is the main weakness of the paper, is that the authors do not explain "how" information encoded by individual cells generates the organism-level features they report.
 > They only shows that each feature out-competes a corresponding knockout.
 > I think the paper would be much richer if this was added.
->
+
+TODO
+
 > My second major point is that I could not always understand what exactly is shown in the figures.
 > I think that adding more explanation in the text and in the caption will improve readability.
+
+Improvements made to figure captions are noted above.
+
 > Lastly, although the authors do not provide enough information to reproduce the entire methodology, they do provide the link to run one's own simulations and, following the links, the source code.
 > I think this suffices.
->
+
+We worked to improve methodological detail, in particular moving key information out of the supplement and into the main text.
+Specific changes are noted above.
+
 > ### Detailed comments:
 >
 > line 64: *cells
@@ -91,16 +116,24 @@ These case studies highlight the striking similarity between digital evolution >
 > Are these e.g. the "best-cases", do these cases examplify the breadth of possible evolutionary outcomes?
 >
 > 94: What does a new-born cell inherit from its parent?
->
+
+TODO
+
 > 97: Is this an explict modelling choice? Could you please motivate it?
 > I understand that physical realism is not the point here, it would just be useful to briefly explain why the circular layout is selected for.
 > After all, resource aquisition through surface (on a 2D space that would be the perimeter) should increase with a concave layout.
->
+
+TODO
+
 > 99: Could you summarise how cells cooperate in the main text?
->
+
+TODO
+
 > 138-141: I am not sure of the relevance of this comparison, given that this is a biology journal.
 > Perhaps expanding on the multicellularity-eusociality nested transition would be more appropriate.
->
+
+TODO
+
 > 145: What is the intended here with "implicit selection" pressure? Group aging and selection on group size and circular layout seems quite explicit group-level selection pressures.
 >
 > 146: *driven
@@ -115,22 +148,34 @@ These case studies highlight the striking similarity between digital evolution >
 
 > 196-202: Could you summarise "how" resource sharing between kins evolves?
 > Do they share information about "with whom" they are cooperating?
->
+
+TODO
+
 > 204-213: I cannot see how I should infer the different life-histories from the figures.
 > Please expand the caption or the main text to clearly explain what is represented by the different parts of the figure.
 > This is a recurring problem - I think the text would be much more accessible if the figures were better described.
->
+
+TODO.
+
 > 218: The "burst" life cycle is referred to here as described above - but this is the first time this term is mentioned.
 > What does it refer to?
->
+
+TODO
+
 > 226: What is the point of a p-value here?
 > What would be the null model?
->
+
+TODO
+
 > Fig 3: Please clarify what different colors represent.
 > Also, the terminology is inconsistent: what do "Endogenous daughter groups" mean?
->
+
+TODO
+
 > Fig 5: I cannot see white borders
->
+
+TODO
+
 > 306: transitions *in* individuality
 
 [Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
@@ -138,7 +183,9 @@ These case studies highlight the striking similarity between digital evolution >
 > 332: Could you please quantify how many multicellular organisms are typically alive at any point (after evolution)?
 > This is important because a higher-level individuality also entails competition (and thus evolution) at the higher level.
 > If the number is very small, then it is difficult to envision how competition between groups can overcome drift.
->
+
+TODO
+
 > ### Supplementary material:
 >
 > Line 519-520: twice the same text
@@ -150,3 +197,5 @@ These case studies highlight the striking similarity between digital evolution >
 [Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
 
 > 710-711: The system just recovered the L0 situation, though with an L1 set-up. Why do the authors think this is surprising?
+
+TODO
