@@ -257,7 +257,17 @@ We agree that the terminology is out of place for the intended audience and prov
 > 196-202: Could you summarise "how" resource sharing between kins evolves?
 > Do they share information about "with whom" they are cooperating?
 
-TODO
+```diff
+--- a/tex/body/results.tex
++++ b/tex/body/results.tex
+ Across replicate evolutionary runs in all four treatments, we also found that resource was transferred among registered kin at a significantly higher mean rate than to unrelated neighbors (non-overlapping 95\% CI).
++Genetic programs controlling cells can sense whether any particular neighbor shares a common hereditary group ID.
++Thus, selective activation of resource sharing behavior to such neighbors might have evolved, which would provide one possible explanation for this observation.\footnote{
++Alternately to the same end, resource sharing behavior could be instead suppressed in the opposite case, when a neighbor holds a different hereditary group ID.
++}
++However, cells are capable of conditioning behavior on whether a particular neighbor is direct kin (i.e., a parent or child).
+ To test whether this resource-sharing was solely an artifact of sharing between direct cellular kin, we also assessed mean sharing to registered kin that were not immediate cellular relatives.
+```
 
 > 204-213: I cannot see how I should infer the different life-histories from the figures.
 > Please expand the caption or the main text to clearly explain what is represented by the different parts of the figure.
