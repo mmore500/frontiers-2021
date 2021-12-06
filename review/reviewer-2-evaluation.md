@@ -186,7 +186,19 @@ Specific changes are noted above.
 > I understand that physical realism is not the point here, it would just be useful to briefly explain why the circular layout is selected for.
 > After all, resource aquisition through surface (on a 2D space that would be the perimeter) should increase with a concave layout.
 
-TODO
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+
+ Cells accrue resource via a cooperative resource-collection process.
+-Cooperating in medium-sized groups (on the order of 100 cells) with a roughly circular layout accelerates per-cell resource collection rate.
+-Unicellular, too-small, too-large, or irregularly-shaped groups collect resource at a lesser per-cell rate.
++Cooperating in medium-sized groups (on the order of 100 cells) accelerates per-cell resource collection rate.
++Unicellular, too-small, or too-large groups collect resource at a lesser per-cell rate.
++As an arbitrary side effect of the distributed simulation algorithm employed to instantiate the cooperative resource distribution process, groups with a roughly circular layout collect resource faster than irregularly-shaped groups.
+
+ Cells may grow a cooperative resource-collecting group through cell proliferation.
+ ```
 
 > 99: Could you summarise how cells cooperate in the main text?
 
