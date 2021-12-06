@@ -214,7 +214,19 @@ Specific changes are noted above.
 > 138-141: I am not sure of the relevance of this comparison, given that this is a biology journal.
 > Perhaps expanding on the multicellularity-eusociality nested transition would be more appropriate.
 
-TODO
+We agree and elected to remove the analogy entirely.
+
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ In order to enforce hierarchical nesting of hereditary group IDs, daughter cells could not inherit just the L1 hereditary group ID.
+
+-Hierarchically nested hereditary group IDs are analogous to a strict corporate organizational structure: all employees (i.e., cells) are members of one department (i.e., L0 hereditary group) and one corporation (i.e., L1 hereditary group) but no employee can be a member of two departments and no department can be a member of two corporations.
++Hierarchically hereditary group IDs are strictly nested: all cells are members of one L0 hereditary group and L1 hereditary group.
++No cell can be a member of two L0 hereditary groups or two L1 hereditary groups.
++Likewise, no L0 hereditary groups can appear within two different L1 hereditary groups.
+ Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}\textbf{(A)} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
+```
 
 > 145: What is the intended here with "implicit selection" pressure? Group aging and selection on group size and circular layout seems quite explicit group-level selection pressures.
 >
