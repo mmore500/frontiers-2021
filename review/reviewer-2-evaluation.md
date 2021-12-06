@@ -307,7 +307,16 @@ TODO
 
 > Fig 5: I cannot see white borders
 
-TODO
+This was an error in the figure caption.
+
+```diff
+--- a/fig/ko-stockpiletrigger-sharing.tex
++++ b/fig/ko-stockpiletrigger-sharing.tex
+ In the resource stockpile visualization, white represents zero-resource stockpiles, blue represents stockpiles with just under enough resource to reproduce, green represents stockpiles with enough resource to reproduce, and yellow represents more than enough resource to reproduce.
+-Black borders divide L1 hereditary groups and white borders divide L0 hereditary groups.
++Black borders divide L1 hereditary groups and dashed gray borders divide L0 hereditary groups.
+ View an animation of the wild type strain at \url{https://hopth.ru/s}.
+```
 
 > 306: transitions *in* individuality
 
