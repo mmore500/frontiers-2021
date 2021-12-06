@@ -283,7 +283,12 @@ TODO
 > 226: What is the point of a p-value here?
 > What would be the null model?
 
-TODO
+We are modeling competitions as individual "coin flips."
+So, we performed 20 "coin flips" and are trying to show that it would be very unexpected for the wild type strain to win all 20 if there weren't some effect systematically influencing the outcomes of competitions
+The null model would be a binomial distribution with a "fairly" weighted coin (probability of heads 0.5).
+
+To clarify, we changed all references to an "exact test" to a "Binomial test" in [commit 4f24c74](https://github.com/mmore500/frontiers-2021/commit/4f24c74eee0d41e15688e9ab9be5c8bfeaffaf86).
+We agree this provide a better, more explicit wording.
 
 > Fig 3: Please clarify what different colors represent.
 > Also, the terminology is inconsistent: what do "Endogenous daughter groups" mean?
