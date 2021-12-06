@@ -229,7 +229,21 @@ We agree and elected to remove the analogy entirely.
 ```
 
 > 145: What is the intended here with "implicit selection" pressure? Group aging and selection on group size and circular layout seems quite explicit group-level selection pressures.
->
+
+That clause lapses into a traditionally "genetic programming" perspective where any scheme where reproductive success is not exclusively determined by a experimenter-defined "fitness function" is considered implicit.
+We agree that the terminology is out of place for the intended audience and provide a clarification.
+
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ \subsection{Cell-Level Organisms}
+
+-Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and implicit selective pressures.
++Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and selective pressures that stem from local competition for limited space.
+
+ We employ the SignalGP event-driven genetic programming representation.
+```
+
 > 146: *driven
 
 [Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
