@@ -278,7 +278,17 @@ TODO.
 > 218: The "burst" life cycle is referred to here as described above - but this is the first time this term is mentioned.
 > What does it refer to?
 
-TODO
+We meant to refer to Figure 2, so we changed the text to make this explicit.
+We also reworked the sentence for better clarity.
+
+```diff
+--- a/tex/body/results.tex
++++ b/tex/body/results.tex
+
+-In the strain exhibiting the ``burst'' lifecycle shown above, we wondered how localization and timing of the propagule origination was determined.
++We wondered how the strain exhibiting the ``burst'' lifecycle in Figure \ref{fig:lifecycle}\textbf{(D)} determined when and where to originate its propagules.
+ To assess whether gene regulation instructions played a role in this process, we prepared two knockout strains.
+```
 
 > 226: What is the point of a p-value here?
 > What would be the null model?
