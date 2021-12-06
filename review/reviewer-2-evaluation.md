@@ -202,8 +202,15 @@ Specific changes are noted above.
 
 > 99: Could you summarise how cells cooperate in the main text?
 
-TODO
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ As an arbitrary side effect of the simulation algorithm employed to instantiate the cooperative resource distribution process, groups with a roughly circular layout collect resource faster than irregularly-shaped groups.
++Cooperative resource collection unfolds as an entirely passive process on the part of the cells, influenced only by a group's spatial layout.
++Full details on the simulation algorithm that determines cooperative resource collection rates appear in supplementary material.
 
+ Cells may grow a cooperative resource-collecting group through cell proliferation.
+```
 > 138-141: I am not sure of the relevance of this comparison, given that this is a biology journal.
 > Perhaps expanding on the multicellularity-eusociality nested transition would be more appropriate.
 
