@@ -314,6 +314,22 @@ TODO
 
 [Fixed](https://github.com/mmore500/frontiers-2021/commit/4e5de1afebe5f6b8bb6933c8eff0357907d85148).
 
-> 710-711: The system just recovered the L0 situation, though with an L1 set-up. Why do the authors think this is surprising?
+> 710-711: The system just recovered the L0 situation, though with an L1 set-up.
+Why do the authors think this is surprising?
 
-TODO
+We meant to imply that at face value, the observation of higher mean sharing among  was unexpected.
+We changed the phrasing to "counterintuitive" as opposed to "surprising" and added more detail.
+
+```diff
+--- a/tex/supplement.tex
++++ b/tex/supplement.tex
+ This could perhaps be due to an especial selective pressure to convey resource towards the group periphery.
+
+-Surprisingly, in the Nested-Wave treatment resource was shared at a higher mean rate among L1 hereditary groups than L0 groups.
+-This observation is likely due to replicates where L1 groups were composed of single-cell L0 groups (where no or very few opportunities for L0 resource sharing occurred).
++In the Nested-Wave treatment resource was shared at a higher mean rate among L1 hereditary groups than L0 groups.
++At face value, this observation appears counterintuitive: why should cells prefer to share with more distant relatives with only one hereditary ID in common as opposed to closer relatives with both hereditary IDs in common?
++However, we believe it likely an artifact of replicates where L1 groups were composed of single-cell L0 groups (where no or very few opportunities for L0 resource sharing occurred).
+
+ Finally, under all treatments resource was transferred to hereditary group comrades at a significantly higher mean rate than to unrelated neighbors (non-overlapping 95\% CI).
+```
