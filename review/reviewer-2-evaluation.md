@@ -168,7 +168,19 @@ Specific changes are noted above.
 
 > 94: What does a new-born cell inherit from its parent?
 
-TODO
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ Cells occupy individual tiles on a toroidal grid.
+ Over discrete time steps (``updates''), cells can collect a resource.
+-Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
+ Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
++Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
++Daughter cells inherit their parent's genetic program, except any novel mutations that may arise.
++Daughter cells may also inherit hereditary group ID, introduced and discussed below.
+
+ Cells accrue resource via a cooperative resource-collection process.
+```
 
 > 97: Is this an explict modelling choice? Could you please motivate it?
 > I understand that physical realism is not the point here, it would just be useful to briefly explain why the circular layout is selected for.
