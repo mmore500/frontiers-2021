@@ -79,8 +79,8 @@ TODO
 > I think the method is sound, though very A-Life oriented.
 >Their conclusions are supported by their results.
 
-We have re-worked the introduction, discussion, and conclusion to better serve non-Alife audiences.
-* commit TODO
+We are planning a full rework of the introduction, discussion, and conclusion to better serve non-Alife audiences.
+This will require several draft exchanges between the co-authors, so we will finalize those changes after returning these comments to you.
 
 > The occasional methodological awkwardness that comes with modelling biological cells as abstract computer programs is more than offset by the resemblance of their results to biological systems.
 
@@ -345,7 +345,19 @@ This was an error in the figure caption.
 > This is important because a higher-level individuality also entails competition (and thus evolution) at the higher level.
 > If the number is very small, then it is difficult to envision how competition between groups can overcome drift.
 
-TODO
+Grid size used for competition experiments was the same as the overall population.
+Our observations of significant outcompetition of variants with traits of interest knocked out suggests that adequate selective pressure should have been present in the population to overcome drift in selecting for those traits.
+
+Your question points out some important information we can add to supplementary information about state at the end of evolutionary runs:
+* average number of distinct groups,
+* mean group size of a cell,
+* median group size of a cell,
+* average number of live cells,
+* average phylogenetic depth of extant cells, and
+* average phylogenetic depth of the most common recent ancestor.
+
+These statistics will be broken up by the four conditions we surveyed.
+This will require un-archiving and re-processing our raw data, so we will add this to our supplement after returning these comments to you.
 
 > ### Supplementary material:
 >
