@@ -69,7 +69,14 @@ See above.
 
 > 3. The main text and the captions of their figures should give more detail about the figures.
 
-TODO
+We have made a pass to improve detail in captions for all figures in the main text:
+* [Figure 1](https://github.com/mmore500/frontiers-2021/commit/f63adc0bb88b9820dd4704839cc49c1950f67313)
+* [Figure 2](https://github.com/mmore500/frontiers-2021/commit/f39a7f6f3c758d39cafc99ed437073fd63fb5f15)
+* [Figure 3](https://github.com/mmore500/frontiers-2021/commit/16012e3a4d949ac239056e56c165f48d5624ad16)
+* [Figure 4](https://github.com/mmore500/frontiers-2021/commit/bce8fdc5c9d455b92860fd60b136bdd8bf8dd338)
+* [Figure 5](https://github.com/mmore500/frontiers-2021/commit/80b9862235d5a606ee7e7cfd9094c859ff49f4db)
+* [Figure 6](https://github.com/mmore500/frontiers-2021/commit/318c26b84e5663281b3db0e69886d5908db29086)
+* [Figure 7](https://github.com/mmore500/frontiers-2021/commit/b8a214b4a1989fea29b8de96476ec620d4e9a1e2)
 
 ## Q3 Please comment on the methods, results and data interpretation. If there are any objective errors, or if the conclusions are not supported, you should detail your concerns.
 
