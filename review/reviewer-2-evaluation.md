@@ -65,7 +65,7 @@ We have added some closing remarks noting the limited scope of the existing work
 
 > 2. They do not explain "how" information encoded by individual cells generates the organism-level features they report.
 
-TODO
+See above.
 
 > 3. The main text and the captions of their figures should give more detail about the figures.
 
@@ -126,7 +126,7 @@ We have moved methods and
 > They only shows that each feature out-competes a corresponding knockout.
 > I think the paper would be much richer if this was added.
 
-TODO
+See above.
 
 > My second major point is that I could not always understand what exactly is shown in the figures.
 > I think that adding more explanation in the text and in the caption will improve readability.
