@@ -301,9 +301,28 @@ To clarify, we changed all references to an "exact test" to a "Binomial test" in
 We agree this provide a better, more explicit wording.
 
 > Fig 3: Please clarify what different colors represent.
+
+```diff
+--- a/fig/ko-interior_propagule.tex
++++ b/fig/ko-interior_propagule.tex
+ Subfigure \textbf{(A)} depicts gene regulation at each of a cell's four directional SignalGP instances using a PCA mapping from regulatory state to three-dimensional RGB coordinates, calculated uniquely for each L1 hereditary group.
++Within a L1 hereditary group, color similarity among tile quarters indicates that the corresponding SignalGP instances exhibit similar regulatory state.
+ Black borders divide outer registered-kin groups and white borders divide inner registered-kin groups.
+```
+
 > Also, the terminology is inconsistent: what do "Endogenous daughter groups" mean?
 
-TODO
+By endogenous daughter groups we meant to refer to the propagule groups that were generated within the parent group's body.
+We agree that this is terminology is inconsistent with the rest of the paper and rephrased it to "interior propagules."
+
+```diff
+--- a/fig/ko-interior_propagule.tex
++++ b/fig/ko-interior_propagule.tex
+ Black borders divide outer registered-kin groups and white borders divide inner registered-kin groups.
+-Endogenous daughter groups annotated with yellow arrows.
++Interior propagules annotated with yellow arrows.
+ Subfigure \textbf{(B)} compares the mean number of interior propagules observed per L1 hereditary group.
+```
 
 > Fig 5: I cannot see white borders
 
