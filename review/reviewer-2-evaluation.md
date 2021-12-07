@@ -273,7 +273,7 @@ We agree that the terminology is out of place for the intended audience and prov
 > Please expand the caption or the main text to clearly explain what is represented by the different parts of the figure.
 > This is a recurring problem - I think the text would be much more accessible if the figures were better described.
 
-TODO.
+Improvements made to figure captions are noted above.
 
 > 218: The "burst" life cycle is referred to here as described above - but this is the first time this term is mentioned.
 > What does it refer to?
