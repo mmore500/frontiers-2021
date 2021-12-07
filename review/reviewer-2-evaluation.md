@@ -112,9 +112,7 @@ Improvements made to figure captions are noted above.
 > Are the methods sufficiently documented to allow replication studies?
 > - No
 
-TODO
-We have moved methods and
-* [commit]()
+TODO?
 
 > Are the data underlying the study available in either the article, supplement, or deposited in a repository? (Sequence/expression data, protein/molecule characterizations, annotations, and taxonomy data are required to be deposited in public repositories prior to publication)
 > - Not Applicable
