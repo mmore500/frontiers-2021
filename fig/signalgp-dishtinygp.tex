@@ -9,8 +9,15 @@
 \begin{minipage}{\textwidth}
 \includegraphics[width=\linewidth]{img/signalgp-cartoon}
 {\textbf{(A)}
-A cartoon overview of a single SignalGP instance.
-SignalGP program modules execute pseudo-concurrently in response to tagged signals, which can originate internally, from the environment, or from other agents.
+Overview of a single SignalGP instance.
+SignalGP program modules contain ordered sets of instructions that activate and execute independently in response to tagged signals.
+Above, these modules are shown as rectangular lists with bitstring tags protruding from the SignalGP instance.
+These signals can originate from any of three sources:
+\begin{enumerate}
+  \item internally from execution of ``Signal'' instructions within a program's modules,
+  \item from the outside environment,
+  \item or from other agents executing ``Message'' instructions.
+\end{enumerate}
 }
 % \label{fig:signalgp-cartoon}
 \end{minipage}
@@ -24,12 +31,13 @@ SignalGP program modules execute pseudo-concurrently in response to tagged signa
 % \begin{minipage}{\textwidth}
 \includegraphics[width=0.8\linewidth]{img/dishtinygp-cartoon}\\
 {\textbf{(B)}
-A cartoon overview of how individual SignalGP instances are organized into DISHTINY cells.
-% Each cell contains four independent SignalGP instances.
-% The same genetic program is mirrored across all four SignalGP instances, but each instance executes independently.
-Within each DISHTINY cell, each of four independent instances senses environmental state, receives intercellular messages, and determines cell behavior with respect to a single cardinal direction.
-All four instances sense non-directional environmental cues and non-directional actions may be taken by any instance.
-Instances within a cell communicate via intracellular messaging.
+How individual SignalGP instances are organized into DISHTINY cells.
+Above, DISHTINY cells are depicted as gray squares.
+Each DISHTINY cell is controlled by independent execution of the cell's genetic program on four distinct SignalGP instances, depicted as colored circles.
+Each of four independent instances manages cell behavior with respect to a single cardinal direction: sensing environmental state, receiving intercellular messages, and determining cell actions.
+Above, the special role of each instance is depicted as a reciporical arrow to the neighboring instance in the neighboring cell.
+(All four instances sense non-directional environmental cues and non-directional actions may be taken by any instance.)
+These four instances can communicate with one another via a cell communicate via intracellular messaging, indicated above by smaller reciprocal arrows among instances within a cell.
 }
 % \label{fig:dishtinygp-cartoon}
 % \end{minipage}
@@ -38,7 +46,8 @@ Instances within a cell communicate via intracellular messaging.
 \end{minipage}
 
 \caption{
-Schematic illustrations of how individual SignalGP instances function and how individual SignalGP instances are organized into DISHTINY cells.
+Schematic illustrations of how an individual SignalGP instance functions and how SignalGP instances control DISHTINY cells.
+Execution of cells' genetic programs on SignalGP instances controls cell behavior in our model.
 Subfigure \textbf{(A)} provided courtesy Alexander Lalejini.
 }
 \label{fig:signalgp-dishtinygp}
