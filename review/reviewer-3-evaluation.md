@@ -381,7 +381,41 @@ TODO
 
 > - L232: Does it mean that there is no adaptive messaging in all the other replicates (if I understand, there are 40*4 in all)?
 
-TODO
+Due to computational limitations, we didn't screen all strains for adaptive messaging.
+Instead, we manually reviewed videos of cell messaging behavior then selected a few that looked interesting for further analysis.
+Messaging in several other strains wasn't adaptive and messaging in these two were.
+
+It seems likely to us that the large majority of evolved strains did not evolve adaptive messaging.
+However, we did not quantify this formally.
+
+Based on the other reviewer's comments, we added some language clarifying how we chose case studies.
+
+```diff
+--- a/tex/body/introduction.tex
++++ b/tex/body/introduction.tex
+ In this work we extend DISHTINY to incorporate a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
+ As expected, we see a far more diverse set of behaviors and strategies arise.
+-Here, we report case studies of notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
+-We see these anecdotal characterizations as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
++
++Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
++Each case study strain was chosen by screening the entire set of replicate evolutionary runs for evidence of a particular trait and then hand selecting the most promising strain(s) for further investigation.
++Our goal is to explore a breadth of possible evolutionary outcomes under the DISHTINY framework.
++We see this as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
+```
+
+Based on your comment, we added a further clarification.
+
+```diff
+--- a/tex/body/introduction.tex
++++ b/tex/body/introduction.tex
+ Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
+-Each case study strain was chosen by screening the entire set of replicate evolutionary runs for evidence of a particular trait and then hand selecting the most promising strain(s) for further investigation.
++Each case study strain was chosen by screening the entire set of replicate evolutionary runs for signs of a trait of interest and then hand selecting the most promising strain(s) for further investigation.
++Case studies presented therefore represent an anecdotal sampling, rather than an exhaustive summary, with respect to each trait of interest.
+ Our goal is to explore a breadth of possible evolutionary outcomes under the DISHTINY framework.
+ We see this as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
+```
 
 > - L266: What are these single-file strings? (should be in appendix)
 
