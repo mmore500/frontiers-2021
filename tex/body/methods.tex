@@ -83,11 +83,12 @@ The event-driven framework facilitates the evolution of dynamic interactions bet
 Special module components allow evolving programs to sense and interact with their environment, through mechanisms including resource sharing, hereditary group sensing, apoptosis, cell reproduction, and arbitrary cell-cell messaging.
 Modules can also include general purpose computational elements like conditionals and loops, which allows cells to evolve sophisticated behaviors conditioned on current (and even previous) local conditions.
 A simple ``regulatory'' system provides special CPU instructions that dynamically adjust which modules are activated by particular signals.
-
-Previous work evolving digital organisms in grid-based problem domains has relied on a single computational agent that designates a direction to act in via an explicit cardinal ``facing'' \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}.
-Here, we introduce novel methodology to facilitate the evolution of directionally-symmetric phenotypes.
-In this work, each cell instantiates four copies of the SignalGP hardware: one facing each cardinal direction.
-These hardware instances all execute the same SignalGP program and may coordinate via internal signals, but are otherwise decoupled.
+In our simulation, directionality of some inputs and outputs must be accounted for (e.g., specifying \textit{which} neighbor to share resource with).
+To accomplish this, we provide each cell an independent SignalGP hardware instance to manage inputs and outputs with respect to each specific cell neighbor.
+So there are four hardware sets per cell, one for each cardinal direction.
+\footnote{
+This approach differs from previous work evolving digital organisms in grid-based problem domains \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}; see Supplemental Section \ref{sup:cell_level_organisms} for further detail.
+}
 Figure \ref{fig:signalgp-dishtinygp}\textbf{(B)} overviews the configuration of the four SignalGP instances that constitute a single cell.
 
 Supplementary Sections \ref{sup:cell_level_organisms}, \ref{sup:standard_instruction_library}, \ref{sup:custom_instruction_library}, and \ref{sup:environmental_cue_library} provide full details of the digital evolution substrate underpinning this work.
