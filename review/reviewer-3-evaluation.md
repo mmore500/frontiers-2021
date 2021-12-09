@@ -263,7 +263,18 @@ We added some clarifying detail to the Figure 1 caption.
 
 > - L95: How has the decay rate value been chosen?
 
-TODO
+Clarified.
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+@@ -9,7 +9,7 @@ We will first describe the environment and hereditary grouping system cells evol
+
+ Cells occupy individual tiles on a 60-by-60 toroidal grid.
+ Over discrete time steps (``updates''), cells can collect a resource.
+-Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
++Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use but gradual enough so as to not prevent the most naive cells from eventually accumulating enough resource to reproduce.
+ Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
+```
 
 > - L97: Is the circular mid-size optimal layout hardcoded, or is it an emergent property of the system?
 
