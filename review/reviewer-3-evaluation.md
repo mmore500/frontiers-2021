@@ -361,8 +361,21 @@ Pared back detail and referred reader to supplement.
 > ### Results:
 > - L170: Are subgroups equivalent to cell differentiation?
 
-TODO
+Clarified.
 
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ To broaden our exploration of possible evolved multicellular behaviors in this system, we surveyed several evolutionary conditions.
+
+-In one manipulation, we explored the effect of structuring hereditary groups, such that parent cells can choose to keep offspring in their same sub-group, in just the same full group, or expel them entirely to start a new group.
+-Cells can independently mediate their behavior based on the level of the group with which they are interacting.
++In one manipulation, we explored the effect of enabling hierarchical structure within hereditary groups, such that parent cells can choose to keep offspring in their same sub-group, in just the same full group, or expel them entirely to start a new group.
++Cells can sense and react to the level of hereditary ID commonality shared with each neighbor.
++This manipulation presents opportunity for hierarchical individuality or for a mechanism to mediate differentiation within a multicell, but does not enforce it.
+
+ In a second manipulation, we explored the importance of explicitly selecting for medium-sized groups (as had been needed to maximize resource collection) by removing this incentive.
+```
 > - L186-195: How many iterations or generations did you run to get the result?
 
 We added better detail about iterations to the methods.
