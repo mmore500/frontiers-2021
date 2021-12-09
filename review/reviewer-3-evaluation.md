@@ -124,7 +124,14 @@ Our motivation in keeping some methodological details in the supplement was to t
 > Also, I have concerns about some concepts the authors should discuss more rigorously in the manuscript:
 > - Digital evolution should be defined in a few words,
 
-TODO
+We now provide a definition.
+
+```diff
+-Digital evolution, occupying a sort of middle ground between wet work and mechanistic modeling, offers a unique conjunction of experimental capabilities that complements work in both of those disciplines.
++Digital evolution, computational model systems designed to instantiate evolution in abstract algorithmic substrates rather than directly emulating any specific biological system, occupies a sort of middle ground between wet work and mechanistic modeling.
++This approach offers a unique conjunction of experimental capabilities that complements work in both of those disciplines.
+
+```
 
 > - The concept of open-endedness (which is not obvious at all for readers outside the Artificial Life community) is brought in the Introduction with no real definition, and then not re-assessed in the Discussion.
 > Open-endedness is a debated concept; the authors should introduce it more rigorously, or remove it entirely from the manuscript.
@@ -195,7 +202,7 @@ TODO
 
 > - L39: Digital evolution should be defined.
 
-TODO
+Fixed, with details noted above.
 
 > - L83: Why "as expected"? (maybe explain in a few words).
 
