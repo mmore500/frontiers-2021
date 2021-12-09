@@ -7,11 +7,12 @@ We will first describe the environment and hereditary grouping system cells evol
 
 \subsection{Cells and Hereditary Groups}
 
-Cells occupy individual tiles on a toroidal grid.
+Cells occupy individual tiles on a 60-by-60 toroidal grid.
 Over discrete time steps (``updates''), cells can collect a resource.
 Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
 Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
 Daughter cells inherit their parent's genetic program, except any novel mutations that may arise.
+We used standard SignalGP mutation parameters from \citep{lalejini2018evolving}, but only applied mutations 1\% of daughter cells at birth.
 Daughter cells may also inherit hereditary group ID, introduced and discussed below.
 
 Cells accrue resource via a cooperative resource-collection process.
@@ -75,10 +76,12 @@ Our experiments use cell-level digital organisms controlled by genetic programs 
 We employ the SignalGP event-driven genetic programming representation.
 As sketched in Figure \ref{fig:signalgp-dishtinygp}\textbf{(A)}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
 This process can be considered somewhat akin to gene expression.
+In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running signal handlers.
 The event-driven framework facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
 
 Special module components allow evolving programs to sense and interact with their environment, through mechanisms including resource sharing, hereditary group sensing, apoptosis, cell reproduction, and arbitrary cell-cell messaging.
 Modules can also include general purpose computational elements like conditionals and loops, which allows cells to evolve sophisticated behaviors conditioned on current (and even previous) local conditions.
+A simple ``regulatory'' system provides special CPU instructions that dynamically adjust which modules are activated by particular signals.
 
 Previous work evolving digital organisms in grid-based problem domains has relied on a single computational agent that designates a direction to act in via an explicit cardinal ``facing'' \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}.
 Here, we introduce novel methodology to facilitate the evolution of directionally-symmetric phenotypes.
@@ -106,4 +109,11 @@ We combined these two manipulations to yield four surveyed conditions:
 \item ``Nested-Wave'': Two hierarchically-nested hereditary group levels (nested) with group-mediated resource collection (wave). In-browser simulation: \url{https://hopth.ru/l}.
 \end{enumerate}
 
-Supplementary Section \ref{sup:treatments} provides full details of surveyed evolutionary conditions.
+Supplementary Section \ref{sup:treatments} provides full details for each of the four surveyed evolutionary conditions.
+
+For each condition, we simulated 40 replicate populations for up to
+1,048,576 ($2^{20}$) updates.
+During this time, on the order of 4,000 cellular generations and 500 apex-level group generations elapsed in runs.
+(Full details appear in Supplementary Table \ref{sup:systematics}.)
+Due to variability in simulation speed, four replicates only completed 262,144 updates.
+All analyses involving inter-replicate comparisons were therefore performed at this earlier time point.
