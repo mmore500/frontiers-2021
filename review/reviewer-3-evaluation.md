@@ -118,7 +118,8 @@ We reinstalled several details into the methods section we had omitted for brevi
 >
 > As discussed above, a description of the experimental protocol is missing in the main text, making it necessary to dig into the appendix to find some essential information.
 
-TODO
+We reinstated several important methodological details that you had noted back into the main text, detailed above.
+Our motivation in keeping some methodological details in the supplement was to try to present a more intuition-driven (rather than implementation-driven) understanding of our experimental protocol to a more biology-oriented audience.
 
 > Also, I have concerns about some concepts the authors should discuss more rigorously in the manuscript:
 > - Digital evolution should be defined in a few words,
@@ -145,7 +146,14 @@ TODO
 > Is the quality of the figures and tables satisfactory?
 > - No
 
-TODO
+We have made a pass to improve detail in captions for all figures in the main text:
+* [Figure 1](https://github.com/mmore500/frontiers-2021/commit/f63adc0bb88b9820dd4704839cc49c1950f67313)
+* [Figure 2](https://github.com/mmore500/frontiers-2021/commit/f39a7f6f3c758d39cafc99ed437073fd63fb5f15)
+* [Figure 3](https://github.com/mmore500/frontiers-2021/commit/16012e3a4d949ac239056e56c165f48d5624ad16)
+* [Figure 4](https://github.com/mmore500/frontiers-2021/commit/bce8fdc5c9d455b92860fd60b136bdd8bf8dd338)
+* [Figure 5](https://github.com/mmore500/frontiers-2021/commit/80b9862235d5a606ee7e7cfd9094c859ff49f4db)
+* [Figure 6](https://github.com/mmore500/frontiers-2021/commit/318c26b84e5663281b3db0e69886d5908db29086)
+* [Figure 7](https://github.com/mmore500/frontiers-2021/commit/b8a214b4a1989fea29b8de96476ec620d4e9a1e2)
 
 > Does the reference list cover the relevant literature adequately and in an unbiased manner?
 > - Yes
@@ -199,7 +207,59 @@ TODO
 > Also, in my opinion very hard to grasp for non-initated readers.
 > Maybe a more conceptual figure showing how cells interact and communicate would be better.
 
-TODO
+We added some clarifying detail to the Figure 1 caption.
+
+```diff
+--- a/fig/signalgp-dishtinygp.tex
++++ b/fig/signalgp-dishtinygp.tex
+@@ -9,8 +9,15 @@
+ \begin{minipage}{\textwidth}
+ \includegraphics[width=\linewidth]{img/signalgp-cartoon}
+ {\textbf{(A)}
+-A cartoon overview of a single SignalGP instance.
+-SignalGP program modules execute pseudo-concurrently in response to tagged signals, which can originate internally, from the environment, or from other agents.
++Overview of a single SignalGP instance.
++SignalGP program modules contain ordered sets of instructions that activate and execute independently in response to tagged signals.
++Above, these modules are shown as rectangular lists with bitstring tags protruding from the SignalGP instance.
++These signals can originate from any of three sources:
++\begin{enumerate}
++  \item internally from execution of ``Signal'' instructions within a program's modules,
++  \item from the outside environment,
++  \item or from other agents executing ``Message'' instructions.
++\end{enumerate}
+ }
+ % \label{fig:signalgp-cartoon}
+ \end{minipage}
+@@ -24,12 +31,13 @@ SignalGP program modules execute pseudo-concurrently in response to tagged signa
+ % \begin{minipage}{\textwidth}
+ \includegraphics[width=0.8\linewidth]{img/dishtinygp-cartoon}\\
+ {\textbf{(B)}
+-A cartoon overview of how individual SignalGP instances are organized into DISHTINY cells.
+-% Each cell contains four independent SignalGP instances.
+-% The same genetic program is mirrored across all four SignalGP instances, but each instance executes independently.
+-Within each DISHTINY cell, each of four independent instances senses environmental state, receives intercellular messages, and determines cell behavior with respect to a single cardinal direction.
+-All four instances sense non-directional environmental cues and non-directional actions may be taken by any instance.
+-Instances within a cell communicate via intracellular messaging.
++How individual SignalGP instances are organized into DISHTINY cells.
++Above, DISHTINY cells are depicted as gray squares.
++Each DISHTINY cell is controlled by independent execution of the cell's genetic program on four distinct SignalGP instances, depicted as colored circles.
++Each of four independent instances manages cell behavior with respect to a single cardinal direction: sensing environmental state, receiving intercellular messages, and determining cell actions.
++Above, the special role of each instance is depicted as a reciporical arrow to the neighboring instance in the neighboring cell.
++(All four instances sense non-directional environmental cues and non-directional actions may be taken by any instance.)
++These four instances can communicate with one another via a cell communicate via intracellular messaging, indicated above by smaller reciprocal arrows among instances within a cell.
+ }
+ % \label{fig:dishtinygp-cartoon}
+ % \end{minipage}
+@@ -38,7 +46,8 @@ Instances within a cell communicate via intracellular messaging.
+ \end{minipage}
+
+ \caption{
+-Schematic illustrations of how individual SignalGP instances function and how individual SignalGP instances are organized into DISHTINY cells.
++Schematic illustrations of how an individual SignalGP instance functions and how SignalGP instances control DISHTINY cells.
++Execution of cells' genetic programs on SignalGP instances controls cell behavior in our model.
+ Subfigure \textbf{(A)} provided courtesy Alexander Lalejini.
+ }
+```
 
 > - L95: How has the decay rate value been chosen?
 
