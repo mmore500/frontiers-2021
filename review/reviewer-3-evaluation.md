@@ -433,7 +433,7 @@ TODO
 > ### Discussion:
 > - L307 "unlike previous work"; Please provide references.
 
-TODO
+We explicitly specified that we mean to refer to Heather Goldsby's work.
 
 > - L309: Differenciation should be evoked in the Methods when L0/L1 groups are described.
 
