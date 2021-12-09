@@ -199,7 +199,17 @@ TODO
 
 > - L83: Why "as expected"? (maybe explain in a few words).
 
-TODO
+Clarified.
+
+```diff
+--- a/tex/body/introduction.tex
++++ b/tex/body/introduction.tex
+ In this work we extend DISHTINY to incorporate a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
+-As expected, we see a far more diverse set of behaviors and strategies arise.
++As expected, with the addition of cell controllers capable of computation we see a far more diverse set of behaviors and strategies arise.
+
+ Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
+```
 
 > ### Methods:
 > - A description of the experimental protocol is missing.
