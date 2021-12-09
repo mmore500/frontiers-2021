@@ -419,7 +419,8 @@ Based on your comment, we added a further clarification.
 
 > - L266: What are these single-file strings? (should be in appendix)
 
-TODO
+We realized that "file" and "string" both have unwanted double connotations with respect to computing and simulation.
+We have corrected our text to use the term "one-cell-wide strands."
 
 > - The section (3.5) must be rewritten more clearly, and the figure 6 should be better presented.
 
