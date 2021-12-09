@@ -310,7 +310,20 @@ Clarified.
 
 > - L145: Please detail implicit selective pressures
 
-TODO
+We realize that our use of terminology may have caused a misunderstanding.
+That clause lapses into a traditionally "genetic programming" perspective where any scheme where reproductive success is not exclusively determined by a experimenter-defined "fitness function" is considered implicit.
+We agree that the terminology is out of place for the intended audience and provide a clarification.
+
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ \subsection{Cell-Level Organisms}
+
+-Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and implicit selective pressures.
++Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and selective pressures that stem from local competition for limited space.
+
+ We employ the SignalGP event-driven genetic programming representation.
+```
 
 > - L156-163: Too technical for non-initiated readers, I think it should be in appendix.
 
