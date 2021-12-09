@@ -457,7 +457,34 @@ We have corrected our text to use the term "one-cell-wide strands."
 
 > - The section (3.5) must be rewritten more clearly, and the figure 6 should be better presented.
 
-TODO
+Rewritten.
+
+```diff
+-One of the more striking examples of genetically encoded hereditary group patterning, in which L0 hereditary groups arranged as elongated, one-cell-wide strands, arose in a Nested-Even treatment replicate.
+-Figure \ref{fig:ko-morphology}\textbf{(A)} provides a snapshot of this strain's hereditary group morphology.
++Figure \ref{fig:ko-morphology}\textbf{(A)} shows one of the more striking examples of genetically encoded hereditary group patterning we observed.
++In this strain, which arose in a Nested-Even treatment replicate, L0 hereditary groups arrange as elongated, one-cell-wide strands.
++
+ Knocking out intracell messaging disrupts the stringy arrangement of L0 hereditary groups groups, shown in Figure \ref{fig:ko-morphology}\textbf{(B)}.
+ Figure \ref{fig:ko-morphology}\textbf{(C)} compares the distribution of cells' L0 same-hereditary-group neighbor counts for L1 groups of nine or more cells.
+-Wild-type cells are significantly less likely to have three or four L0 same-hereditary-group neighbors, as we would expect of one-cell-wide strands (non-overlapping 95\% CI).
+-However, we also observed that wild-type L0 hereditary groups also had significantly fewer cells than the knockout strain
++Compared to the knockout variant, many fewer wild-type cells are have three or four L0 same-hereditary-group neighbors, consistent with the one-cell-wide strands (non-overlapping 95\% CI).
++However, we also observed that wild-type L0 hereditary groups were overall smaller than the knockout strain
+ (WT: mean $2.1$, S.D. $1.5$; messaging knockout: mean $4.3$, S.D. 5.1; $p < 0.001$; bootstrap test).
+
+-To determine whether morphological patterning beyond smaller group size contributed to observed differences in neighbor count, we compared a dimensionless shape factor describing group stringiness (perimeter divided by the square root of area) between the wild type and messaging knockout strains.
++So, we set out to determine determine whether smaller L0 group size alone was sufficient to explain these observed differences in neighbor count.
++We compared a dimensionless shape factor describing group stringiness (perimeter divided by the square root of area) between the wild type and messaging knockout strains.
+ Between L0 group size four (the smallest size stringiness can emerge at on a grid) and L0 group size six (the largest size we had sufficient replicate wild type observations for), wild type exhibited significantly greater stringiness
+ (4: $p < 0.01$, bootstrap test; 5: $p < 0.01$, bootstrap test; 6: non-overlapping 95\% CI).
++This confirms that more sophisticated patterning beyond just smaller L0 group size is at play to create the observed one-cell-wide L0 strand morphology.
+
+-However, competition experiments between the wild type and knockout strain failed to establish a fitness differential ($6/20$).
++Competition experiments failed to show a fitness effect of this strain's morphological patterning.
++The wild type strain won competitions about as often as the knockout strain ($6/20$).
+ Thus, it seems this trait emerged either by drift, as the genetic background of a selective sweep, or was advantageous against a divergent competitor earlier in evolutionary history.
+```
 
 > - Figure 6: two terms introduced in the figure 6C (P/sqrt(A)) but not defined in the caption nor in the main text.
 
