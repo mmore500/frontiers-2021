@@ -480,7 +480,16 @@ We made changes to explicitly specify that we mean to refer to Heather Goldsby's
 
 > - L309: Differenciation should be evoked in the Methods when L0/L1 groups are described.
 
-TODO
+Added.
+
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ Successive fraternal transitions in natural history --- for example, to multicellularity and then to eusociality \citep{smith1997major} --- underscores the constructive power of evolution to harness emergent structures as building blocks for further novelty.
++Such substructure can also provide scaffolding for differentiation and division of labor within an organism \citep{wilson1984relation}.
+ To explore these dynamics, in some experimental conditions we incorporated a hierarchical extension to the hereditary grouping scheme described above.
+
+```
 
 > - L324-337: This part of the discussion is oriented towards technical and modeling considerations and limitations.
 > In my opinion, it should focus more on evolutionary theory, and the limitations and potential improvements of the conceptual model.
