@@ -438,7 +438,17 @@ TODO
 
 > - Figure 6: two terms introduced in the figure 6C (P/sqrt(A)) but not defined in the caption nor in the main text.
 
-TODO
+Clarified.
+
+```diff
+diff --git a/fig/ko-morphology.tex b/fig/ko-morphology.tex
+index be67b78..374fc28 100644
+--- a/fig/ko-morphology.tex
++++ b/fig/ko-morphology.tex
+ Subfigures \textbf{(C)} and \textbf{(D)} quantify the morphological effect of the intracellular-messaging knockout.
++In the formula for Shape Factor given in Subfigure \textbf{(C)}, $P$ refers to group perimeter and $A$ refers to group area.
+ Error bars indicate 95\% confidence.
+```
 
 > ### Discussion:
 > - L307 "unlike previous work"; Please provide references.
