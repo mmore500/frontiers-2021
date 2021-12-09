@@ -278,7 +278,22 @@ Clarified.
 
 > - L97: Is the circular mid-size optimal layout hardcoded, or is it an emergent property of the system?
 
-TODO
+The mid-size is hardcoded (and can be adjusted by tweaking parameters).
+We clarified that advantage enjoyed under circular layouts was an arbitrary effect of the implementation we used to detect group size.
+
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+
+ Cells accrue resource via a cooperative resource-collection process.
+-Cooperating in medium-sized groups (on the order of 100 cells) with a roughly circular layout accelerates per-cell resource collection rate.
+-Unicellular, too-small, too-large, or irregularly-shaped groups collect resource at a lesser per-cell rate.
++Cooperating in medium-sized groups (on the order of 100 cells) accelerates per-cell resource collection rate.
++Unicellular, too-small, or too-large groups collect resource at a lesser per-cell rate.
++As an arbitrary side effect of the distributed simulation algorithm employed to instantiate the cooperative resource distribution process, groups with a roughly circular layout collect resource faster than irregularly-shaped groups.
+
+ Cells may grow a cooperative resource-collecting group through cell proliferation.
+ ```
 
 > - L120: Please better explain L0 and L1 (it was unclear for me if L0 was embedded in L1 or the opposite, I got an answer only in Figure 2 caption).
 
