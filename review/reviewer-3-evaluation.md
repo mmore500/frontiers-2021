@@ -476,7 +476,7 @@ index be67b78..374fc28 100644
 > ### Discussion:
 > - L307 "unlike previous work"; Please provide references.
 
-We explicitly specified that we mean to refer to Heather Goldsby's work.
+We made changes to explicitly specify that we mean to refer to Heather Goldsby's work.
 
 > - L309: Differenciation should be evoked in the Methods when L0/L1 groups are described.
 
