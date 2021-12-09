@@ -373,7 +373,17 @@ We have also clarified in the section of the results you commented on.
 
 > - L218: Unclear which case you are speaking about.
 
-TODO
+We meant to refer to Figure 2, so we changed the text to make this explicit.
+We also reworked the sentence for better clarity.
+
+```diff
+--- a/tex/body/results.tex
++++ b/tex/body/results.tex
+
+-In the strain exhibiting the ``burst'' lifecycle shown above, we wondered how localization and timing of the propagule origination was determined.
++We wondered how the strain exhibiting the ``burst'' lifecycle in Figure \ref{fig:lifecycle}\textbf{(D)} determined when and where to originate its propagules.
+ To assess whether gene regulation instructions played a role in this process, we prepared two knockout strains.
+```
 
 > - Figure 3: The figure is difficult to read (black borders and yellow arrows are not visible).
 
