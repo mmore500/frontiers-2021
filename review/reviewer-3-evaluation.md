@@ -297,7 +297,16 @@ We clarified that advantage enjoyed under circular layouts was an arbitrary effe
 
 > - L120: Please better explain L0 and L1 (it was unclear for me if L0 was embedded in L1 or the opposite, I got an answer only in Figure 2 caption).
 
-TODO
+Clarified.
+
+```diff
+--- a/tex/body/methods.tex
++++ b/tex/body/methods.tex
+ We refer to each independent hereditary grouping system as a ``level.''
+ The hierarchical extension allows two levels of hereditary grouping, identified here as L0 and L1.
++L0 instantiates smaller, inner grouping embedded inside of a L1 grouping.
+ Without the hierarchical extension, only L0 is present.
+```
 
 > - L145: Please detail implicit selective pressures
 
