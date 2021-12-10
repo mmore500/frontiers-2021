@@ -136,7 +136,19 @@ We now provide a definition.
 > - The concept of open-endedness (which is not obvious at all for readers outside the Artificial Life community) is brought in the Introduction with no real definition, and then not re-assessed in the Discussion.
 > Open-endedness is a debated concept; the authors should introduce it more rigorously, or remove it entirely from the manuscript.
 
-TODO
+To better suit the intended audience, we removed this term from the manuscript.
+```diff
+--- a/tex/body/introduction.tex
++++ b/tex/body/introduction.tex
+ These transitions are understood as essential to natural history's remarkable record of complexification and diversification \citep{smith1997major}.
+-Likewise, researchers studying open-ended evolution in artificial life systems have focused on transitions in individuality as a mechanism that is missing in digital systems, but necessary for achieving the evolution of complexity and diversity that we witness in nature \citep{taylor2016open, banzhaf2016defining}.
++Likewise, artificial life researchers have highlighted transitions in individuality as a mechanism that is missing in digital systems, but necessary for achieving the evolution of complexity and diversity that we witness in nature \citep{taylor2016open, banzhaf2016defining}.
+
+ In previous work introducing the DISHTINY (DIStributed Hierarchical Transitions in IndividualitY) framework we evolved parameters for manually designed cell-level strategies to explore fraternal transitions in individuality \citep{moreno2019toward}.
+-In this work we extend DISHTINY to incorporate a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
++In this work we extend DISHTINY to incorporate a more dynamic event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
+ As expected, with the addition of cell controllers capable of computation we see a far more diverse set of behaviors and strategies arise.
+```
 
 > - I also would have been happy to read more about the concept of emergence. It could also be debated here as hereditary groups are explicitly encoded in the model, and (if I understand well from Supp. mat. L432-434) as cells can communicate some signals only with their own hereditary group.
 > It deserves a few more words in the main text.
