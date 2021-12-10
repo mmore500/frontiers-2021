@@ -204,7 +204,16 @@ Although not our focus here, egalitarian transitions --- events in which non-kin
 
 > - L33-39: This part lacks some details and examples about what is a major transition.
 
-TODO
+We added some details with multicellularity as an example.
+```diff
+--- a/tex/body/introduction.tex
++++ b/tex/body/introduction.tex
+
+-In nature, major transitions occur rarely and over vast time scales, making them challenging to study.
++In nature, major fraternal transitions occur sporadically with few extant transitional forms, making them challenging to study.
++For instance, on the order of 25 independent origins of Eukaryotic multicellularity are known \citep{grosberg2007evolution} with most transitions having occurred hundreds of millions of years ago \citep{libby2014ratcheting}.
+ Recent work in experimental evolution \citep{ratcliff2014experimental, ratcliff2015origins, gulli2019evolution, koschwanez2013improved}, mechanistic modeling \citep{hanschen2015evolutionary, staps2019emergence}, and digital evolution \citep{goldsby2012task, goldsby2014evolutionary} complements traditional post hoc approaches focused on characterizing the record of natural history.
+```
 
 > - L39: Digital evolution should be defined.
 
