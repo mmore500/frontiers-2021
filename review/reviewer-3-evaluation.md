@@ -147,7 +147,7 @@ To better suit the intended audience, we removed this term from the manuscript.
  In previous work introducing the DISHTINY (DIStributed Hierarchical Transitions in IndividualitY) framework we evolved parameters for manually designed cell-level strategies to explore fraternal transitions in individuality \citep{moreno2019toward}.
 -In this work we extend DISHTINY to incorporate a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
 +In this work we extend DISHTINY to incorporate a more dynamic event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
- As expected, with the addition of cell controllers capable of computation we see a far more diverse set of behaviors and strategies arise.
+ As expected, with the addition of cell controllers capable of nearly arbitrary computation we see a far more diverse set of behaviors and strategies arise.
 ```
 
 > - I also would have been happy to read more about the concept of emergence. It could also be debated here as hereditary groups are explicitly encoded in the model, and (if I understand well from Supp. mat. L432-434) as cells can communicate some signals only with their own hereditary group.
@@ -240,7 +240,7 @@ Clarified.
 +++ b/tex/body/introduction.tex
  In this work we extend DISHTINY to incorporate a more open-ended event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
 -As expected, we see a far more diverse set of behaviors and strategies arise.
-+As expected, with the addition of cell controllers capable of computation we see a far more diverse set of behaviors and strategies arise.
++As expected, with the addition of cell controllers capable of nearly arbitrary computation we see a far more diverse set of behaviors and strategies arise.
 
  Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
 ```
