@@ -194,7 +194,13 @@ We have made a pass to improve detail in captions for all figures in the main te
 > ### Introduction:
 > - L26-32: I would first present the two concepts, and then precise what is the focus on.
 
-TODO
+Reorganized.
+```diff
+-Here, we focus on \textit{fraternal} evolutionary transitions in individuality, in which the higher-level replicating entity is derived from the combination of cooperating kin that have entwined their long-term fates \citep{west2015major}.
++Fraternal evolutionary transitions in individuality are transitions in which the higher-level replicating entity is derived from the combination of cooperating kin that have entwined their long-term fates \citep{west2015major}.
+Multicellular organisms and eusocial insect colonies exemplify this phenomenon \citep{smith1997major} given that both are sustained and propagated through the cooperation of lower-level kin.
+Although not our focus here, egalitarian transitions --- events in which non-kin unite, such as the genesis of mitochondria by symbiosis of free-living prokaryotes and eukaryotes \citep{smith1997major} --- also constitute essential episodes in natural history.
+```
 
 > - L33-39: This part lacks some details and examples about what is a major transition.
 
