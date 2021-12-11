@@ -444,7 +444,7 @@ We also reworked the sentence for better clarity.
 
 > - Figure 3: The figure is difficult to read (black borders and yellow arrows are not visible).
 
-TODO
+We altered the graphics to add red underlining of black borders and make the arrows red with white outlines.
 
 > - L232: Does it mean that there is no adaptive messaging in all the other replicates (if I understand, there are 40*4 in all)?
 
