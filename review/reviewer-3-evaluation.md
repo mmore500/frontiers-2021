@@ -150,10 +150,31 @@ To better suit the intended audience, we removed this term from the manuscript.
  As expected, with the addition of cell controllers capable of nearly arbitrary computation we see a far more diverse set of behaviors and strategies arise.
 ```
 
-> - I also would have been happy to read more about the concept of emergence. It could also be debated here as hereditary groups are explicitly encoded in the model, and (if I understand well from Supp. mat. L432-434) as cells can communicate some signals only with their own hereditary group.
+> - I also would have been happy to read more about the concept of emergence.
+> It could also be debated here as hereditary groups are explicitly encoded in the model, and (if I understand well from Supp. mat. L432-434) as cells can communicate some signals only with their own hereditary group.
 > It deserves a few more words in the main text.
 
-TODO
+We added some clarification and elaboration to this end.
+
+```diff
+--- a/tex/body/introduction.tex
++++ b/tex/body/introduction.tex
+ Novelty can occur in terms of interactions among competitors, among organism-level kin, or even within the building blocks that make up hierarchical individuality.
+ Experimentally studying fraternal transitions in a digital system where key processes (reproductive, developmental, homeostatic, and social) occur implicitly within a unified framework can provide unique insights into nature.
+
+-We do provide some framework to facilitate fraternal transitions in individuality by allowing cells to readily designate distinct hereditary groups.
++However, in our system, multicells do not emerge from an entirely impartial substrate.
++We do explicitly provide some framework to facilitate fraternal transitions in individuality by allowing cells to readily designate distinct hereditary groups.
+ Offspring cells may either remain part of their parent's hereditary group or found a new group.
+ Cells can recognize group members, thus allowing targeted communication and resource sharing with kin.
+-We reward cells for performing tasks that require coordination with hereditary group members.
+-As such, cells that cooperate will have an advantage on those tasks and if they are also part of a hereditary group they will increase their inclusive fitness.
++We reward cells for performing tasks designed to require passive collaboration among hereditary group members.
++As such, cells that form hereditary groups to maximize advantage on those tasks stand to increase their inclusive fitness.
+ In previous work introducing the DISHTINY (DIStributed Hierarchical Transitions in IndividualitY) framework we evolved parameters for manually designed cell-level strategies to explore fraternal transitions in individuality \citep{moreno2019toward}.
+ In this work we extend DISHTINY to incorporate a more dynamic event-driven genetic programming representation called SignalGP, which was designed to facilitate dynamic interactions among agents and between agents and their environment \citep{lalejini2018evolving}.
+ As expected, with the addition of cell controllers capable of nearly arbitrary computation we see a far more diverse set of behaviors and strategies arise.
+```
 
 ## Q4 Check List
 
