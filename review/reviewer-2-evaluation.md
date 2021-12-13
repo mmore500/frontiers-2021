@@ -282,7 +282,8 @@ We agree and elected to remove the analogy entirely.
  Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}\textbf{(A)} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
 ```
 
-> 145: What is the intended here with "implicit selection" pressure? Group aging and selection on group size and circular layout seems quite explicit group-level selection pressures.
+> 145: What is the intended here with "implicit selection" pressure?
+> Group aging and selection on group size and circular layout seems quite explicit group-level selection pressures.
 
 That clause lapses into a traditionally "genetic programming" perspective where any scheme where reproductive success is not exclusively determined by a experimenter-defined "fitness function" is considered implicit.
 We agree that the terminology is out of place for the intended audience and provide a clarification.
