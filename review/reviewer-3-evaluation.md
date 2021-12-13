@@ -36,6 +36,9 @@ We also provide some links so that diffs may be viewed directly on GitHub.
 >
 > Doing so, the authors demonstrate the ability of their model to generate complex multicellular evolutive strategies, and the usefulness of complex individual-based simulations to tackle the modeling of major evolutionary transitions.
 
+Your comments touch on the major points we hoped to present in our manuscript.
+We appreciate your careful attention and copacetic synopsis.
+
 ## Q2 Please highlight the limitations and strengths.
 
 > Reviewer 3 | 01 Nov 2021 | 11:51

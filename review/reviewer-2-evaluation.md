@@ -35,7 +35,11 @@ We also provide some links so that diffs may be viewed directly on GitHub.
 > However, there is no predefined group-level explicit coordination of group-replication strategies.
 > This has to evolve, and the plethora of possible rules are such that its evolution is quite open-ended.
 > They report a number of case studies on developmental and reproductive patterns observed in preliminary runs of their model.
-These case studies highlight the striking similarity between digital evolution > and empirical ("biological") multicellularity.
+> These case studies highlight the striking similarity between digital evolution and empirical ("biological") multicellularity.
+
+Your comments touch on the major points we hoped to present in our manuscript.
+We appreciate your careful attention and copacetic synopsis.
+
 
 ## Q2 Please highlight the limitations and strengths.
 
