@@ -403,16 +403,7 @@ This was an error in the figure caption.
 Grid size used for competition experiments was the same as the overall population.
 Our observations of significant outcompetition of variants with traits of interest knocked out suggests that adequate selective pressure should have been present in the population to overcome drift in selecting for those traits.
 
-Your question points out some important information we can add to supplementary information about state at the end of evolutionary runs:
-* average number of distinct groups,
-* mean group size of a cell,
-* median group size of a cell,
-* average number of live cells,
-* average phylogenetic depth of extant cells, and
-* average phylogenetic depth of the most common recent ancestor.
-
-These statistics will be broken up by the four conditions we surveyed.
-This will require un-archiving and re-processing our raw data, so we will add this to our supplement after returning these comments to you.
+This of course varied run to run, but we estimate a population size of on the order of 30 to 40 "high-level" organisms.
 
 > ### Supplementary material:
 >
