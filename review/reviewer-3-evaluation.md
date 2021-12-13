@@ -555,4 +555,18 @@ Added.
 > - L324-337: This part of the discussion is oriented towards technical and modeling considerations and limitations.
 > In my opinion, it should focus more on evolutionary theory, and the limitations and potential improvements of the conceptual model.
 
-TODO
+Technical considerations with respect to parallel computing and artifical life are central to our ongoing work with this system, so we are keen to mention them in the discussion.
+However, we are hopeful that our technical efforts will benefit other systems and have added a few words broadening out to assumptions and extensions of the conceptual model presented here.
+
+```diff
+--- a/tex/body/discussion.tex
++++ b/tex/body/discussion.tex
+ Ongoing work with DISHITNY is testing approaches to harness increasingly abundant parallel processing power for digital evolution simulation \citep{moreno2021conduit}.
+ The spatial, distributed nature of our approach potentially affords a route to achieve large-scale digital multicellularity experiments consisting of millions, instead of thousands, of cells via high-performance parallel computing.
++
++We hope that such technical efforts will also benefit other computational work exploring a broader range of conceptual models of multicellularity.
++For instance, this work assumes incessant, pervasive biotic interaction via competition for space.
++However, many natural systems exhibit more intermittent, sparse encounters between multicells and such selective interactions have been hypothesized as key to the evolution of complexity and diversity \citep{soros2014identifying}.
++Also crucial to explore, and unaccounted for in this work, are dynamics of cell migration in development \citep{horwitz2003cell} and motility of multicells \citep{arnellos2019bodily}.
++It seems certain that the varied conditions and mechanistic richness of biological reality can only be fully explored through a plurality of conceptual models and model systems.
+```
