@@ -90,8 +90,8 @@ We have made a pass to improve detail in captions for all figures in the main te
 > I think the method is sound, though very A-Life oriented.
 >Their conclusions are supported by their results.
 
-We are planning a full rework of the introduction, discussion, and conclusion to better serve non-Alife audiences.
-This will require several draft exchanges between the co-authors, so we will finalize those changes after returning these comments to you.
+In addition to other changes, in [commit 2275456](https://github.com/mmore500/frontiers-2021/commit/2275456a3dc16b537e936f523f30780e8198fdde) we made several additions and tweaks to better serve non-Alife audiences.
+(In particular, incorporating more familiar biological vocabulariy).
 
 > The occasional methodological awkwardness that comes with modelling biological cells as abstract computer programs is more than offset by the resemblance of their results to biological systems.
 

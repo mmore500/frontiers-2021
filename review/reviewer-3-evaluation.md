@@ -55,8 +55,8 @@ We appreciate your careful attention and copacetic synopsis.
 > For example, the SignalGP model is abruptly brought, as well as some concepts such as open-endedness.
 > In my opinion, it may challenge non-initiated readers, while it brings results that may be of interest for a wider audience, outside of the modeling community.
 
-We are planning a full rework of the introduction, discussion, and conclusion to better serve non-Alife audiences.
-This will require several draft exchanges between the co-authors, so we will finalize those changes after returning these comments to you.
+In addition to other changes, in [commit 2275456](https://github.com/mmore500/frontiers-2021/commit/2275456a3dc16b537e936f523f30780e8198fdde) we made several additions and tweaks to better serve non-Alife audiences.
+(In particular, incorporating more familiar biological vocabulariy).
 
 > Moreover, the manuscript lacks a description of the experimental protocol in the main text, which is almost entirely relegated to the appendix, making the reading difficult as it is necessary to dig into the supplementary material to get basic information such as the grid size, the number of simulated iterations, the number of replicates, etc.
 
