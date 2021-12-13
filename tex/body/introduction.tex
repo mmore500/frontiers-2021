@@ -24,20 +24,23 @@ High-level organisms that must compete for a limited number of subspace slots.
 Individual cells that comprise an organism are controlled by heritable computer programs that allow them to self-replicate, interact with their environment, and communicate with neighboring cells.
 
 Goldsby's work defines two modes of cellular reproduction: tissue accretion and offspring generation.
+In this way, somatic and gametogenic modes of reproduction are explicitly differentiated.
 Within a group, cells undergo tissue accretion, whereby a cell copies itself into a neighboring position in its subspace.
 In the latter, a population slot is cleared to make space for a daughter organism then seeded with a single daughter cell from the parent organism.
 
+Goldsby's model abstracts away developmental cost to focus on resource competition between groups.
 Cells grow freely within an organism, but fecundity depends on the collective profile of computational tasks (usually mathematical functions) performed within the organism.
 When an organism accumulates sufficient resource, a randomly chosen subspace is cleared and a single cell from the replicating organism is used as a propagule to seed the new organism.
 This setup mirrors the dynamics of biological multicellularity, in which cell proliferation may either grow an existing multicellular body or found a new multicellular organism.
 
 Here, we take several steps to develop a computational environment that removes the enforcement and rigid regulation of multiple organismal levels.
-Specifically, we remove the explicitly segregated subspaces and we let cells interact with each other more freely.
+Specifically, we remove the explicitly segregated subspaces and we let multicells interact with each other more freely.
 We demonstrate the emergence of multicellularity where each organism manages its own spatial distribution and reproductive process.
 This spatially unified approach enables more nuanced interactions among organisms, albeit at the cost of substantially more complicated analyses.
 Instead of a single explicit interface to mediate interactions among high-level organisms, such interactions must emerge via many cell-cell interfaces.
 Novelty can occur in terms of interactions among competitors, among organism-level kin, or even within the building blocks that make up hierarchical individuality.
 Experimentally studying fraternal transitions in a digital system where key processes (reproductive, developmental, homeostatic, and social) occur implicitly within a unified framework can provide unique insights into nature.
+For example, pervasive, arbitrary interactions between multicells introduces the possibility for strong influence of biotic selection.
 
 However, in our system, multicells do not emerge from an entirely impartial substrate.
 We do explicitly provide some framework to facilitate fraternal transitions in individuality by allowing cells to readily designate distinct hereditary groups.
