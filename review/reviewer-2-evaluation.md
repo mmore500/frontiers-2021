@@ -183,7 +183,7 @@ We reinstalled several details into the methods section we had omitted for brevi
 > They only shows that each feature out-competes a corresponding knockout.
 > I think the paper would be much richer if this was added.
 
-See above.
+See above (reply to Q2 points 1 and 2).
 
 > My second major point is that I could not always understand what exactly is shown in the figures.
 > I think that adding more explanation in the text and in the caption will improve readability.
