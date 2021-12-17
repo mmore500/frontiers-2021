@@ -454,7 +454,7 @@ This will enable exploration of conditions that incorporate even stronger select
 > 710-711: The system just recovered the L0 situation, though with an L1 set-up.
 Why do the authors think this is surprising?
 
-We meant to imply that at face value, the observation of higher mean sharing among  was unexpected.
+We meant to imply that at face value, the observation of higher mean sharing across L0 group boundaries than within L0 groups was unexpected.
 We changed the phrasing to "counterintuitive" as opposed to "surprising" and added more detail.
 
 ```diff
