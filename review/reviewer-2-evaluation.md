@@ -52,9 +52,13 @@ We appreciate your careful attention and copacetic synopsis.
 >
 > The main weaknesses are:
 > 1. They do not explain in depth how this information evolves (no evolutionary dynamics - only the final results)
+> 2. They do not explain "how" information encoded by individual cells generates the organism-level features they report.
+
+This reply is meant in conversation with both points 1 and 2 above.
 
 We agree that evolutionary dynamics and evolutionary histories are crucial, exciting topics with respect to experimental and modeling efforts around multicellularity.
-This is an active topic of [our ongoing work](http://workshops.alife.org/oee4/papers/moreno-oee4-camera-ready.pdf).
+A side effect of our system's degrees of freedom is that tracing out a full account of the mechanisms at play behind a phenotypic feature or tracing a detailed evolutionary history of a feature become much more involved.
+However, this is an active topic of [our ongoing work (see, for example, [our workshop paper "Case Study of Novelty, Complexity, and Adaptation in a Multicellular System" for the OEE4 Workshop @ Alife 2021](http://workshops.alife.org/oee4/papers/moreno-oee4-camera-ready.pdf)).
 
 We have added some closing remarks noting the limited scope of the existing work and emphasizing the importance of exploring these dimensions in future work.
 
@@ -66,10 +70,6 @@ We have added some closing remarks noting the limited scope of the existing work
 
  In particular, we plan to investigate mechanisms to evolve greater collective sophistication among agents.
 ```
-
-> 2. They do not explain "how" information encoded by individual cells generates the organism-level features they report.
-
-See above.
 
 > 3. The main text and the captions of their figures should give more detail about the figures.
 
@@ -90,8 +90,10 @@ We have made a pass to improve detail in captions for all figures in the main te
 > I think the method is sound, though very A-Life oriented.
 >Their conclusions are supported by their results.
 
-In addition to other changes, in [commit 2275456](https://github.com/mmore500/frontiers-2021/commit/2275456a3dc16b537e936f523f30780e8198fdde) we made several additions and tweaks to better serve non-Alife audiences.
-(In particular, incorporating more familiar biological vocabulariy).
+We agree that the manuscript should be adjusted to better cater to a broader audience.
+We have kept this objective top of mind while incorporating feedback from you and the other reviewer, and expect that that attention (particularly to figure captions) has translated to improvement on this front.
+In addition to other changes, in [commit 2275456](https://github.com/mmore500/frontiers-2021/commit/2275456a3dc16b537e936f523f30780e8198fdde) we specially made several additions and tweaks to better serve non-Alife audiences.
+(In particular, incorporating more familiar biological vocabulary).
 
 > The occasional methodological awkwardness that comes with modelling biological cells as abstract computer programs is more than offset by the resemblance of their results to biological systems.
 
@@ -131,7 +133,8 @@ We reinstalled several details into the methods section we had omitted for brevi
  Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
  Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
  Daughter cells inherit their parent's genetic program, except any novel mutations that may arise.
-+We used standard SignalGP mutation parameters from \citep{lalejini2018evolving}, but only applied mutations 1\% of daughter cells at birth.
++Mutations included whole-function duplication and deletion, bit flips on tags for instructions and functions, instruction and argument substitutions, and slip mutation of instruction sequences.
++We used standard SignalGP mutation parameters from \citep{lalejini2018evolving}, but only applied mutations to 1\% of daughter cells at birth.
  Daughter cells may also inherit hereditary group ID, introduced and discussed below.
 
  Cells accrue resource via a cooperative resource-collection process.
@@ -139,7 +142,7 @@ We reinstalled several details into the methods section we had omitted for brevi
  We employ the SignalGP event-driven genetic programming representation.
  As sketched in Figure \ref{fig:signalgp-dishtinygp}\textbf{(A)}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
  This process can be considered somewhat akin to gene expression.
-+In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running signal handlers.
++In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running modules.
  The event-driven framework facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
 
  Special module components allow evolving programs to sense and interact with their environment, through mechanisms including resource sharing, hereditary group sensing, apoptosis, cell reproduction, and arbitrary cell-cell messaging.
@@ -158,7 +161,7 @@ We reinstalled several details into the methods section we had omitted for brevi
 +For each condition, we simulated 40 replicate populations for up to
 +1,048,576 ($2^{20}$) updates.
 +During this time, on the order of 4,000 cellular generations and 500 apex-level group generations elapsed in runs.
-+(Full details appear in Supplementary Table \ref{sup:systematics}.)
++(Full details appear in Supplementary Table \ref{tab:systematics}.)
 +Due to variability in simulation speed, four replicates only completed 262,144 updates.
 +All analyses involving inter-replicate comparisons were therefore performed at this earlier time point.
 ```
@@ -206,6 +209,11 @@ Specific changes are noted above.
 > 84-87: Why/how are these case studies chosen?
 > Are these e.g. the "best-cases", do these cases examplify the breadth of possible evolutionary outcomes?
 
+Each case study strain was chosen by screening the entire set of replicate evolutionary runs for signs of the trait under investigation and then manually the most promising strain(s) for further investigation.
+Case studies presented therefore represent an anecdotal sampling, rather than an exhaustive summary, with respect to each trait of interest.
+
+We have clarified this in the manuscript.
+
 ```diff
 --- a/tex/body/introduction.tex
 +++ b/tex/body/introduction.tex
@@ -215,12 +223,15 @@ Specific changes are noted above.
 -We see these anecdotal characterizations as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
 +
 +Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
-+Each case study strain was chosen by screening the entire set of replicate evolutionary runs for evidence of a particular trait and then hand selecting the most promising strain(s) for further investigation.
++Each case study strain was chosen by screening the entire set of replicate evolutionary runs for signs of the trait under investigation and then manually the most promising strain(s) for further investigation.
++Case studies presented therefore represent an anecdotal sampling, rather than an exhaustive summary, with respect to each trait of interest.
 +Our goal is to explore a breadth of possible evolutionary outcomes under the DISHTINY framework.
 +We see this as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
 ```
 
 > 94: What does a new-born cell inherit from its parent?
+
+Clarified.
 
 ```diff
 --- a/tex/body/methods.tex
@@ -236,9 +247,13 @@ Specific changes are noted above.
  Cells accrue resource via a cooperative resource-collection process.
 ```
 
-> 97: Is this an explict modelling choice? Could you please motivate it?
+> 97: Is this an explict modelling choice?
+> Could you please motivate it?
 > I understand that physical realism is not the point here, it would just be useful to briefly explain why the circular layout is selected for.
 > After all, resource aquisition through surface (on a 2D space that would be the perimeter) should increase with a concave layout.
+
+The benefit of a circular layout is an arbitrary artifact of the size-sensing algorithm we used.
+We have clarified this in the manuscript.
 
 ```diff
 --- a/tex/body/methods.tex
@@ -255,6 +270,8 @@ Specific changes are noted above.
  ```
 
 > 99: Could you summarise how cells cooperate in the main text?
+
+Added.
 
 ```diff
 --- a/tex/body/methods.tex
@@ -278,7 +295,7 @@ We agree and elected to remove the analogy entirely.
 -Hierarchically nested hereditary group IDs are analogous to a strict corporate organizational structure: all employees (i.e., cells) are members of one department (i.e., L0 hereditary group) and one corporation (i.e., L1 hereditary group) but no employee can be a member of two departments and no department can be a member of two corporations.
 +Hierarchically hereditary group IDs are strictly nested: all cells are members of one L0 hereditary group and L1 hereditary group.
 +No cell can be a member of two L0 hereditary groups or two L1 hereditary groups.
-+Likewise, no L0 hereditary groups can appear within two different L1 hereditary groups.
++Likewise, no L0 hereditary group can appear within more than one L1 hereditary group.
  Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}\textbf{(A)} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
 ```
 
@@ -312,15 +329,18 @@ We agree that the terminology is out of place for the intended audience and prov
 > 196-202: Could you summarise "how" resource sharing between kins evolves?
 > Do they share information about "with whom" they are cooperating?
 
+We have added some detail here.
+
 ```diff
 --- a/tex/body/results.tex
 +++ b/tex/body/results.tex
  Across replicate evolutionary runs in all four treatments, we also found that resource was transferred among registered kin at a significantly higher mean rate than to unrelated neighbors (non-overlapping 95\% CI).
 +Genetic programs controlling cells can sense whether any particular neighbor shares a common hereditary group ID.
-+Thus, selective activation of resource sharing behavior to such neighbors might have evolved, which would provide one possible explanation for this observation.\footnote{
++Thus, selective activation of resource sharing behavior to hereditary group members might have evolved, which would provide one possible explanation for this observation.%
++\footnote{%
 +Alternately to the same end, resource sharing behavior could be instead suppressed in the opposite case, when a neighbor holds a different hereditary group ID.
 +}
-+However, cells are capable of conditioning behavior on whether a particular neighbor is direct kin (i.e., a parent or child).
++However, cells are also capable of conditioning behavior on whether a particular neighbor is direct kin (i.e., a parent or child).
  To test whether this resource-sharing was solely an artifact of sharing between direct cellular kin, we also assessed mean sharing to registered kin that were not immediate cellular relatives.
 ```
 
@@ -357,12 +377,22 @@ We agree this provide a better, more explicit wording.
 
 > Fig 3: Please clarify what different colors represent.
 
+Clarified.
+
 ```diff
 --- a/fig/ko-interior_propagule.tex
 +++ b/fig/ko-interior_propagule.tex
- Subfigure \textbf{(A)} depicts gene regulation at each of a cell's four directional SignalGP instances using a PCA mapping from regulatory state to three-dimensional RGB coordinates, calculated uniquely for each L1 hereditary group.
+-Subfigure \textbf{(A)} depicts gene regulation at each of a cell's four directional SignalGP instances using a PCA mapping from regulatory state to three-dimensional RGB coordinates, calculated uniquely for each L1 hereditary group.
+-Black borders divide outer registered-kin groups and white borders divide inner registered-kin groups.
++Subfigure \textbf{(A)} compares gene regulation between analyzed strains.
++Group layouts are overlaid via borders between cells.
++Black borders divide L1 groups and white borders divide L0 groups.
++Borders between L1 groups are underlined in red for greater visibility.
++Within these group layouts, regulation state for each cell's four directional SignalGP instances is color coded using a PCA mapping from regulatory state to three-dimensional RGB coordinates.
++(The PCA mapping is calculated uniquely for each L1 hereditary group.)
 +Within a L1 hereditary group, color similarity among tile quarters indicates that the corresponding SignalGP instances exhibit similar regulatory state.
- Black borders divide outer registered-kin groups and white borders divide inner registered-kin groups.
++However, the particular hue of a SignalGP instance has no significance.
++In the case of identical regulatory state (here, due to the absence of genetic regulation in a knockout strain) this color coding appears gray.
 ```
 
 > Also, the terminology is inconsistent: what do "Endogenous daughter groups" mean?
@@ -400,10 +430,16 @@ This was an error in the figure caption.
 > This is important because a higher-level individuality also entails competition (and thus evolution) at the higher level.
 > If the number is very small, then it is difficult to envision how competition between groups can overcome drift.
 
-Grid size used for competition experiments was the same as the overall population.
-Our observations of significant outcompetition of variants with traits of interest knocked out suggests that adequate selective pressure should have been present in the population to overcome drift in selecting for those traits.
-
+We used a grid size of 60x60 for evolutionary runs, which limited the number of cells present in the population to 3600.
+A typical apex-level group comprised 80 to 100 cells.
 This of course varied run to run, but we estimate a population size of on the order of 30 to 40 "high-level" organisms.
+
+We also used 60x60 grid for competition experiments.
+In these competion experiments, we repeatedly observed wildtype strains outcompete variants with traits of interest knocked out.
+Because the simulation size was identical between competition and evolutionary runs, sufficient selective pressure seems likely to have been present in the population to overcome drift in selecting for those traits.
+
+Instantiating larger populations with parallel and distributed computing techniques is a key research objective for us.
+This will enable exploration of conditions that incorporate even stronger selection pressure and that evaluate even larger amounts of genetic variation.
 
 > ### Supplementary material:
 >

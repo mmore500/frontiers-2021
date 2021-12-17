@@ -12,7 +12,8 @@ Over discrete time steps (``updates''), cells can collect a resource.
 Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use but gradual enough so as to not prevent the most naive cells from eventually accumulating enough resource to reproduce.
 Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
 Daughter cells inherit their parent's genetic program, except any novel mutations that may arise.
-We used standard SignalGP mutation parameters from \citep{lalejini2018evolving}, but only applied mutations 1\% of daughter cells at birth.
+Mutations included whole-function duplication and deletion, bit flips on tags for instructions and functions, instruction and argument substitutions, and slip mutation of instruction sequences.
+We used standard SignalGP mutation parameters from \citep{lalejini2018evolving}, but only applied mutations to  1\% of daughter cells at birth.
 Daughter cells may also inherit hereditary group ID, introduced and discussed below.
 
 Cells accrue resource via a cooperative resource-collection process.
@@ -51,8 +52,8 @@ We accomplish this through two separate, but overlaid, instantiations of the her
 We refer to each independent hereditary grouping system as a ``level.''
 The hierarchical extension allows two levels of hereditary grouping, identified here as L0 and L1.
 L0 instantiates smaller, inner grouping embedded inside of a L1 grouping.
-Without the hierarchical extension, only L0 is present.
-\footnote{
+Without the hierarchical extension, only L0 is present.%
+\footnote{%
 We chose to number these levels using the computer science convention of zero-based indexing (as opposed to everyday practice of counting up from one) to maintain consistency with source code and data sets associated with this work.
 }
 We refer to the highest hereditary grouping level present in a simulation as the ``apex'' level.
@@ -68,7 +69,7 @@ In order to enforce hierarchical nesting of hereditary group IDs, daughter cells
 
 Hierarchical hereditary group IDs are strictly nested: all cells are members of one L0 hereditary group and L1 hereditary group.
 No cell can be a member of two L0 hereditary groups or two L1 hereditary groups.
-Likewise, no L0 hereditary groups can appear within two different L1 hereditary groups.
+Likewise, no L0 hereditary group can appear within more than one L1 hereditary group.
 Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}\textbf{(A)} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
 
 \subsection{Cell-Level Organisms}
@@ -78,7 +79,7 @@ Our experiments use cell-level digital organisms controlled by genetic programs 
 We employ the SignalGP event-driven genetic programming representation.
 As sketched in Figure \ref{fig:signalgp-dishtinygp}\textbf{(A)}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
 This process can be considered somewhat akin to gene expression.
-In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running signal handlers.
+In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running modules.
 The event-driven framework facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
 
 Special module components allow evolving programs to sense and interact with their environment, through mechanisms including resource sharing, hereditary group sensing, apoptosis, cell reproduction, and arbitrary cell-cell messaging.
@@ -86,9 +87,9 @@ Modules can also include general purpose computational elements like conditional
 A simple ``regulatory'' system provides special CPU instructions that dynamically adjust which modules are activated by particular signals.
 In our simulation, directionality of some inputs and outputs must be accounted for (e.g., specifying \textit{which} neighbor to share resource with).
 To accomplish this, we provide each cell an independent SignalGP hardware instance to manage inputs and outputs with respect to each specific cell neighbor.
-So there are four hardware sets per cell, one for each cardinal direction.
-\footnote{
-This approach differs from previous work evolving digital organisms in grid-based problem domains \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}; see Supplemental Section \ref{sup:cell_level_organisms} for further detail.
+So there are four virtual hardware sets per cell, one for each cardinal direction.%
+\footnote{%
+This approach differs from existing work evolving digital organisms in grid-based problem domains, where directionality is managed by a within-cell ``facing'' state that determines the source direction for inputs and the target direction for outputs \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}; see Supplemental Section \ref{sup:cell_level_organisms} for further detail.
 }
 Figure \ref{fig:signalgp-dishtinygp}\textbf{(B)} overviews the configuration of the four SignalGP instances that constitute a single cell.
 

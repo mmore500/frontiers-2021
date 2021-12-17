@@ -55,12 +55,14 @@ We appreciate your careful attention and copacetic synopsis.
 > For example, the SignalGP model is abruptly brought, as well as some concepts such as open-endedness.
 > In my opinion, it may challenge non-initiated readers, while it brings results that may be of interest for a wider audience, outside of the modeling community.
 
-In addition to other changes, in [commit 2275456](https://github.com/mmore500/frontiers-2021/commit/2275456a3dc16b537e936f523f30780e8198fdde) we made several additions and tweaks to better serve non-Alife audiences.
-(In particular, incorporating more familiar biological vocabulariy).
+We agree that the manuscript should be adjusted to better cater to a broader audience.
+We have kept this objective top of mind while incorporating feedback from you and the other reviewer, and expect that that attention (particularly to figure captions) has translated to improvement on this front.
+In addition to other changes, in [commit 2275456](https://github.com/mmore500/frontiers-2021/commit/2275456a3dc16b537e936f523f30780e8198fdde) we specially made several additions and tweaks to better serve non-Alife audiences.
+(In particular, incorporating more familiar biological vocabulary).
 
 > Moreover, the manuscript lacks a description of the experimental protocol in the main text, which is almost entirely relegated to the appendix, making the reading difficult as it is necessary to dig into the supplementary material to get basic information such as the grid size, the number of simulated iterations, the number of replicates, etc.
 
-We reinstalled several details into the methods section we had omitted for brevity.
+We reinstated several details into the methods section we had omitted for brevity.
 
 ```diff
 --- a/tex/body/methods.tex
@@ -75,7 +77,8 @@ We reinstalled several details into the methods section we had omitted for brevi
  Collected resource decays at a rate of 0.1\% per update, incentivizing its quick use.
  Once sufficient resource accrues, cells may pay one unit of resource to place a daughter cell on an adjoining tile of the toroidal grid (i.e., reproduce), replacing any existing cell already there.
  Daughter cells inherit their parent's genetic program, except any novel mutations that may arise.
-+We used standard SignalGP mutation parameters from \citep{lalejini2018evolving}, but only applied mutations 1\% of daughter cells at birth.
++Mutations included whole-function duplication and deletion, bit flips on tags for instructions and functions, instruction and argument substitutions, and slip mutation of instruction sequences.
++We used standard SignalGP mutation parameters from \citep{lalejini2018evolving}, but only applied mutations to 1\% of daughter cells at birth.
  Daughter cells may also inherit hereditary group ID, introduced and discussed below.
 
  Cells accrue resource via a cooperative resource-collection process.
@@ -83,7 +86,7 @@ We reinstalled several details into the methods section we had omitted for brevi
  We employ the SignalGP event-driven genetic programming representation.
  As sketched in Figure \ref{fig:signalgp-dishtinygp}\textbf{(A)}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
  This process can be considered somewhat akin to gene expression.
-+In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running signal handlers.
++In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running signal modules.
  The event-driven framework facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
 
  Special module components allow evolving programs to sense and interact with their environment, through mechanisms including resource sharing, hereditary group sensing, apoptosis, cell reproduction, and arbitrary cell-cell messaging.
@@ -102,7 +105,7 @@ We reinstalled several details into the methods section we had omitted for brevi
 +For each condition, we simulated 40 replicate populations for up to
 +1,048,576 ($2^{20}$) updates.
 +During this time, on the order of 4,000 cellular generations and 500 apex-level group generations elapsed in runs.
-+(Full details appear in Supplementary Table \ref{sup:systematics}.)
++(Full details appear in Supplementary Table \ref{tab:systematics}.)
 +Due to variability in simulation speed, four replicates only completed 262,144 updates.
 +All analyses involving inter-replicate comparisons were therefore performed at this earlier time point.
 ```
@@ -111,6 +114,11 @@ We reinstalled several details into the methods section we had omitted for brevi
 > I thus suggest to the authors to re-organize the manuscript to make it more accessible.
 > In particular, the model and the results should be understandable without detailed knowledge of digital evolution modeling, with more focus on the theoretical and biological insights (as done for example by Wilke et al 2001; <https://doi.org/10.1038/35085569>).
 > I think it is possible to do so without running any new experiment, just by re-equilibrating the content and vocabulary of the manuscript.
+
+We agree that the manuscript should be adjusted to better cater to a broader audience.
+We have kept this objective top of mind while incorporating feedback from you and the other reviewer, and expect that that attention (particularly to figure captions) has translated to improvement on this front.
+In addition to other changes, in [commit 2275456](https://github.com/mmore500/frontiers-2021/commit/2275456a3dc16b537e936f523f30780e8198fdde) we specially made several additions and tweaks to better serve non-Alife audiences.
+(In particular, incorporating more familiar biological vocabulary).
 
 ## Q3 Please comment on the methods, results and data interpretation. If there are any objective errors, or if the conclusions are not supported, you should detail your concerns.
 
@@ -131,7 +139,7 @@ We now provide a definition.
 
 ```diff
 -Digital evolution, occupying a sort of middle ground between wet work and mechanistic modeling, offers a unique conjunction of experimental capabilities that complements work in both of those disciplines.
-+Digital evolution, computational model systems designed to instantiate evolution in abstract algorithmic substrates rather than directly emulating any specific biological system, occupies a sort of middle ground between wet work and mechanistic modeling.
++Digital evolution, computational model systems designed to instantiate evolution in abstract algorithmic substrates rather than directly emulating any specific biological system \citep{wilke2002biology,dolsondigital2022}, occupies a sort of middle ground between wet work and mechanistic modeling.
 +This approach offers a unique conjunction of experimental capabilities that complements work in both of those disciplines.
 
 ```
@@ -409,8 +417,8 @@ Pared back detail and referred reader to supplement.
 -These hardware instances all execute the same SignalGP program and may coordinate via internal signals, but are otherwise decoupled.
 +In our simulation, directionality of some inputs and outputs must be accounted for (e.g., specifying \textit{which} neighbor to share resource with).
 +To accomplish this, we provide each cell an independent SignalGP hardware instance to manage inputs and outputs with respect to each specific cell neighbor.
-+So there are four hardware sets per cell, one for each cardinal direction.
-+\footnote{
++So there are four virtual hardware sets per cell, one for each cardinal direction.%
++\footnote{%
 +This approach differs from previous work evolving digital organisms in grid-based problem domains \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}; see Supplemental Section \ref{sup:cell_level_organisms} for further detail.
 +}
  Figure \ref{fig:signalgp-dishtinygp}\textbf{(B)} overviews the configuration of the four SignalGP instances that constitute a single cell.
@@ -490,7 +498,8 @@ Based on the other reviewer's comments, we added some language clarifying how we
 -We see these anecdotal characterizations as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
 +
 +Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
-+Each case study strain was chosen by screening the entire set of replicate evolutionary runs for evidence of a particular trait and then hand selecting the most promising strain(s) for further investigation.
++Each case study strain was chosen by screening the entire set of replicate evolutionary runs for signs of the trait under investigation and then manually the most promising strain(s) for further investigation.
++Case studies presented therefore represent an anecdotal sampling, rather than an exhaustive summary, with respect to each trait of interest.
 +Our goal is to explore a breadth of possible evolutionary outcomes under the DISHTINY framework.
 +We see this as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
 ```
