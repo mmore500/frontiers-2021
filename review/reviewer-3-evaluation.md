@@ -499,7 +499,6 @@ Based on the other reviewer's comments, we added some language clarifying how we
 +
 +Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
 +Each case study strain was chosen by screening the entire set of replicate evolutionary runs for signs of the trait under investigation and then manually the most promising strain(s) for further investigation.
-+Case studies presented therefore represent an anecdotal sampling, rather than an exhaustive summary, with respect to each trait of interest.
 +Our goal is to explore a breadth of possible evolutionary outcomes under the DISHTINY framework.
 +We see this as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
 ```
@@ -510,8 +509,7 @@ Based on your comment, we added a further clarification.
 --- a/tex/body/introduction.tex
 +++ b/tex/body/introduction.tex
  Here, we perform case studies to characterize notable multicellular phenotypes that evolved via this more dynamic genetic programming underpinning.
--Each case study strain was chosen by screening the entire set of replicate evolutionary runs for evidence of a particular trait and then hand selecting the most promising strain(s) for further investigation.
-+Each case study strain was chosen by screening the entire set of replicate evolutionary runs for signs of a trait of interest and then hand selecting the most promising strain(s) for further investigation.
+ Each case study strain was chosen by screening the entire set of replicate evolutionary runs for signs of a trait of interest and then hand selecting the most promising strain(s) for further investigation.
 +Case studies presented therefore represent an anecdotal sampling, rather than an exhaustive summary, with respect to each trait of interest.
  Our goal is to explore a breadth of possible evolutionary outcomes under the DISHTINY framework.
  We see this as a precursory step toward hypothesis-driven work contributing to open questions about fraternal transitions in individuality.
