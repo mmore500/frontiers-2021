@@ -587,7 +587,11 @@ Added.
 > In my opinion, it should focus more on evolutionary theory, and the limitations and potential improvements of the conceptual model.
 
 Technical considerations with respect to parallel computing and artifical life are central to our ongoing work with this system, so we are keen to mention them in the discussion.
-However, we are hopeful that our technical efforts will benefit other systems and have added a few words broadening out to assumptions and extensions of the conceptual model presented here.
+The evolutionary theory associated with major transitions is broad, with enough nuance that unpacking our observations in thorough, rigorous conversation with theory is beyond our ambition without adding an expert in the area to our team.
+That said, this is our exact plan for a future paper that will focus more on experimentally testing the theory.
+
+We do strongly agree with your comments, however, in that directly stating models' assumptions and limitations is crucial to useful modeling.
+We have incorporated direct commentary on assumptions and limitations of our modeling approach, in context with some potential theoretical implications.
 
 ```diff
 --- a/tex/body/discussion.tex
