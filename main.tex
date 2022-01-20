@@ -17,6 +17,9 @@
 \usepackage{amsmath}
 
 \usepackage{rotating}
+\usepackage{bibunits}
+\defaultbibliography{bibl}
+\defaultbibliographystyle{apalike}
 
 \usepackage[export]{adjustbox}
 
@@ -144,6 +147,8 @@
 
 \maketitle
 
+\begin{bibunit}
+
 \input{tex/abstract.tex}
 
 \input{tex/body.tex}
@@ -151,14 +156,15 @@
 \input{tex/acknowledgements.tex}
 
 \footnotesize
-\bibliographystyle{apalike}
-\bibliography{bibl} % replace by the name of your .bib file
+\putbib
+
+\end{bibunit}
 
 \clearpage
 \newpage
 
-\appendix
-
+\begin{bibunit}
 \input{tex/supplement.tex}
-
+\putbib
+\end{bibunit}
 \end{document}
