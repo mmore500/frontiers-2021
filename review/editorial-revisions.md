@@ -82,3 +82,74 @@ For the time being, I made a minor change to read `smaller population sizes than
 > G. Beslon
 
 Thank you for your careful reading and feedback.
+
+# Jan 21, 2022
+
+We have pasted plain text markdown into the "Comment" field on the Frontiers forum.
+However, a nicer-to-read rendered version of our responses to your feedback may be viewed at the following url,
+
+<https://github.com/mmore500/frontiers-2021/blob/master/review/editorial-revisions.md#jan-21-2022>
+
+> Hi Matthew,
+>
+> Ofria, 2019 is surprising because of its title ("empirical") without further reference.
+> At least you'd better give the full title to clarify ("The Empirical C++ library").
+
+Ah, that makes sense.
+I have expanded the title as follows.
+
+```bibtex
+@misc{charles_ofria_2019_2575607,
+  title={Empirical C++ scientific software library for research, education, \& public engagement},
+  author={Charles Ofria and Emily Dolson and Alex Lalejini and Jake Fenton and Matthew Andres Moreno and Steven Jorgensen and Robin Miller and Jason Stredwick and Luis Zaman and Jory Schossau and Lauren Gillespie and Nitash C G and Anya Vostinar},
+  year=2019,
+  month=feb,
+  publisher={Zenodo},
+  doi={10.5281/zenodo.2575606},
+  url={https://doi.org/10.5281/zenodo.2575606}
+}
+```
+
+> By the way you are right, when I checked references, I did not checked the sup mat.
+> However, it's better referencing only those papers that are cited in the main text.
+>
+> for (Moreno, 2020) and (Moreno and Ofria, 2020) the situation is different.
+> It's ok to cite preprints but current reference give no information about that.
+> Just give complete information in the reference such that the reader can have all necessary information.
+
+Makes sense!
+I figured out how to use the `note` bibtex field to provide a link to these pieces,
+
+```bibtex
+@preprint{Moreno_2020,
+  title={Profiling foundations for scalable digital evolution methods},
+  author={Moreno, Matthew A},
+  year=2020,
+  month={Jul},
+  publisher={Open Science Framework},
+  doi={10.17605/OSF.IO/TCJFY},
+  url={https://osf.io/tcjfy},
+  note={Preprint via Open Science Framework at \url{https://doi.org/10.17605/OSF.IO/TCJFY}.}
+}
+
+@preprint{Moreno_Ofria_2020,
+  title={Practical steps toward indefinite scalability: In pursuit of robust computational substrates for open-ended evolution},
+  author={Moreno, Matthew A and Ofria, Charles},
+  year=2020,
+  month={Jun},
+  publisher={Open Science Framework},
+  doi={10.17605/OSF.IO/53VGH},
+  url={https://osf.io/53vgh},
+  note={Preprint via Open Science Framework at \url{https://doi.org/10.17605/OSF.IO/53VGH}.}
+}
+```
+
+> I am surprised you missed the typo on line 376 (DISHTINY is not DISHITNY ;)
+
+I am also surprised I didn't see that!
+Corrected.
+:)
+
+> Best,
+>
+>G__ll___.
