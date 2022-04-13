@@ -56,3 +56,5 @@ cleaner: clean
 	find . -type f -name ${BUILD_DIR}"*" ! -name '*.tex' ! -name '*.bib' -delete
 
 fresh: cleaner all
+
+.PHONY: draft release view clean sview cleaner fresh
