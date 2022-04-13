@@ -10,9 +10,9 @@ RELEASE_SUPPLEMENT_PAGE = $(shell pdftk ${BUILD_DIR}.pdf dump_data_utf8 | pcregr
 
 all: ${BUILD_DIR}-draft.pdf
 
-draft: ${BUILD_DIR}-draft.pdf ${BUILD_DIR}-manuscript-draft.pdf ${BUILD_DIR}-supplement-draft.pdf
+draft: ${BUILD_DIR}-draft.pdf ${BUILD_DIR}-manuscript-draft.pdf ${BUILD_DIR}-supplement-draft.pdf ${BUILD_DIR}-draft.tex
 
-release: ${BUILD_DIR}-draft.pdf ${BUILD_DIR}-manuscript.pdf ${BUILD_DIR}-supplement.pdf
+release: ${BUILD_DIR}-draft.pdf ${BUILD_DIR}-manuscript.pdf ${BUILD_DIR}-supplement.pdf ${BUILD_DIR}.tex
 
 view:
 	atom ${BUILD_DIR}.pdf
@@ -21,6 +21,9 @@ ${BUILD_DIR}.pdf: main.tex
 	latexmk -pdf -silent \
     -jobname=${BUILD_DIR} \
     -pdflatex="pdflatex -interaction=nonstopmode" main.tex
+
+${BUILD_DIR}.tex: main.tex
+	./latexpand main.tex > ${BUILD_DIR}.tex
 
 ${BUILD_DIR}-manuscript.pdf: ${BUILD_DIR}.pdf
 	pdftk ${BUILD_DIR}.pdf cat 1-$$(( $(RELEASE_SUPPLEMENT_PAGE) - 1 )) output ${BUILD_DIR}-manuscript.pdf
@@ -33,6 +36,9 @@ ${BUILD_DIR}-draft.pdf: main.tex
     -jobname=${BUILD_DIR}-draft \
     -pdflatex="pdflatex -interaction=nonstopmode" draft.tex
 
+${BUILD_DIR}-draft.tex: main.tex
+	./latexpand draft.tex > ${BUILD_DIR}-draft.tex
+
 ${BUILD_DIR}-manuscript-draft.pdf: ${BUILD_DIR}-draft.pdf
 	pdftk ${BUILD_DIR}-draft.pdf cat 1-$$(( $(DRAFT_SUPPLEMENT_PAGE) - 1 )) output ${BUILD_DIR}-manuscript-draft.pdf
 
@@ -41,7 +47,9 @@ ${BUILD_DIR}-supplement-draft.pdf: ${BUILD_DIR}-draft.pdf
 
 clean:
 	rm -f ${BUILD_DIR}.pdf
+	rm -f ${BUILD_DIR}.tex
 	rm -f ${BUILD_DIR}-draft.pdf
+	rm -f ${BUILD_DIR}-draft.tex
 	rm -f ${BUILD_DIR}-manuscript.pdf
 	rm -f ${BUILD_DIR}-manuscript-draft.pdf
 	rm -f ${BUILD_DIR}-supplement.pdf
