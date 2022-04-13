@@ -12,7 +12,7 @@ all: ${BUILD_DIR}-draft.pdf
 
 draft: ${BUILD_DIR}-draft.pdf ${BUILD_DIR}-manuscript-draft.pdf ${BUILD_DIR}-supplement-draft.pdf ${BUILD_DIR}-draft.tex
 
-release: ${BUILD_DIR}-draft.pdf ${BUILD_DIR}-manuscript.pdf ${BUILD_DIR}-supplement.pdf ${BUILD_DIR}.tex
+release: ${BUILD_DIR}.pdf ${BUILD_DIR}-manuscript.pdf ${BUILD_DIR}-supplement.pdf ${BUILD_DIR}.tex
 
 view:
 	atom ${BUILD_DIR}.pdf
