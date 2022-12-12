@@ -1,4 +1,19 @@
-\section{Supplementary Material}
+\input{lib/dissertationexclude.tex}
+\input{lib/dissertationonly.tex}
+
+\dissertationexclude{\section{Supplementary Material}}
+
+\dissertationonly{
+\newenvironment{levelupfrontiers}% Promote sectional commands
+  {\let\subparagraph\paragraph%
+   \let\paragraph\subsubsection%
+   \let\subsubsection\subsection%
+   \let\subsection\section%
+   %\let\section\relax%
+  }{}
+
+\begin{levelupfrontiers}
+}
 
 \subsection{Background} \label{sup:background}
 
@@ -539,3 +554,5 @@ So, intercell messaging within hereditary groups most likely underlies this phen
 It seems most plausible that increased incidence of asymmetric border reproduction rates arises as a knock-on effect of the life history retardation effect originally discussed.
 Perhaps older, ``full-grown'' hereditary groups arrive at a low-reproduction detente at interfaces with other older, ``full-grown'' hereditary groups while resisting incursion at interfaces with younger, growing hereditary groups.
 This would constitute a contextually-expressed tit-for-tat policy, perhaps mediated by cell age or cell generations elapsed from the group's founding propagule cell.
+
+\dissertationonly{\end{levelupfrontiers}}
