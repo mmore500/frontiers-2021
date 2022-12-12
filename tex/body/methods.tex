@@ -1,3 +1,5 @@
+\input{lib/dissertationelse.tex}
+
 \section{Materials and Methods}
 
 \input{fig/signalgp-dishtinygp.tex}
@@ -70,14 +72,14 @@ In order to enforce hierarchical nesting of hereditary group IDs, daughter cells
 Hierarchical hereditary group IDs are strictly nested: all cells are members of one L0 hereditary group and L1 hereditary group.
 No cell can be a member of two L0 hereditary groups or two L1 hereditary groups.
 Likewise, no L0 hereditary group can appear within more than one L1 hereditary group.
-Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}\textbf{(A)} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
+Useful as a concrete illustration of this scheme, Figure \ref{fig:ko-morphology}\dissertationelse{a}{\textbf{(A)}} depicts hierarchically-nested hereditary groupings assumed by an evolved strain.
 
 \subsection{Cell-Level Organisms}
 
 Our experiments use cell-level digital organisms controlled by genetic programs subject to mutations and selective pressures that stem from local competition for limited space.
 
 We employ the SignalGP event-driven genetic programming representation.
-As sketched in Figure \ref{fig:signalgp-dishtinygp}\textbf{(A)}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
+As sketched in Figure \ref{fig:signalgp-dishtinygp}\dissertationelse{a}{\textbf{(A)}}, this representation is specially designed to express function-like modules of code in response to internal signals or external stimuli.
 This process can be considered somewhat akin to gene expression.
 In our experiments, virtual CPUs can execute responses to up to 24 signals at once, with any further signals usurping the longest-running modules.
 The event-driven framework facilitates the evolution of dynamic interactions between digital organisms and their environment (including other organisms) \citep{lalejini2018evolving}.
@@ -91,7 +93,7 @@ So there are four virtual hardware sets per cell, one for each cardinal directio
 \footnote{%
 This approach differs from existing work evolving digital organisms in grid-based problem domains, where directionality is managed by a within-cell ``facing'' state that determines the source direction for inputs and the target direction for outputs \citep{goldsby2014evolutionary, goldsby2018serendipitous, grabowski2010early, biswas2014causes, lalejini2018evolving}; see Supplemental Section \ref{sup:cell_level_organisms} for further detail.
 }
-Figure \ref{fig:signalgp-dishtinygp}\textbf{(B)} overviews the configuration of the four SignalGP instances that constitute a single cell.
+Figure \ref{fig:signalgp-dishtinygp}\dissertationelse{b}{\textbf{(B)}} overviews the configuration of the four SignalGP instances that constitute a single cell.
 
 Supplementary Sections \ref{sup:cell_level_organisms}, \ref{sup:standard_instruction_library}, \ref{sup:custom_instruction_library}, and \ref{sup:environmental_cue_library} provide full details of the digital evolution substrate underpinning this work.
 
